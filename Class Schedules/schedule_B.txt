@@ -1,0 +1,5399 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>UP CRS - Schedule of Classes</title>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery-1.4.1.min.js"></script>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery.tablesorter.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/layout.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/status.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/schedule.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/tablesorter/tablesorter.css" type="text/css" />
+	<link rel="shortcut icon" href="https://crs.upd.edu.ph/images/favicon.ico" type="image/x-icon" />
+
+	<style type="text/css">
+		#tbl_schedule tbody:hover {
+			background-color: #F0F0AF;
+		}
+	</style>
+	
+	<script type="text/javascript" language="JavaScript">
+	$(document).ready(function() {
+		$('#btn_search').click(searchClasses);
+		$('#frm_schedule').submit(function(e) {
+			e.preventDefault();
+			searchClasses();
+		});
+
+//		// table sorter
+//		$.tablesorter.addParser({
+//			// set uniqueid
+//			id: 'availableslots',
+//			is: function(s) {
+//				// return false so that parser is not automatically detected
+//				return false;
+//			},
+//			format: function(s) {
+//				var temp = s.replace('<strong>','').replace('</strong>','').split('/');
+//				return temp[0];
+//			},
+//			// set type to numeric
+//			type: 'numeric'
+//		});
+
+//		$('#tbl_schedule').tablesorter({widgets:['zebra'], headers: {0:{sorter:false},2:{sorter:false},4:{sorter:'availableslots'},5:{sorter:false}}});
+
+	});
+
+	function searchClasses() {
+		var coursenumber = $.trim($('#txt_coursenumber').val());
+		var term = $.trim($('#txt_term').val());
+		var alphanumeric_pattern = /^[a-zA-Z0-9\.\s]+$/;
+
+		if(coursenumber != '') {
+			if( ! alphanumeric_pattern.test(coursenumber)) {
+				alert('Course number must be alphanumeric.');
+			} else {
+				window.location = 'https://crs.upd.edu.ph/schedule' + '/'+ term + '/'+ coursenumber ;
+			}
+		}
+
+	}
+
+	</script>
+
+<style>
+	#frm_schedule {
+		margin: auto;
+		width: 25%;
+		background: #FCFCF0;
+		border: 3px solid #444444;
+		padding: 1em;
+	}
+	#frm_schedule strong, #search input {
+		padding-right: 1em;
+	}
+</style>
+</head>
+
+<body class="schedule">
+
+<div id="header">
+	<a href="https://crs.upd.edu.ph/user" class="header_link"></a>
+</div>
+<div id="subheader">
+</div>
+
+<div id="content" class="align-center">
+
+<h1>
+	Schedule of Classes<br />
+		<select id="txt_term" name="txt_term" style="padding: 2px; border: 1px solid #CECECE; border-radius: 5px; font-size: 100%; text-align: right;" onchange="searchClasses();">
+					<option value="120144" >Midyear Term 2015</option>
+					<option value="120151" >First Semester AY 2015-2016</option>
+					<option value="120152" selected="selected">Second Semester AY 2015-2016</option>
+					<option value="120154" >Midyear Term 2016</option>
+		</select>
+	</h1>
+
+<br />
+<form id="frm_schedule" action="" method="post">
+Course Number: 
+<input type="text" id="txt_coursenumber" name="txt_coursenumber" placeholder="(e.g., Math 11, Eng 1)"/>
+<br/> 
+<input type="button" id="btn_search" name="btn_search" value="Search" />
+</form>
+
+<br/>
+<p>
+	<a href="https://crs.upd.edu.ph/schedule/120152/A">A</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/B">B</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/C">C</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/D">D</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/E">E</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/F">F</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/G">G</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/H">H</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/I">I</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/J">J</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/K">K</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/L">L</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/M">M</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/N">N</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/O">O</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/P">P</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/Q">Q</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/R">R</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/S">S</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/T">T</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/U">U</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/V">V</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/W">W</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/X">X</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/Y">Y</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/Z">Z</a>&nbsp;
+<a href="https://crs.upd.edu.ph/">Back to main page</a>
+</p>
+<br />
+<div style="text-align: left; padding: 0; margin: 0;"><strong>Results for: <em>B</em></strong></div>
+<table id="tbl_schedule" style="table-layout: fixed	">
+<thead>
+<tr>
+	<th width="5%">Class Code</th>
+	<th width="15%">Class</th>
+	<th width="5%">Credits</th>
+	<th width="30%">
+		Schedule<br />
+		Instructor(s)<br/>
+		Remarks
+	</th>
+	<th width="15%">Enlisting Unit : Block<br/><b>Block Remarks</b></th>
+	<th width="10%">
+		Available Slots /<br />
+		Total Slots
+	</th>
+	<th width="5%">Demand</th>
+	<th width="15%">Restrictions</th>
+</tr>
+</thead>
+
+	<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">27616</td>
+		<td rowspan = "1">B 201 TZZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 5:30-8:30PM lec BVR<br />
+			GUIEB, EULALIO<br/>
+					</td>
+		 
+		<td>GRADUATE<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">27617</td>
+		<td rowspan = "1">B 206 TZZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 5:30-8:30PM lec M 107<br />
+			AVECILLA, VICTOR<br/>
+					</td>
+		 
+		<td>GRADUATE<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">27620</td>
+		<td rowspan = "1">B 211 FZZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 5:30-8:30PM lec CMC RADIO<br />
+			SANTOS, JOSEFINA <br/>
+					</td>
+		 
+		<td>GRADUATE<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">27615</td>
+		<td rowspan = "1">B 242 TZZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 5:30-8:30PM lec CMC RADIO<br />
+			AUSTRIA, FERNANDO<br/>
+					</td>
+		 
+		<td>GRADUATE<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">27618</td>
+		<td rowspan = "1">B 272 WYZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 4-7PM lec CMC RADIO<br />
+			ASERON, MARINELA<br/>
+					</td>
+		 
+		<td>GRADUATE<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17745</td>
+		<td rowspan = "1">BA 99.1 THR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec BA 108<br />
+			VALCARCEL, LINA<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17711</td>
+		<td rowspan = "1">BA 99.1 THU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec BA 108<br />
+			CONCEALED<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17709</td>
+		<td rowspan = "1">BA 99.2 THR-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec BA 301<br />
+			ANTONINO, MA ANDREA<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				55			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17710</td>
+		<td rowspan = "1">BA 99.2 THR-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec BA 306<br />
+			GABAY, KRYZTELLE PEARL<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				52			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17701</td>
+		<td rowspan = "1">BA 99.2 THY-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec BA 301<br />
+			ANTONINO, MA ANDREA<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				51			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA, BS BAA(5 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17702</td>
+		<td rowspan = "1">BA 99.2 THY-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec BA 304<br />
+			GABAY, KRYZTELLE PEARL<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				52			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA, BS BAA(5 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16641</td>
+		<td rowspan = "1">BA 101 WFX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec BA 303<br />
+			BORAZON, ELAINE<br/>
+			<em style="font-weight: bold">for BSBA and BSBAA</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: VSB</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16615</td>
+		<td rowspan = "1">BA 105 THR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec BA 303<br />
+			TAN, JASSLYN JOANNE<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16619</td>
+		<td rowspan = "1">BA 105 THW-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec BA 302<br />
+			MANUEL, MANUEL<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				44			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16646</td>
+		<td rowspan = "1">BA 105 THW-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec BA 303<br />
+			TAN, JASSLYN JOANNE<br/>
+			<em style="font-weight: bold">for BSBAA dq in the program</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA(20 slots), BS BA(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17712</td>
+		<td rowspan = "1">BA 114.2 THWX-1</td>
+		<td rowspan = "1">4.5</td>
+		<td rowspan = "1">
+			TTh 1-3:15PM lec BA 301<br />
+			ANTONINO, MA ANDREA<br/>
+			<em style="font-weight: bold">For BSBAA 3rd year block X</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17716</td>
+		<td rowspan = "1">BA 114.2 THWX-2</td>
+		<td rowspan = "1">4.5</td>
+		<td rowspan = "1">
+			TTh 1-3:15PM lec BA 309<br />
+			GABAY, KRYZTELLE PEARL<br/>
+			<em style="font-weight: bold">for BSBAA 3rd year block Y</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				54			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17739</td>
+		<td rowspan = "1">BA 115 THX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec BA 305<br />
+			AGUSTIN, MARIE THERESE<br/>
+			<em style="font-weight: bold">for BSBAA dq in the program</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA(20 slots), BS BA(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17735</td>
+		<td rowspan = "1">BA 115 THY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec BA 305<br />
+			AGUSTIN, MARIE THERESE<br/>
+			<em style="font-weight: bold">for BSIE and VSB students</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: VSB(20 slots), BS IE(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17726</td>
+		<td rowspan = "1">BA 117 THW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec BA 108<br />
+			YUSOPH, AL-HABBYEL<br/>
+			<em style="font-weight: bold">for BSBAA 4th year block Y</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17721</td>
+		<td rowspan = "1">BA 117 THX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec BA 108<br />
+			YUSOPH, AL-HABBYEL<br/>
+			<em style="font-weight: bold">for BSBAA 4th year block X</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17723</td>
+		<td rowspan = "1">BA 118.1 WFRU</td>
+		<td rowspan = "1">6.0</td>
+		<td rowspan = "1">
+			WF 8:30-11:30AM lec BA 301<br />
+			LLOREN, PAMELA ANNE; RODRIGUEZ, JERELLEEN; YUSOPH, AL-HABBYEL<br/>
+			<em style="font-weight: bold">for BSBAA 4th year block X</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17729</td>
+		<td rowspan = "1">BA 118.1 WFWX</td>
+		<td rowspan = "1">6.0</td>
+		<td rowspan = "1">
+			WF 1-4PM lec BA 301<br />
+			LLOREN, PAMELA ANNE; RODRIGUEZ, JERELLEEN; YUSOPH, AL-HABBYEL<br/>
+			<em style="font-weight: bold">for BSBAA 4th year block Y</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17743</td>
+		<td rowspan = "1">BA 119 THW<br/>Special Topics in Accounting</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec BA 311<br />
+			DELA CRUZ, BRAD NEIEL<br/>
+			<em style="font-weight: bold">for BSBAA 5th year</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				38			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17744</td>
+		<td rowspan = "1">BA 119 THX<br/>Special Topics in Accounting</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec BA 311<br />
+			DELA CRUZ, BRAD NEIEL<br/>
+			<em style="font-weight: bold">for BSBAA 5th year</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				38			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17727</td>
+		<td rowspan = "1">BA 121 THY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec BA 108<br />
+			ANDALLON, RAYMUNDO<br/>
+			<em style="font-weight: bold">for BSBAA 4th year block Y</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17724</td>
+		<td rowspan = "1">BA 121 WFY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec BA 304<br />
+			LLOREN, PAMELA ANNE<br/>
+			<em style="font-weight: bold">for BSBAA 4th year block X</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17731</td>
+		<td rowspan = "1">BA 123 THRU-1</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 9-11:30AM lec BA 304<br />
+			RODRIGUEZ, JERELLEEN<br/>
+			<em style="font-weight: bold">for BSBAA 5th year block X</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17732</td>
+		<td rowspan = "1">BA 123 THRU-2</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 9-11:30AM lec BA 307<br />
+			DELA CRUZ, BRAD NEIEL<br/>
+			<em style="font-weight: bold">for BSBAA 5th year block Y</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17741</td>
+		<td rowspan = "1">BA 126 WFY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec BA 301<br />
+			YUSOPH, AL-HABBYEL<br/>
+			<em style="font-weight: bold">for BSBAA 5th year</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				76			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17725</td>
+		<td rowspan = "1">BA 127 WFZ-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 5:30-7PM lec BA 304<br />
+			CONCEALED<br/>
+			<em style="font-weight: bold">for BSBAA 4th year block X</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17730</td>
+		<td rowspan = "1">BA 127 WFZ-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 5:30-7PM lec BA 306<br />
+			CONCEALED<br/>
+			<em style="font-weight: bold">for BSBAA 4th year block Y</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17736</td>
+		<td rowspan = "1">BA 129 THU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec BA 305<br />
+			AGUSTIN, MARIE THERESE<br/>
+			<em style="font-weight: bold">for BSBA 4th year</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17737</td>
+		<td rowspan = "1">BA 129 THV</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 11:30AM-1PM lec BA 305<br />
+			AGUSTIN, MARIE THERESE<br/>
+			<em style="font-weight: bold">for BSBA 4th year</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17738</td>
+		<td rowspan = "1">BA 142 THU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec BA 309<br />
+			SALITA, NELSON<br/>
+			<em style="font-weight: bold">for BSBAA dq in the program</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA(20 slots), BS BA(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17703</td>
+		<td rowspan = "1">BA 142 THW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec BA 306<br />
+			ASINAS, MARK ADRIAN<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17713</td>
+		<td rowspan = "1">BA 142 THY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec BA 306<br />
+			ASINAS, MARK ADRIAN<br/>
+			<em style="font-weight: bold">for BSBAA 3rd year block X</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				58			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17706</td>
+		<td rowspan = "1">BA 142 WFR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec BA 309<br />
+			SALITA, NELSON<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17719</td>
+		<td rowspan = "1">BA 142 WFU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec BA 309<br />
+			SALITA, NELSON<br/>
+			<em style="font-weight: bold">for BSBAA 3rd year block Y</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				42			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17708</td>
+		<td rowspan = "1">BA 145 HYZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 4-7PM lec BA 309<br />
+			CONCEALED<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				46			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17707</td>
+		<td rowspan = "1">BA 146 THR<br/>International Finance</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec BA 309<br />
+			SALITA, NELSON<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17747</td>
+		<td rowspan = "1">BA 146 TRUV<br/>Special Topics in Finance</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 9AM-12PM lec BA 110<br />
+			DY, DIOGENES<br/>
+			<em style="font-weight: bold">for BSBAA 4th year</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				31			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17720</td>
+		<td rowspan = "1">BA 146 WFX<br/>Managerial Economics and Policy</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec BA 305<br />
+			SICAT, CHARLOTTE JUSTINE<br/>
+			<em style="font-weight: bold">for BSBA and BSBAA</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				51			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: VSB</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17715</td>
+		<td rowspan = "1">BA 146 WFY<br/>Managerial Economics and Policy</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec BA 305<br />
+			SICAT, CHARLOTTE JUSTINE<br/>
+			<em style="font-weight: bold">for BSBA and BSBAA</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				49			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: VSB</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16638</td>
+		<td rowspan = "1">BA 151 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec BA 302<br />
+			RACELIS, ALIZA<br/>
+			<em style="font-weight: bold">for BSBAA 3rd year block Y</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				56			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16636</td>
+		<td rowspan = "1">BA 151 WFX-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec TBA<br />
+			RACELIS, ALIZA<br/>
+			<em style="font-weight: bold">for BSBAA 3rd year block X</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				53			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16649</td>
+		<td rowspan = "1">BA 151 WFX-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec BA 311<br />
+			GUERZON, ESTER<br/>
+			<em style="font-weight: bold">for BSBAA dq in the program</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA(20 slots), BS BA(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16618</td>
+		<td rowspan = "1">BA 152 THU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec BA 302<br />
+			SANTAMARIA, JOSE GERARDO<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				55			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16616</td>
+		<td rowspan = "1">BA 152 THX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec BA 302<br />
+			CONCEALED<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				53			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17705</td>
+		<td rowspan = "1">BA 160 THR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec BA 305<br />
+			ROQUE, BEATRICE EUSEBIA<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				46			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17704</td>
+		<td rowspan = "1">BA 160 WFZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 5:30-7PM lec BA 303<br />
+			GELI, NORAYDA<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				48			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17718</td>
+		<td rowspan = "1">BA 162 THZ-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 5:30-7PM lec BA 305<br />
+			SANTOS, RODERICK BEN<br/>
+			<em style="font-weight: bold">for BSBAA 3rd year block X</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				44			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17717</td>
+		<td rowspan = "1">BA 162 THZ-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 5:30-7PM lec BA 307<br />
+			ENCARNACION, AISSA<br/>
+			<em style="font-weight: bold">for BSBAA 3rd year block Y</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>11</strong> /
+				47			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17740</td>
+		<td rowspan = "1">BA 162 WFZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 5:30-7PM lec BA 307<br />
+			REDULLA, FERDINAND<br/>
+			<em style="font-weight: bold">for BSBAA dq in the program</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA(20 slots), BS BA(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17728</td>
+		<td rowspan = "1">BA 166 THZ-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 5:30-7PM lec BA 303<br />
+			STA LUCIA, RICHMUND<br/>
+			<em style="font-weight: bold">for BSBAA 4th year block Y</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17722</td>
+		<td rowspan = "1">BA 166 THZ-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 5:30-7PM lec BA 304<br />
+			LABAY, JO BLANCA PERALTA<br/>
+			<em style="font-weight: bold">for BSBAA 4th year block X</em>		</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17742</td>
+		<td rowspan = "1">BA 168 WFZ<br/>Special Topics in Business Law</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 5:30-7PM lec BA 301<br />
+			CONCEALED<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				76			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16620</td>
+		<td rowspan = "1">BA 170 THX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec BA 303<br />
+			ILANO, ARTURO BENEDICTO<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				52			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16621</td>
+		<td rowspan = "1">BA 170 THY-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec TBA<br />
+			ILANO, ARTURO BENEDICTO<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16647</td>
+		<td rowspan = "1">BA 170 THY-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec BA 311<br />
+			CRUZ, DESIREE<br/>
+			<em style="font-weight: bold">for BSBAA dq in the program</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA(20 slots), BS BA(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16623</td>
+		<td rowspan = "1">BA 174 HWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 1-4PM lec BA 307<br />
+			TAYAO, AGNES<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>22</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16622</td>
+		<td rowspan = "1">BA 175 THU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec BA 303<br />
+			TAN, JASSLYN JOANNE<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16627</td>
+		<td rowspan = "1">BA 178 WFX<br/>Digital Marketing</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec BA 304<br />
+			JONAS, JAMES RYAN<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				47			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16630</td>
+		<td rowspan = "1">BA 180.1 WFX-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec BA 309<br />
+			PADIGOS, EBONY<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16612</td>
+		<td rowspan = "1">BA 180.1 WFX-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec BA 306<br />
+			RELENTE, MARIA ANGELA<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA, BS BAA(5 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16632</td>
+		<td rowspan = "1">BA 180.1 WFY-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec BA 307<br />
+			ZARCO, TIMOTHY<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16614</td>
+		<td rowspan = "1">BA 180.1 WFY-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec BA 306<br />
+			RELENTE, MARIA ANGELA<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA, BS BAA(5 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16631</td>
+		<td rowspan = "1">BA 181 WFU-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec BA 305<br />
+			PAREDES, LORNA<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16613</td>
+		<td rowspan = "1">BA 181 WFU-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec BA 306<br />
+			SUAN, IVY<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA, BS BAA(5 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16629</td>
+		<td rowspan = "1">BA 181 WFW-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec BA 305<br />
+			PAREDES, LORNA<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16611</td>
+		<td rowspan = "1">BA 181 WFW-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec BA 306<br />
+			SUAN, IVY<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				50			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA, BS BAA(5 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16642</td>
+		<td rowspan = "1">BA 182 WFY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec BA 303<br />
+			SARREAL, ROGELIO<br/>
+			<em style="font-weight: bold">for BSBA and BSBAA</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>15</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: VSB</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16637</td>
+		<td rowspan = "1">BA 186 THY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec BA 302<br />
+			CONCEALED<br/>
+			<em style="font-weight: bold">for BSBAA 3rd year block Y</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				46			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16648</td>
+		<td rowspan = "1">BA 186 WFU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec BA 307<br />
+			PADIGOS, EBONY<br/>
+			<em style="font-weight: bold">for BSBAA dq in the program</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				49			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA(20 slots), BS BA(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16635</td>
+		<td rowspan = "1">BA 186 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec BA 307<br />
+			PADIGOS, EBONY<br/>
+			<em style="font-weight: bold">for BSBAA 3rd year block X</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				47			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16645</td>
+		<td rowspan = "1">BA 190 THW-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec BA 305<br />
+			SANDOVAL, BENJAMIN<br/>
+			<em style="font-weight: bold">for BSBA 4th year</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				45			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16640</td>
+		<td rowspan = "1">BA 190 THW-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec BA 304<br />
+			JONAS, JAMES RYAN<br/>
+			<em style="font-weight: bold">for BSBAA 5th year block Y</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				45			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16643</td>
+		<td rowspan = "1">BA 190 THX-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec BA 110<br />
+			SANTAMARIA, JOSE GERARDO<br/>
+			<em style="font-weight: bold">for BSBA 4th year</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16639</td>
+		<td rowspan = "1">BA 190 THX-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec BA 304<br />
+			JONAS, JAMES RYAN<br/>
+			<em style="font-weight: bold">for BSBAA 5th year block X</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				42			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BAA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16644</td>
+		<td rowspan = "1">BA 190 THY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec BA 110<br />
+			SANTAMARIA, JOSE GERARDO<br/>
+			<em style="font-weight: bold">for BSBA 4th year</em>		</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>23</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16625</td>
+		<td rowspan = "1">BA 192 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec BA 304<br />
+			JONAS, JAMES RYAN<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				48			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16624</td>
+		<td rowspan = "1">BA 198 WFU<br/>Business Communication</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec BA 311<br />
+			CALINGACION, BELEN; LAUREL, MA. MILAGROS<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16626</td>
+		<td rowspan = "1">BA 198 WFW<br/>Leadership</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec BA 303<br />
+			ACUNA, JASMIN<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				46			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16628</td>
+		<td rowspan = "1">BA 198 WFY<br/>Change Management</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec BA 311<br />
+			GUERZON, ESTER<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				45			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS BA</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16654</td>
+		<td rowspan = "1">BA 198 WFZ<br/>Special Topics in Business Administration</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 5:30-7PM lec BA 305<br />
+			FALCIS, NICARDO<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16601</td>
+		<td rowspan = "1">BA 230 THW</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec BA 106<br />
+			ILANO, ARTURO BENEDICTO<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>42</strong> /
+				42			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16610</td>
+		<td rowspan = "1">BA 233 THQ</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 8-9:20PM lec BA 110<br />
+			SANCHEZ, MA. ETHEL JOSEPHINE<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>20</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16608</td>
+		<td rowspan = "1">BA 236 THP</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 6:30-7:50PM lec BA 301<br />
+			SANDOVAL, BENJAMIN<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>20</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16606</td>
+		<td rowspan = "1">BA 238 THP</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 6:30-7:50PM lec BA 309<br />
+			CHUA, GEORGE<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>20</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16603</td>
+		<td rowspan = "1">BA 240 THP</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 6:30-7:50PM lec BA 206<br />
+			ENRIQUEZ, RAMON <br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>40</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16607</td>
+		<td rowspan = "1">BA 240 THQ</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 8-9:20PM lec BA 206<br />
+			ENRIQUEZ, RAMON <br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>40</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16602</td>
+		<td rowspan = "1">BA 240 THX</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 2:30-3:50PM lec BA 106<br />
+			MANUEL, MANUEL<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>40</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16604</td>
+		<td rowspan = "1">BA 291.2 THP1</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 6:30-7:50PM lec BA 106<br />
+			ECHANIS, ERLINDA<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>30</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16605</td>
+		<td rowspan = "1">BA 291.2 THP2</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 6:30-7:50PM lec BA 108<br />
+			GUTIERREZ, BEN PAUL; RODRIGUEZ, RAFAEL<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>30</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16609</td>
+		<td rowspan = "1">BA 291.2 THQ</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 8-9:20PM lec BA 301<br />
+			SANDOVAL, BENJAMIN<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>30</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16650</td>
+		<td rowspan = "1">BA 303 TCE</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 9AM-12PM lec BA 214<br />
+			PATALINGHUG, EPICTETUS<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				5			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16651</td>
+		<td rowspan = "1">BA 313 THX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 1-4PM lec BA 214<br />
+			BAUTISTA, CARLOS; PAREDES, LORNA<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				5			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16652</td>
+		<td rowspan = "1">BA 391 WFC</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec BA 214<br />
+			BAUTISTA, CARLOS<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				5			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16655</td>
+		<td rowspan = "1">BA 392 MHP</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 6-9PM lec SE 102<br />
+			TBA<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				4			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">17746</td>
+		<td rowspan = "1">BA 394 WED</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 2-5PM lec BA 212<br />
+			GUTIERREZ, BEN PAUL<br/>
+					</td>
+		 
+		<td>DAF<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				5			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">16653</td>
+		<td rowspan = "1">BA 395 TUX<br/>Business Policy</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 1-4PM lec BA 212<br />
+			BAUTISTA, CARLOS<br/>
+					</td>
+		 
+		<td>DBA<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				4			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29828</td>
+		<td rowspan = "1">BC 100 FRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 8:30-11:30AM lec MCB Radio Studio<br />
+			MANALILI, PERLITA<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				31			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29821</td>
+		<td rowspan = "1">BC 100 HRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 8:30-11:30AM lec MCB TV Studio<br />
+			LIQUIGAN, BOOTS<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29809</td>
+		<td rowspan = "1">BC 100 TWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 1-4PM lec M 107<br />
+			AVECILLA, VICTOR<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29816</td>
+		<td rowspan = "1">BC 100 WRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 8:30-11:30AM lec MCB Radio Studio<br />
+			MARTINEZ, CHRYL BHEFER<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29807</td>
+		<td rowspan = "1">BC 102 THWX</td>
+		<td rowspan = "1">6.0</td>
+		<td rowspan = "1">
+			TTh 1-4PM lec CMC RADIO<br />
+			ESTONILO, MELBA<br/>
+			<em style="font-weight: bold">This course is offered to regular BC students only.</em>		</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29805</td>
+		<td rowspan = "1">BC 104 THRU</td>
+		<td rowspan = "1">6.0</td>
+		<td rowspan = "1">
+			TTh 8:30-11:30AM lec CMC TV<br />
+			VINCULADO, JANE<br/>
+			<em style="font-weight: bold">This course is offered to regular BC students only.</em>		</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29808</td>
+		<td rowspan = "1">BC 104 THWX</td>
+		<td rowspan = "1">6.0</td>
+		<td rowspan = "1">
+			TTh 1-4PM lec CMC TV<br />
+			FELICIANO, ROSA MARIA<br/>
+			<em style="font-weight: bold">This course is offered to regular BC students only.</em>		</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29817</td>
+		<td rowspan = "1">BC 104 WFWX</td>
+		<td rowspan = "1">6.0</td>
+		<td rowspan = "1">
+			WF 1-4PM lec CMC TV<br />
+			SANTOS, JOSEFINA <br/>
+			<em style="font-weight: bold">This course is offered to regular BC students only.</em>		</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29829</td>
+		<td rowspan = "1">BC 110 FWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 1-4PM lec BVR<br />
+			MANALILI, PERLITA<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29812</td>
+		<td rowspan = "1">BC 114 WRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 8:30-11:30AM lec CMC RADIO<br />
+			ASERON, MARINELA<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29826</td>
+		<td rowspan = "1">BC 116 FRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 8:30-11:30AM lec CMC RADIO<br />
+			CLAUDIO, MA IVY<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29820</td>
+		<td rowspan = "1">BC 124 WWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 1-4PM lec MCB TV Studio<br />
+			VINCULADO, JANE<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29831</td>
+		<td rowspan = "1">BC 125 TWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 1-4PM lab MCB TV Studio<br />
+			TBA<br/>
+			<em style="font-weight: bold">Kindly delete your enlistment from this BC 125 class because this course is from the old curriculum. This class will be dissolved. Sorry for the inconvenience.</em>		</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29801</td>
+		<td rowspan = "1">BC 128 MRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8:30-11:30AM lec CMC TV<br />
+			DELA TORRE, RAZ<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29813</td>
+		<td rowspan = "1">BC 132 WRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 8:30-11:30AM lec CMC TV<br />
+			ALJIBE, MA. AMOR<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29806</td>
+		<td rowspan = "1">BC 134 TRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 8:30-11:30AM lec MCB TV Studio<br />
+			ALJIBE, MA. AMOR<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29802</td>
+		<td rowspan = "1">BC 140 MWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 1-4PM lec CMC RADIO<br />
+			MARTINEZ, CHRYL BHEFER<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29832</td>
+		<td rowspan = "1">BC 142 TWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 1-4PM lec MCB TV Studio<br />
+			ABAYA, LEO ANTONIO<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29803</td>
+		<td rowspan = "1">BC 144 MWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 1-4PM lec CMC TV<br />
+			DELA TORRE, RAZ<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29823</td>
+		<td rowspan = "1">BC 164 HWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 1-4PM lec PStar2<br />
+			MUTUC, IRMA<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29814</td>
+		<td rowspan = "1">BC 170 WRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 8:30-11:30AM lec PStar1<br />
+			VINCULADO, JANE<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29825</td>
+		<td rowspan = "1">BC 174 HYZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 4-7PM lec MCB Radio Studio<br />
+			MANALO, EUGENE<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29822</td>
+		<td rowspan = "1">BC 180 HWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 1-4PM lec A 101<br />
+			SANTOS, JOSEFINA <br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29830</td>
+		<td rowspan = "1">BC 181 FWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 1-4PM lec MCB Radio Studio<br />
+			LIQUIGAN, BOOTS<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29811</td>
+		<td rowspan = "1">BC 181 TWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 1-4PM lec BVR<br />
+			AGUIRRE, ALWIN<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29810</td>
+		<td rowspan = "1">BC 182 TWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 1-4PM lec MCB Radio Studio<br />
+			AUSTRIA, FERNANDO<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29815</td>
+		<td rowspan = "1">BC 182 WRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 8:30-11:30AM lec MCB TV Studio<br />
+			LIQUIGAN, BOOTS<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29827</td>
+		<td rowspan = "1">BC 192 FRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 8:30-11:30AM lec M 107<br />
+			GUIA, ROLAND ANTONIO<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29824</td>
+		<td rowspan = "1">BC 196 HWX<br/>Crisis in Broadcasting</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 1-4PM lec MCB Radio Studio<br />
+			PALMONES, ANGELO<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29819</td>
+		<td rowspan = "1">BC 196 WWX<br/>Special Topics in Broadcasting: Pornography in Electronic Media</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 1-4PM lec MCB Radio Studio<br />
+			GUIEB, EULALIO<br/>
+			<em style="font-weight: bold">Students should be at least 18 years old.</em>		</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29804</td>
+		<td rowspan = "1">BC 198 MYZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 4-7PM prac CMC RADIO<br />
+			FELICIANO, ROSA MARIA<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29818</td>
+		<td rowspan = "1">BC 199 WWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 1-4PM lec BVR<br />
+			MANALILI, PERLITA<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29833</td>
+		<td rowspan = "1">BC 200 MRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8:30-11:30AM thesis BVR<br />
+			GUIEB, EULALIO<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29835</td>
+		<td rowspan = "1">BC 200 MRU-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8:30-11:30AM thesis CMC RADIO<br />
+			VINCULADO, JANE<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29836</td>
+		<td rowspan = "1">BC 200 MRU-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8:30-11:30AM thesis MCB Radio Studio<br />
+			MANALILI, PERLITA<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29838</td>
+		<td rowspan = "1">BC 200 MRU-3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8:30-11:30AM thesis MCB TV Studio<br />
+			LIQUIGAN, BOOTS<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29839</td>
+		<td rowspan = "1">BC 200 MRU-4</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8:30-10:30AM thesis M 107<br />
+			FELICIANO, ROSA MARIA<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29834</td>
+		<td rowspan = "1">BC 200 MWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 1-4PM thesis CMC TV<br />
+			SANTOS, JOSEFINA <br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29837</td>
+		<td rowspan = "1">BC 200 MWX-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 1-4PM thesis MCB TV Studio<br />
+			ALJIBE, MA. AMOR<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">29840</td>
+		<td rowspan = "1">BC 200 MWX-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 1-4PM thesis MCB Radio Studio<br />
+			CLAUDIO, MA IVY<br/>
+					</td>
+		 
+		<td>DBC<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43017</td>
+		<td rowspan = "1">B Ind/Mal 12 TWHFU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TWThF 10-11:30AM lec PH 400C<br />
+			JAVIER, JEM<br/>
+			<em style="font-weight: bold">Prerequisite: B Ind/Mal 11</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43018</td>
+		<td rowspan = "1">B Ind/Mal 13 TWHFU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TWThF 10-11:30AM lec PH 400C<br />
+			JAVIER, JEM<br/>
+			<em style="font-weight: bold">Prerequisite: B Ind/Mal 11</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43019</td>
+		<td rowspan = "1">B Ind/Mal 110 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-4PM lec PH 400C<br />
+			CRUZ, EMILITA<br/>
+			<em style="font-weight: bold">Prerequisite: B Ind/Mal 101</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43020</td>
+		<td rowspan = "1">B Ind/Mal 111 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-4PM lec PH 400C<br />
+			CRUZ, EMILITA<br/>
+			<em style="font-weight: bold">Prerequisite: B Ind/Mal 101</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37501</td>
+		<td rowspan = "1">BIO 1 THR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec IB 117<br />
+			ESPANOLA, CARMELA; BELA-ONG, DENNIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				90			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37502</td>
+		<td rowspan = "1">BIO 1 THU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec IB 117<br />
+			QUILANG, JONAS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				90			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37503</td>
+		<td rowspan = "1">BIO 1 THW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec IB 117<br />
+			BASIAO, ZUBAIDA; VELARDE, MICHAEL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				90			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37504</td>
+		<td rowspan = "1">BIO 1 THX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec IB 117<br />
+			ESPANOLA, CARMELA; BELA-ONG, DENNIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				90			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37505</td>
+		<td rowspan = "1">BIO 1 THY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec IB 117<br />
+			BASIAO, ZUBAIDA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				70			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37506</td>
+		<td rowspan = "1">BIO 1 WFR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec IB 117<br />
+			PEREZ, TERESITA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				89			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37507</td>
+		<td rowspan = "1">BIO 1 WFU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec IB 117<br />
+			GARCIA, LUIS MARIA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				90			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37508</td>
+		<td rowspan = "1">BIO 1 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec IB 117<br />
+			HERRERA, ANNABELLE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				71			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37509</td>
+		<td rowspan = "1">BIO 1 WFX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec IB 117<br />
+			HERRERA, ANNABELLE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				72			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37510</td>
+		<td rowspan = "1">BIO 1 WFY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec IB 117<br />
+			ESPANOLA, CARMELA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				90			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37511</td>
+		<td rowspan = "1">BIO 11 THQ/THRU</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 7-8:30AM lec IB 117; TTh 8:30-11:30AM lab IB 309<br />
+			RODEROS, REMEDIOS; REBUSI, ROMEO; LUCZON, ADRIAN; RULLOG, EMMERSON<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS FT(4 slots), IC(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37512</td>
+		<td rowspan = "1">BIO 11 THQ/THRU1</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 7-8:30AM lec IB 117; TTh 8:30-11:30AM lab IB 308<br />
+			RODEROS, REMEDIOS; LUCZON, ADRIAN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS FT(4 slots), IC(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37513</td>
+		<td rowspan = "1">BIO 11 THQ/THRU2</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 7-8:30AM lec IB 117; TTh 8:30-11:30AM lab IB 307<br />
+			RODEROS, REMEDIOS; LUCZON, ADRIAN; TRINIDAD, ABIGAIL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS FT(2 slots), IC(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37514</td>
+		<td rowspan = "1">BIO 11 THR/THVW</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec IB 250; TTh 11:30AM-2:30PM lab IB 309<br />
+			PUZON, JULIANA JANET; REBUSI, ROMEO<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS FT(4 slots), BS Bio(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37515</td>
+		<td rowspan = "1">BIO 11 THR/THVW1</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec IB 250; TTh 11:30AM-2:30PM lab IB 308<br />
+			PUZON, JULIANA JANET; GALVEZ, JULIAN CHRIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS FT(2 slots), BS Bio(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37516</td>
+		<td rowspan = "1">BIO 11 THW/THXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec IB 345; TTh 2:30-5:30PM lab IB 309<br />
+			REBUSI, ROMEO; LUCZON, ADRIAN; YU, SHINY CATHLYNNE; BASCOS, ERIKA MARIE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: NIP(9 slots), BS FT(15 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37517</td>
+		<td rowspan = "1">BIO 11 THW/THXY1</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec IB 345; TTh 2:30-5:30PM lab IB 308<br />
+			LUCZON, ADRIAN; BOMBAY, MAURENE; BASCOS, ERIKA MARIE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: NIP(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37518</td>
+		<td rowspan = "1">BIO 11 WFQ/WFRU</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 7-8:30AM lec IB 117; WF 8:30-11:30AM lab IB 309<br />
+			PUZON, JULIANA JANET; BOMBAY, MAURENE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: IC(4 slots), BS MBB(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37519</td>
+		<td rowspan = "1">BIO 11 WFQ/WFRU1</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 7-8:30AM lec IB 117; WF 8:30-11:30AM lab IB 308<br />
+			PUZON, JULIANA JANET; DELLOSA, GIANN KERWIN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: IC(4 slots), BS MBB(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37520</td>
+		<td rowspan = "1">BIO 11 WFQ/WFRU2</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 7-8:30AM lec IB 117; WF 8:30-11:30AM lab IB 307<br />
+			PUZON, JULIANA JANET; FERRER, REGINA JOYCE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: IC(4 slots), BS MBB(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37521</td>
+		<td rowspan = "1">BIO 11 WFR/WFVW</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec IB 250; WF 11:30AM-2:30PM lab IB 309<br />
+			CAO, ERNELEA; LUCZON, ADRIAN; BELA-ONG, DENNIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS FT(4 slots), BS Bio(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37522</td>
+		<td rowspan = "1">BIO 11 WFR/WFVW1</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec IB 250; WF 11:30AM-2:30PM lab IB 308<br />
+			CAO, ERNELEA; HALILI, JORDAN FERDIN; BELA-ONG, DENNIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS FT(2 slots), BS Bio(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37523</td>
+		<td rowspan = "1">BIO 11 WFW/WFXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec IB 345; WF 2:30-5:30PM lab IB 309<br />
+			PUZON, JULIANA JANET; BOMBAY, MAURENE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS FT(4 slots), NIP(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37524</td>
+		<td rowspan = "1">BIO 11 WFW/WFXY1</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec IB 345; WF 2:30-5:30PM lab IB 308<br />
+			PUZON, JULIANA JANET; FERRER, REGINA JOYCE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: BS FT(2 slots), NIP(20 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37525</td>
+		<td rowspan = "1">BIO 12 THR/THVW</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec IB 345; TTh 11:30AM-2:30PM lab IB 307<br />
+			MAMARIL, AUGUSTUS; RODEROS, REMEDIOS; DELLOSA, GIANN KERWIN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37526</td>
+		<td rowspan = "1">BIO 12 THR/THXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec IB 345; TTh 2:30-5:30PM lab IB 307<br />
+			MAMARIL, AUGUSTUS; RODEROS, REMEDIOS; GALVEZ, JULIAN CHRIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37527</td>
+		<td rowspan = "1">BIO 12 WFR/WFVW</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec IB 345; WF 11:30AM-2:30PM lab IB 307<br />
+			MAMARIL, AUGUSTUS; RODEROS, REMEDIOS; DY, DOMINIQUE PATRICIA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37528</td>
+		<td rowspan = "1">BIO 12 WFR/WFXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec IB 345; WF 2:30-5:30PM lab IB 307<br />
+			MAMARIL, AUGUSTUS; RODEROS, REMEDIOS; RAMOS, DINO ANGELO; RULLOG, EMMERSON<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37529</td>
+		<td rowspan = "1">BIO 101 WFW/FXY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 12-1PM lec IB 117; F 2:30-5:30PM lab IB 260<br />
+			BASCOS, ERIKA MARIE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37530</td>
+		<td rowspan = "1">BIO 101 WFW/WXY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 12-1PM lec IB 117; W 2:30-5:30PM lab IB 260<br />
+			BASCOS, ERIKA MARIE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37531</td>
+		<td rowspan = "1">BIO 102 THV/THRU</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 8:30-11:30AM lab IB 302; TTh 11:30AM-1PM lec IB 345<br />
+			CATAP, ELENA; IMPERIAL, IVAN CHRISTIAN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37532</td>
+		<td rowspan = "1">BIO 102 THV/THXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 11:30AM-1PM lec IB 345; TTh 2:30-5:30PM lab IB 302<br />
+			CATAP, ELENA; ALCANTARA, MELLISSA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37533</td>
+		<td rowspan = "1">BIO 102 WFV/WFRU</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 8:30-11:30AM lab IB 302; WF 11:30AM-1PM lec IB 345<br />
+			CATAP, ELENA; ALCANTARA, MELLISSA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37534</td>
+		<td rowspan = "1">BIO 102 WFV/WFXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 11:30AM-1PM lec IB 345; WF 2:30-5:30PM lab IB 302<br />
+			CATAP, ELENA; IMPERIAL, IVAN CHRISTIAN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37602</td>
+		<td rowspan = "1">BIO 115 THW/THXY</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 1-2PM lec IB 319; TTh 2:30-5:30PM lab IB 119<br />
+			YAP, SANDRA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37535</td>
+		<td rowspan = "1">BIO 117 WFO/MUVWX</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			M 10AM-4PM lab IB 119; F 5:30-7:30PM lec IB 117<br />
+			ONG, PERRY; DUYA, MARIANO ROY; HOSPODARSKY, MARISOL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37536</td>
+		<td rowspan = "1">BIO 118 SRU/THRU</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 8:30-11:30AM lab IB 119; S 9-11AM lec IB 318<br />
+			TBA<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37606</td>
+		<td rowspan = "1">BIO 118 SRU/THRU-1</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 8:30-11:30AM lab IB 119; S 9-11AM lec IB 318<br />
+			HERNANDEZ, MA BRENDA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37537</td>
+		<td rowspan = "1">BIO 119 THW/THXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 1-2PM lec IB 318; TTh 2:30-5:30PM lab IB 306<br />
+			TBA<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37617</td>
+		<td rowspan = "1">BIO 119 THW/THXY-1</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 1-2PM lec TBA; TTh 2:30-5:30PM lab TBA<br />
+			GARCIA, LUIS MARIA; ANTICAMARA, JONATHAN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37538</td>
+		<td rowspan = "1">BIO 120 THV/THRU</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 8:30-11:30AM lab IB 346; TTh 12-1PM lec IB 117<br />
+			RIVERA, WINDELL; GALARION, LUIZA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				21			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37539</td>
+		<td rowspan = "1">BIO 120 THV/THXY</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 12-1PM lec IB 117; TTh 2:30-5:30PM lab IB 346<br />
+			RIVERA, WINDELL; VITAL, PIERANGELI<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37540</td>
+		<td rowspan = "1">BIO 121 THQ/THRU</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 7:30-8:30AM lec IB 250; TTh 8:30-11:30AM lab IB 330<br />
+			PUZON, JULIANA JANET; BOMBAY, MAURENE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37541</td>
+		<td rowspan = "1">BIO 121 THQ/THXY</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 7:30-8:30AM lec IB 250; TTh 2:30-5:30PM lab IB 330<br />
+			PUZON, JULIANA JANET<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37542</td>
+		<td rowspan = "1">BIO 122 WFW/WFRU</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			WF 8:30-11:30AM lab IB 321; WF 1-2PM lec IB 250<br />
+			GARCIA, LUIS MARIA; PEREDAS, CHARMAINE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37543</td>
+		<td rowspan = "1">BIO 122 WFW/WFXY</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			WF 1-2PM lec IB 250; WF 2:30-5:30PM lab IB 321<br />
+			GARCIA, LUIS MARIA; PEREDAS, CHARMAINE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37545</td>
+		<td rowspan = "1">BIO 133 THW/THRU</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 8:30-11:30AM lab IB 260; TTh 1-2:30PM lec IB 250<br />
+			FERRER, REGINA JOYCE; HALILI, JORDAN FERDIN; BASCOS, ERIKA MARIE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37546</td>
+		<td rowspan = "1">BIO 133 THW/THXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec IB 250; TTh 2:30-5:30PM lab IB 260<br />
+			FERRER, REGINA JOYCE; HALILI, JORDAN FERDIN; BASCOS, ERIKA MARIE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37547</td>
+		<td rowspan = "1">BIO 140 THQ/THRU</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 7-8:30AM lec IB 345; TTh 8:30-11:30AM lab IB 171<br />
+			QUILANG, JONAS; RODEROS, REMEDIOS; FONTANILLA, IAN K; YU, SHINY CATHLYNNE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37548</td>
+		<td rowspan = "1">BIO 140 THQ/THXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 7-8:30AM lec IB 345; TTh 2:30-5:30PM lab IB 171<br />
+			QUILANG, JONAS; RODEROS, REMEDIOS; SANTOS, BRIAN; FONTANILLA, IAN K<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37549</td>
+		<td rowspan = "1">BIO 140 THQ/WFRU</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 7-8:30AM lec IB 345; WF 8:30-11:30AM lab IB 171<br />
+			QUILANG, JONAS; RODEROS, REMEDIOS; FONTANILLA, IAN K; LUCZON, ADRIAN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37550</td>
+		<td rowspan = "1">BIO 150 WFQ/THVW</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 7-8:30AM lec IB 250; TTh 11:30AM-2:30PM lab IB 280<br />
+			CAO, ERNELEA; PENULIAR, GIL; BELA-ONG, DENNIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37551</td>
+		<td rowspan = "1">BIO 150 WFQ/WFRU</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 7-8:30AM lec IB 250; WF 8:30-11:30AM lab IB 280<br />
+			IBANA, JOYCE; SANTOS, DAISY MAY; IMPERIAL, IVAN CHRISTIAN; BELA-ONG, DENNIS; VELARDE, MICHAEL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37552</td>
+		<td rowspan = "1">BIO 150 WFQ/WFXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 7-8:30AM lec IB 250; WF 2:30-5:30PM lab IB 280<br />
+			IBANA, JOYCE; TRINIDAD, ABIGAIL; BELA-ONG, DENNIS; VELARDE, MICHAEL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37553</td>
+		<td rowspan = "1">BIO 151 TXY/HXY</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			Th 2:30-5:30PM lab IB 280; T 3-5PM lec IB 345<br />
+			IBANA, JOYCE; IMPERIAL, IVAN CHRISTIAN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37603</td>
+		<td rowspan = "1">BIO 160 THO/THXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 2:30-5:30PM lab IB 118; TTh 5:30-7PM lec IB 117<br />
+			HERNANDEZ, MA BRENDA; MAGBANUA, FRANCIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37554</td>
+		<td rowspan = "1">BIO 160 THO/WFRU</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 8:30-11:30AM lab IB 118; TTh 5:30-7PM lec IB 117<br />
+			HERNANDEZ, MA BRENDA; MAGBANUA, FRANCIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37555</td>
+		<td rowspan = "1">BIO 160 THO/WFXY</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 2:30-5:30PM lab IB 118; TTh 5:30-7PM lec IB 117<br />
+			HERNANDEZ, MA BRENDA; MAGBANUA, FRANCIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37556</td>
+		<td rowspan = "1">BIO 163 WRU/FRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 8:30-11:30AM lab IB 346; F 9-11AM lec IB 319<br />
+			VITAL, PIERANGELI; GALARION, LUIZA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37557</td>
+		<td rowspan = "1">BIO 164 WFU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec IB 250<br />
+			ESPANOLA, CARMELA; ONG, PERRY<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				46			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37601</td>
+		<td rowspan = "1">BIO 180 THR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec IB 318<br />
+			SANTOS, BRIAN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37558</td>
+		<td rowspan = "1">BIO 180 WFU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec IB 345<br />
+			SANTOS, BRIAN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				31			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37559</td>
+		<td rowspan = "1">BIO 191 WFQ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 7-8:30AM lec IB 345<br />
+			FONTANILLA, IAN K<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				47			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37560</td>
+		<td rowspan = "1">BIO 196 FO</td>
+		<td rowspan = "1">1.0</td>
+		<td rowspan = "1">
+			F 6-7PM lec IB 318<br />
+			VELARDE, MICHAEL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37561</td>
+		<td rowspan = "1">BIO 196 HO</td>
+		<td rowspan = "1">1.0</td>
+		<td rowspan = "1">
+			Th 6-7PM lec IB 318<br />
+			PUZON, JULIANA JANET<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>13</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37563</td>
+		<td rowspan = "1">BIO 196 TO</td>
+		<td rowspan = "1">1.0</td>
+		<td rowspan = "1">
+			T 6-7PM lec IB 318<br />
+			PUZON, JULIANA JANET<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37562</td>
+		<td rowspan = "1">BIO 196 WO</td>
+		<td rowspan = "1">1.0</td>
+		<td rowspan = "1">
+			W 6-7PM lec IB 318<br />
+			VELARDE, MICHAEL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37584</td>
+		<td rowspan = "1">BIO 200 A</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			ANTICAMARA, JONATHAN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37585</td>
+		<td rowspan = "1">BIO 200 B</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			BASIAO, ZUBAIDA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37586</td>
+		<td rowspan = "1">BIO 200 C</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			CAO, ERNELEA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37587</td>
+		<td rowspan = "1">BIO 200 D</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			CATAP, ELENA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37588</td>
+		<td rowspan = "1">BIO 200 E</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			ESPANOLA, CARMELA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37589</td>
+		<td rowspan = "1">BIO 200 F</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			FONTANILLA, IAN K<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37590</td>
+		<td rowspan = "1">BIO 200 G</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			GARCIA, LUIS MARIA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37591</td>
+		<td rowspan = "1">BIO 200 H</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			IBANA, JOYCE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37592</td>
+		<td rowspan = "1">BIO 200 I</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			JACINTO, SONIA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37593</td>
+		<td rowspan = "1">BIO 200 J</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			MAGBANUA, FRANCIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37594</td>
+		<td rowspan = "1">BIO 200 K</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			ONG, PERRY<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37595</td>
+		<td rowspan = "1">BIO 200 L</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			PENULIAR, GIL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37596</td>
+		<td rowspan = "1">BIO 200 M</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			PUZON, JULIANA JANET<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37597</td>
+		<td rowspan = "1">BIO 200 N</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			QUILANG, JONAS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37598</td>
+		<td rowspan = "1">BIO 200 O</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			RIVERA, WINDELL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37625</td>
+		<td rowspan = "1">BIO 200b P</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			PUZON, JULIANA JANET<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37599</td>
+		<td rowspan = "1">BIO 200 P</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			VITAL, PIERANGELI<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37600</td>
+		<td rowspan = "1">BIO 200 Q</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			YAP, SANDRA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37628</td>
+		<td rowspan = "1">BIO 200a Q</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			QUILANG, JONAS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37612</td>
+		<td rowspan = "1">BIO 200 R</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			HERNANDEZ, MA BRENDA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37564</td>
+		<td rowspan = "1">BIO 241 SRU/SWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9-11AM lec IB 250; S 1-4PM lab IB 171<br />
+			FONTANILLA, IAN K<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37565</td>
+		<td rowspan = "1">BIO 243 TWX/HWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 1-4PM lab IB 118; T 2-4PM lec IB 319<br />
+			QUILANG, JONAS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37566</td>
+		<td rowspan = "1">BIO 250 THO</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 5:30-7PM lec IB 345<br />
+			IBANA, JOYCE; BELA-ONG, DENNIS; VELARDE, MICHAEL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37567</td>
+		<td rowspan = "1">BIO 260 FO/FXY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 2:30-5:30PM lab IB 119; F 5:30-7:30PM lec IB 250<br />
+			MAGBANUA, FRANCIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37604</td>
+		<td rowspan = "1">BIO 265 WFO</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 5:30-7PM lec IB 117<br />
+			TBA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37613</td>
+		<td rowspan = "1">BIO 265 WFZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 5:30-8:30PM lec IB 117<br />
+			ONG, PERRY<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37568</td>
+		<td rowspan = "1">BIO 271 MO/MXY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 2:30-5:30PM lab TBA; M 5:30-7:30PM lec IB 345<br />
+			VALLE, DEMETRIO<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37569</td>
+		<td rowspan = "1">BIO 296 WY</td>
+		<td rowspan = "1">1.0</td>
+		<td rowspan = "1">
+			W 4-5PM lec IB 318<br />
+			MAGBANUA, FRANCIS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37611</td>
+		<td rowspan = "1">BIO 299 WFRU</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			WF 8:30-11:30AM res TBA<br />
+			QUILANG, JONAS; VELARDE, MICHAEL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37615</td>
+		<td rowspan = "1">BIO 299 WFVW</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			WF 11:30AM-2:30PM lab TBA<br />
+			ESPANOLA, CARMELA; FONTANILLA, IAN K<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37614</td>
+		<td rowspan = "1">BIO 299 WFZ</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			WF 5:30-8:30PM res TBA<br />
+			IBANA, JOYCE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37610</td>
+		<td rowspan = "1">BIO 300 A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			CATAP, ELENA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				2			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37618</td>
+		<td rowspan = "1">BIO 300 B</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			PUZON, JULIANA JANET<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37608</td>
+		<td rowspan = "1">BIO 300 J</td>
+		<td rowspan = "1">6.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			IBANA, JOYCE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37627</td>
+		<td rowspan = "1">BIO 300 Q</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			QUILANG, JONAS<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37607</td>
+		<td rowspan = "1">BIO 300 S</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			JACINTO, SONIA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37620</td>
+		<td rowspan = "1">BIO 300 V</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			VELARDE, MICHAEL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37626</td>
+		<td rowspan = "1">BIO 300 Y</td>
+		<td rowspan = "1">6.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			YAP, SANDRA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37619</td>
+		<td rowspan = "1">BIO 395 A</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			S 10AM-4PM lab TBA<br />
+			ONG, PERRY<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37609</td>
+		<td rowspan = "1">BIO 395 I</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			S 10AM-4PM lab TBA<br />
+			IBANA, JOYCE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37622</td>
+		<td rowspan = "1">BIO 395 WFRU</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			WF 8:30-11:30AM lab TBA<br />
+			YAP, SANDRA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37572</td>
+		<td rowspan = "1">BIO 397 THU-1<br/>Cell Cycle Control</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec IB 250<br />
+			VELARDE, MICHAEL<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37570</td>
+		<td rowspan = "1">BIO 397 TYO<br/>Forensics Biology</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 4-7PM lec IB 250<br />
+			RIVERA, WINDELL; FONTANILLA, IAN K; YAP, SANDRA; DE UNGRIA, CORAZON<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37571</td>
+		<td rowspan = "1">BIO 397 WFW<br/>Biodiversity Science</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec IB 319<br />
+			ONG, PERRY; ANTICAMARA, JONATHAN<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37573</td>
+		<td rowspan = "1">BIO 397 WXY<br/>Immunotoxicology</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 2:30-5:30PM lec IB 319<br />
+			CATAP, ELENA<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">37616</td>
+		<td rowspan = "1">BIO 399 WFRU</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			WF 8:30-11:30AM thesis TBA<br />
+			IBANA, JOYCE<br/>
+					</td>
+		 
+		<td>IB<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">42451</td>
+		<td rowspan = "1">Bioethics 202 HYZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 4-7PM lec PH 306<br />
+			SY, PETER<br/>
+					</td>
+		 
+		<td>Philo<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">42571</td>
+		<td rowspan = "1">Bioethics 211 FLNO</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 4-7PM lec TBA<br />
+			MANALOTO, RENATO<br/>
+					</td>
+		 
+		<td>Philo<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">28170</td>
+		<td rowspan = "1">BJ 101 FWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 1-4PM lec CMC RADIO<br />
+			CLAUDIO, MA IVY<br/>
+					</td>
+		 
+		<td>OCS<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">28164</td>
+		<td rowspan = "1">BJ 110 WWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 1-4PM lec CMC RADIO<br />
+			CLAUDIO, MA IVY<br/>
+					</td>
+		 
+		<td>OCS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+	</table>
+
+</div><!-- #content -->
+
+﻿
+<script type="text/javascript">
+			
+		$(document).ready(function() {
+			
+			//set the width per footer_expander element
+			var expander_count = $('.footerlink').length;
+			var expander_width = (83/expander_count);
+			
+			var i = 0;
+			$.each($(".footerlink"), function(index, value){
+				$(this).css('width', expander_width+'%');
+				$(this).css('left', (((expander_width)*i)+10)+'%');
+				i++;
+			});
+			
+			$(".footerlink,.footer_expander").hover(
+				function(){
+					$(this).animate({ height: "30"}, 50);
+				},
+				function(){
+					$(this).animate({ height: "16"}, 50);
+				
+				}
+			);
+			
+			//set the width per footer_expander element
+			var division_count = $('.footer_division').length;
+			var division_width = (88/division_count);
+			division_width = division_width+'%';
+			
+			$.each($(".footer_division"), function(index, value){
+				$(this).css('width', division_width);
+			});
+			
+		function change_acadtermtype() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_acadtermtype/' + $(this).val();
+		}
+
+		function change_role() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_role/' + $(this).val();
+		}
+
+		function show_roles() {
+			$("#span_role").addClass("hidden");
+			$("#span_role-choices").removeClass("hidden");
+		}
+
+		function show_acadtermtypes() {
+			$("#span_acadtermtype").addClass("hidden");
+			$("#span_acadtermtype-choices").removeClass("hidden");
+		}
+
+	 });
+	 
+	
+	function showFooter(){
+		$('#footer').slideDown(150);
+		$('.footermin').hide();
+	}
+	function hideFooter(){
+		$('#footer').slideUp(150);
+		$('.footermin').show();
+	}
+	</script>
+
+<span style="clear:both;"></span>
+
+	<div class="footer_expander footermin" onclick="showFooter();">
+		More ▲
+	</div>
+
+		<div id="footer" align="center">
+		<div id="footer_linktotop" align="right" onclick="hideFooter();">
+			<a href="Javascript:void(0);" onclick="hideFooter();" style="color:white">Less ▼</a>
+		</div>
+		<div style="padding-top: 30px;">
+						<div class="footer_division">
+				<div class="footer_division_header">Flowcharts</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/OnlineDroppingFlowchart.pdf" >
+								Dropping							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ChangeMatFlowchart_modified.pdf" >
+								Change Mat							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ClearanceMechanics.pdf" >
+								Clearance							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/downloads/LOA_mechanics.pdf" >
+								Leave of Absence							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Class Schedules</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/" >
+								Regular Classes							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/mba" >
+								MBA/MS Finance PT							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/schedule/spring" >
+								Spring Asia							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Information</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/course_catalog" >
+								Course Catalog							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/curriculum.html" >
+								Curriculum Checklist							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://our.upd.edu.ph/files/ListofGECourses.pdf" >
+								List of RGEP Courses							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Calendar</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/~updinfo/apr14/articles/BOR_approved_AcadCal_AY_2014_2015.pdf" >
+								BOR Approved<br>Academic Calendar<br>AY 2014-2015							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular" >
+								Regular Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/mba" >
+								MBA/MS Fin PT Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/msfin" >
+								MS Fin FT Calendar							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/spring" >
+								Spring Asia Calendar							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">CRS</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/faq" >
+								CRS FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/faq.html" >
+								OUR FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>History of the CRS<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item ">
+													<span>User Guide<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/about/" >
+								The CRS Team<br/>							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Contact Us</div>
+																		<div class="footer_division_item ">
+																				<a href="http://www.facebook.com/groups/134746139953068/" >
+								Facebook Group							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="mailto:crssupport@list.upd.edu.ph" >
+								E-Mail							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>Phone<br/>(981-8500 local 4560)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+													<span>You may visit us at the CRSRS Office at the 3rd floor of the OUR.</span>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">External Links</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/" >
+								UP Diliman							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://up.edu.ph/" >
+								UP System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/" >
+								OUR Site							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://sts.up.edu.ph/" >
+								Socialized Tuition System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://dormapplication.upd.edu.ph/" >
+								Dorm Application Website							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://uvle.up.edu.ph/" >
+								UvLE							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://ucc.upd.edu.ph/about-us/" >
+								UPCC							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://mail.up.edu.ph/" >
+								UP Webmail							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://www.dzup.org/" >
+								DZUP							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://upd.edu.ph/aup/" >
+								Acceptable Use Policy							</a>
+											</div>
+																	</div>
+					</div>
+	</div>
+
+	<div class="footer_quicklinks footermin">
+		Quick Links:
+	</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/schedule/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/schedule/">
+				Regular Classes			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/course_catalog'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/course_catalog">
+				Course Catalog			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='http://our.upd.edu.ph/curriculum.html'">
+			<a class="a_footerlink" href="http://our.upd.edu.ph/curriculum.html">
+				Curriculum Checklist			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/acadcal_public/index/advanced/regular'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular">
+				Regular Calendar			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/faq'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/faq">
+				CRS FAQ			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/about/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/about/">
+				The CRS Team<br/>			</a>
+		</div>
+	</body>
+</html>

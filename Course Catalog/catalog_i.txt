@@ -1,0 +1,2388 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>UP CRS - Course Catalog</title>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery-1.4.1.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/layout.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/status.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/schedule.css" type="text/css" />
+	<link rel="shortcut icon" href="https://crs.upd.edu.ph/images/favicon.ico" type="image/x-icon" />
+
+	<script type="text/javascript" language="JavaScript">
+	$(document).ready(function() {
+		$('#btn_search').click(searchcourses);
+		$('#frm_schedule').submit(function(e) {
+			e.preventDefault();
+			searchcourses();
+		});
+	});
+
+	function searchcourses() {
+		var coursenumber = $.trim($('#txt_coursenumber').val());
+		var alphanumeric_pattern = /^[a-zA-Z0-9\s\.\-]+$/;
+
+		if(coursenumber != '') {
+			if( ! alphanumeric_pattern.test(coursenumber)) {
+				alert('Course number must be alphanumeric.');
+			} else {
+				window.location = 'https://crs.upd.edu.ph/course_catalog/index/' + coursenumber;
+			}
+		}
+
+	}
+
+	</script>
+
+</head>
+
+<body class="schedule">
+
+<div id="header">
+	<a href="https://crs.upd.edu.ph/user" class="header_link"></a>
+</div>
+<div id="subheader">
+</div>
+
+<div id="content" class="align-center">
+
+<h1>
+	Course Catalog
+</h1>
+
+<br />
+
+<form id="frm_schedule" action="" method="post">
+<table class="form" align="center">
+	<tr>
+		<td>Course Number:</td>
+		<td><input type="text" id="txt_coursenumber" name="txt_coursenumber" /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>(e.g., Math 11, Eng 1)</td>
+	</tr>
+	<tr class="tr_submit">
+		<td></td>
+		<td><input type="button" id="btn_search" name="btn_search" value="Search" /></td>
+	</tr>
+</table>
+</form>
+
+<p>
+	<a href="https://crs.upd.edu.ph/course_catalog/index/A">A</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/B">B</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/C">C</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/D">D</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/E">E</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/F">F</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/G">G</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/H">H</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/I">I</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/J">J</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/K">K</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/L">L</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/M">M</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/N">N</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/O">O</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/P">P</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Q">Q</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/R">R</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/S">S</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/T">T</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/U">U</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/V">V</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/W">W</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/X">X</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Y">Y</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Z">Z</a>&nbsp;&nbsp;
+<a href="https://crs.upd.edu.ph/">Back to main page</a>
+</p>
+
+<br /><br />
+
+<table >
+<tr>
+	<th width = "15%">Course code & No.</th>
+	<th width = "30%">Course Title</th>
+	<th width = "40%">Course Description</th>
+	<th width = "15%">Offering Unit</th>
+	
+</tr>
+			<tr class="tr_odd">
+		<td>ID 10</td>
+		<td>Introduction to Interior Design</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 11</td>
+		<td>Interior Design Freehand Drawing and Rendering</td>
+		<td>Methods and techniques in freehand drawing and rendering in various media applicable to interior design. </td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 11</td>
+		<td>Design Presentation I</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 14</td>
+		<td>Historical Styles I</td>
+		<td>History of Western interiors and furniture covering ancient times to the Renaissance.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 14</td>
+		<td>History of Western Interiors</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 20</td>
+		<td>Theories in Interior Design</td>
+		<td>Different theoretical frameworks relevant to interior design.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 20</td>
+		<td>Theories in Interior Design</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 21</td>
+		<td>Interior Design Drafting and Perspective Drawing</td>
+		<td>Drafting methods and techniques in interior design with emphasis on orthographic and perspective drawings.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 21</td>
+		<td>Design Presentation II</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 24</td>
+		<td>Philippine and Asian Historical Styles </td>
+		<td>History of Philippine and Asian interiors and furniture.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 24</td>
+		<td>History of Philippine and Asian Interiors</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 31</td>
+		<td>Design Presentation III</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 31</td>
+		<td>Interior Design Presentation Methods and Techniques</td>
+		<td>Advanced methods and techniques in visual presentation and other forms of communication applicable to interior design.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 34</td>
+		<td>Historical Styles II</td>
+		<td>History of Western interiors and furniture covering Baroque, Rococo, and Neoclassic periods.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 44</td>
+		<td>Historical Styles III</td>
+		<td>History of Western interiors and furniture from the nineteenth century to the present.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 107</td>
+		<td>Professional Practice I</td>
+		<td>Statutory laws, codes and standards applicable to interior design in the Philippines.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 114</td>
+		<td>Historic Furniture and Styles of Decoration I</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 116</td>
+		<td>Furniture Design and Construction I</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 116</td>
+		<td>Furniture Design and Construction</td>
+		<td>Basic methods and processes applied to custom and freestanding furniture design.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 117</td>
+		<td>Professional Practice II</td>
+		<td>Project management and business procedures involved in the interior design practice in the Philippines.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 117</td>
+		<td>Professional Management in Interior Design</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 121</td>
+		<td>Interior Design I</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 121</td>
+		<td>Interior Design I</td>
+		<td>Design problems dealing with residential interiors.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 123</td>
+		<td>Decorative Arts and Soft Furnishings</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 123</td>
+		<td>Visual and Applied Arts in Interior Design</td>
+		<td>Visual and applied arts as decorative and/or functional objects in interiors.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 124</td>
+		<td>Historic Furniture and Styles of Decoration II</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 126</td>
+		<td>Furniture Design and Construction II</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 131</td>
+		<td>Interior Design II</td>
+		<td>Design problems dealing with office interiors.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 131</td>
+		<td>Interior Design II</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 133</td>
+		<td>Interior Construction</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 133</td>
+		<td>Materials for Interior Design</td>
+		<td>Materials for finishing and treatments used in interior design and their specific applications. </td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 141</td>
+		<td>Interior Design III</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 141</td>
+		<td>Interior Design III</td>
+		<td>Design problems dealing with institutional interiors.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 143</td>
+		<td>Interior Construction I</td>
+		<td>Methods and techniques of construction in interior design.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 151</td>
+		<td>Interior Design IV</td>
+		<td>Design problems dealing with interiors and settings for exhibition, retail, and theater and television productions.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 151</td>
+		<td>Interior Design IV</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 153</td>
+		<td>Interior Construction II</td>
+		<td>Building systems relevant to interior design.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 161</td>
+		<td>Interior Design V</td>
+		<td>Design problems dealing with interiors for lodging and food and beverage services.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 178</td>
+		<td>Interior Design Internship</td>
+		<td>Internship in interior design, architectural and furniture firms under the supervision of a registered interior designer or architect. </td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 178</td>
+		<td>Practicum</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 179</td>
+		<td>Special Projects in Interior Design</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 179</td>
+		<td>Special Project in Interior Design</td>
+		<td>A capstone course in interior design that involves planning, designing, and execution of a special project collectively chosen by the class.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 191</td>
+		<td>Interior Design Seminar</td>
+		<td>Global and local issues and perspectives in interior design.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 191</td>
+		<td>Seminar</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 199</td>
+		<td>Research Methods in Interior Design</td>
+		<td>Research methods relevant to interior design.</td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 199</td>
+		<td>Research Methods in Interior Design</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 200</td>
+		<td>Undergraduate Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 201</td>
+		<td>Theory of Interior Design</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 216</td>
+		<td>Interior Design Education</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 231</td>
+		<td>Interior Design Technology</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 241</td>
+		<td>Interior Design and Philippine Society and Culture</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 251</td>
+		<td>Comparative Interior Design</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 261</td>
+		<td>Current Issues in Interior Design</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 276</td>
+		<td>Environmental Concerns in Interior Design</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>ID 299</td>
+		<td>Research Methods in Interior Design</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>ID 300</td>
+		<td>Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Clothing, Textile and Interior Design" style="border-bottom: 1px dotted;">CTID</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 3</td>
+		<td>Introduction to Industrial Engineering</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 10</td>
+		<td>Basics of Industrial Engineering</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 21</td>
+		<td>Industrial Processes</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 21</td>
+		<td>Industrial Materials and Processes</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 22</td>
+		<td>Product Design and Development</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 27</td>
+		<td>Probability and Statistics for Industrial Engineering</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 28</td>
+		<td>Statistical Analysis for Industrial Engineering</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 31</td>
+		<td>Industrial Organization and Management</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 32</td>
+		<td>Methods Engineering</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 33</td>
+		<td>Systems and Procedures</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research, Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR, DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 41</td>
+		<td>Operations Research I</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 50</td>
+		<td>Engineering Economics for Industrial Engineering</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 122</td>
+		<td>Product Design and Development</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 134</td>
+		<td>Ergonomics</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 135</td>
+		<td>Industrial Quality Control</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 136</td>
+		<td>Manufacturing Systems</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 137</td>
+		<td>Quality Systems in Manufacturing</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 138</td>
+		<td>Manufacturing Management</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 139</td>
+		<td>Reliability Engineering for Industrial Systems</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 141</td>
+		<td>Operations Research I</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 142</td>
+		<td>Operations Research II</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 143</td>
+		<td>Stochastic Processes in Engineering</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 144</td>
+		<td>Systems Simulation</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 150</td>
+		<td>Systems Evaluation</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 151</td>
+		<td>Production Systems</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 152</td>
+		<td>Manufacturing Planning and Design</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 153</td>
+		<td>Project Development and Management</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 154</td>
+		<td>Information Systems I</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 155</td>
+		<td>Industrial Systems Design</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 156</td>
+		<td>Information Systems II</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 157</td>
+		<td>Software Tools for Industrial Engineering</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 158</td>
+		<td>Supply Chain Management for Industrial and Service Systems</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 159</td>
+		<td>Introduction to Technology Entrepreneurship</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 160</td>
+		<td>Ergonomics</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 161</td>
+		<td>Safety and Health Management</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 181</td>
+		<td>Systems Simulation</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 183</td>
+		<td>Stochastic Processes in Engineering</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 197</td>
+		<td>Special Topics</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 198</td>
+		<td>Special Problems</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 200</td>
+		<td>Special Problems</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 201</td>
+		<td>Industrial Management and Productivity</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 202</td>
+		<td>Product Systems and Processes</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 203</td>
+		<td>Industrial Productivity</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 211</td>
+		<td>Quantitative Methods in Industrial Engineering</td>
+		<td>Estimation and tests of hypotheses in industrial engineering problems, regression and correlation, statistical control charts, acceptance sampling plans, specifications and tolerances, reliability and life-testing.</td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 212</td>
+		<td>Quantitative Methods in Industrial Engineering II</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 214</td>
+		<td>Introductory Operations Research</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 220</td>
+		<td>Advanced Methods and Standards</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 221</td>
+		<td>Project Development and Evaluation</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 222</td>
+		<td>Production Planning and Control Systems</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 223</td>
+		<td>Industrial Systems Analysis and Design</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 229</td>
+		<td>Research Projects</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 230</td>
+		<td>Statistical Design and Analysis for Engineers</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 231</td>
+		<td>Analysis of Production Systems</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 241</td>
+		<td>Operations Research I</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 242</td>
+		<td>Operations Research II</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 243</td>
+		<td>Advanced Methods and Standards</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 245</td>
+		<td>Advances in Production Systems</td>
+		<td>Current emerging trends in the analysis and design of production systems. </td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 251</td>
+		<td>Engineering Economic Analysis</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 252</td>
+		<td>Advanced Operations Research</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 253</td>
+		<td>Information Systems I</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 254</td>
+		<td>Information Systems II</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 255</td>
+		<td>Facilities Systems Design</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 256</td>
+		<td>Human Factors Engineering</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 281</td>
+		<td>Systems Simulation</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 290</td>
+		<td>Seminar</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 296</td>
+		<td>Seminar</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 298</td>
+		<td>Special Problems</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IE 299</td>
+		<td>Special Project</td>
+		<td>Independent study on topics in the area of specialization</td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IE 300</td>
+		<td>Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Industrial Engineering and Operations Research, Department of Industrial Engineering and Operations Research" style="border-bottom: 1px dotted;">DIE/OR, DIE/OR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Int B Indo A</td>
+		<td>Elementary Bahasa Indonesia</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Int B Indo B</td>
+		<td>Intermediate Bahasa Indonesia</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Int B Malay A</td>
+		<td>Elementary Bahasa Malaysia</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Int B Malay B</td>
+		<td>Intermediate Bahasa Malaysia</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Int Chi A</td>
+		<td>Elementary Chinese</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Int Chi B</td>
+		<td>Intermediate Chinese</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>INT INDO A</td>
+		<td>Elementary Indonesian</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Int Jap A</td>
+		<td>Elementary Japanese</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Int Jap B</td>
+		<td>Intermediate Japanese</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intl Stud 201</td>
+		<td>Nature and Scope of International Studies</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intl Stud 202</td>
+		<td>Development of International Systems</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intl Stud 203</td>
+		<td>The Geographical Context of International Affairs</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intl Stud 209</td>
+		<td>Readings in International Relations</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intl Stud 251</td>
+		<td>The Organization and Management of International Relations</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intl Stud 261</td>
+		<td>Contemporary International Issues and Trends</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intl Stud 263</td>
+		<td>International Peace and Security</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intl Stud 267</td>
+		<td>Special Problems and Topics in International Security</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intl Stud 270</td>
+		<td>Comparative International Systems</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intl Stud 280</td>
+		<td>International Law and Organization</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intl Stud 290</td>
+		<td>Theories of International Relations</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intl Stud 298</td>
+		<td>Praticum</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intl Stud 299</td>
+		<td>Research Methods</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intl Stud 300</td>
+		<td>MA Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Political Science" style="border-bottom: 1px dotted;">PolSci</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Int Malay A</td>
+		<td>Elementary Bahasa Malaysia</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Int Malay B</td>
+		<td>Intermediate Bahasa Malaysia</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intsik 10</td>
+		<td>Elementaring Intsik I (Elementary Chinese I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intsik 11</td>
+		<td>Elementaring Intsik II (Elementary Chinese II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intsik 12</td>
+		<td>Intermidyet na Intsik I (Intermediate Chinese I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intsik 13</td>
+		<td>Intermidyet na Intsik II (Intermediate Chinese II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intsik 100</td>
+		<td>Advans na Intsik I (Advanced Chinese I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intsik 101</td>
+		<td>Advans na Intsik II (Advanced Chinese II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Intsik 110</td>
+		<td>Mga Babasahin sa Intsik (Readings in Chinese)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Intsik 111</td>
+		<td>Advans na Komposisyon sa Intsik (Advanced Composition in Chinese)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Int Thai A</td>
+		<td>Elementary Thai</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Int Thai B</td>
+		<td>Intermediate Thai</td>
+		<td></td>
+		<td><abbr title="Asian Studies Program" style="border-bottom: 1px dotted;">AC-ASP</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 101</td>
+		<td>Fundamentals of IR</td>
+		<td>Concepts and theories of IR.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 104</td>
+		<td>Labor and the Economy</td>
+		<td>Basic economic concepts and principles; labor and the economy in a development context.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 106</td>
+		<td>Industrial Democracy</td>
+		<td>Concepts and practice of industrial democracy.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 108</td>
+		<td>Labor Laws & Social Development</td>
+		<td>Philosophy of labor legislation and social development.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 110</td>
+		<td>History of the Philippine Labor Movement</td>
+		<td>History and evolution of the Philippine labor movement.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 111</td>
+		<td>Collective Bargaining</td>
+		<td>Theory and practice of Collective Bargaining.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 112</td>
+		<td>Compensation Systems</td>
+		<td>Wage and benefits administration.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 113</td>
+		<td>Organizational Behavior in IR</td>
+		<td>Study of organizational behavior in IR.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 114</td>
+		<td>IR in the Public Sector</td>
+		<td>Concept and practice of IR in the public sector.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 115</td>
+		<td>Industrial Conflict Resolution</td>
+		<td>Theory and practice of industrial conflict resolution.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 120</td>
+		<td>Human Resource Development</td>
+		<td>Introduction to the concept and programs of HRD.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 125</td>
+		<td>Training Design</td>
+		<td>Training programs and methodologies.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 131</td>
+		<td>Comparative IR</td>
+		<td>IR models in selected countries.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 142</td>
+		<td>Labor Policy Analysis</td>
+		<td>Concept and issues in labor policy formulation and implementation.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 181</td>
+		<td>Private or Public Enterprise Industrial Relations Practicum</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 182</td>
+		<td>Labor Organization Practicum</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 185</td>
+		<td>Labor Education</td>
+		<td>Concept and practice of labor education and labor advocacy work.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 197</td>
+		<td>Special Topics in IR</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 199</td>
+		<td>Research Methods in IR</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 200</td>
+		<td>Thesis</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 201</td>
+		<td>Introduction to Industrial Relations</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 202</td>
+		<td>Organization and Work</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 203</td>
+		<td>Philippine Labor Problems</td>
+		<td>Employment, unemployment and related problems and institutional factors affecting the allocation of labor resources.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 204</td>
+		<td>Labor and the Economy</td>
+		<td>Basic principles, institutions and mechanisms in both the industry, as well as the national and global levels which define and mediate the role of labor in industrial relations and economic development, including policy issues and options.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 205</td>
+		<td>Wages and the Labor Market</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 207.1</td>
+		<td>Employment Relations and Industrial Democracy</td>
+		<td>Principles, jurisprudence, laws and rules covering employment contracts, labor-management relations, collective bargaining, strikes, and disputes settlement in the context of industrial democracy.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 207.2</td>
+		<td>Labor Standards, Justice and Equity</td>
+		<td>Current labor standards: wages, benefits, work conditions, safety and health, gender equality and related issues in hiring and promotion, and affirmative action.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 210</td>
+		<td>Philippine Labor Movement</td>
+		<td>History of the Philippine labor movement, in the context of industrialization and industrial policy.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 211</td>
+		<td>Collective Bargaining and Negotiations</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 212</td>
+		<td>Job Evaluation and Wage/Salary Administration</td>
+		<td>Critical examination of various job evaluation schemes, determinants of wage levels, wage structures and study of problems/issues related to the implementation of compensation schemes.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 213</td>
+		<td>Organizational Behavior in Industrial Relations</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 214</td>
+		<td>Industrial Relations in the Public Sector</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 215</td>
+		<td>Forms and Settlement of Industrial Conflicts</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 216</td>
+		<td>Special Problems in Labor-Management Relations</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 217</td>
+		<td>Employee Benefit Programs</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 218</td>
+		<td>Labor Laws and Social Development</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 220</td>
+		<td>Human Resource Development at the National Level</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 221</td>
+		<td>Wages and the Labor Market</td>
+		<td>Theories on the labor market, analysis of wage and employment problems, determinants of wage levels and structures.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 222</td>
+		<td>Human Resource Development at the Firm Level</td>
+		<td>HRD planning and program development and implementation at the firm level; roles of HRD in organizations and the relationships of HRD policies with other business policies of the organization.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 225</td>
+		<td>Design and Administration of Training Programs</td>
+		<td>Training programs and methodologies as applied in business, government and industrial organizations. Emphasis is placed on integrating public and private efforts for training and development.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 226</td>
+		<td>Special Problems in Human Resources Development</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 231</td>
+		<td>Comparative Labor Movements</td>
+		<td>Evaluation and role of labor movements in selected countries of Europe, North America, Africa, Latin America and Asia.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 233</td>
+		<td>Labor Problems and Economic Development</td>
+		<td>Development theories and their implication to the allocation of manpower, skills training and wage policies.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 236</td>
+		<td>Special Topics in Comparative Industrial Relations</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 242</td>
+		<td>Approaches to Labor Policy Analysis</td>
+		<td>Approaches to labor policy planning, evaluation and research.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 246</td>
+		<td>Special Problems in Labor Policy and Administration</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 281</td>
+		<td>Seminar in Philippine Labor Relations Policy</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 283</td>
+		<td>Seminar in Human Resources Planning in Less Developed Countries</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 285</td>
+		<td>Seminar in Workers' Education</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 286</td>
+		<td>Seminar in Workers' Participation in Management</td>
+		<td>Concept and practice of worker participation in management; its origin, application and development; and determinants of participation and the efficacy of structures and processes.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 287</td>
+		<td>Seminar in Comparative Industrial Relations</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 288</td>
+		<td>Seminar in Philippine Labor Problems</td>
+		<td>Employment, unemployment and related problems and institutional factors affecting the allocation of labor resources.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 289</td>
+		<td>Seminar in Industrial Relations and National Development</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 299</td>
+		<td>Research Methods in Industrial Relations</td>
+		<td>Study and analysis of research design and methods applicable to the field of industrial and labor relations and manpower studies.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 299</td>
+		<td>Research Methods in Industrial Relations</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 299.1</td>
+		<td>Quantitative Approaches in IR</td>
+		<td>Use of quantitative approaches in the analysis of current research problems in labor and industrial relations.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IR 299.2</td>
+		<td>Research Methods in Industrial Relations</td>
+		<td>Advanced research methodology in industrial relations including research design formulation, field research implementation and statistical data analysis.</td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IR 300</td>
+		<td>Thesis Writing</td>
+		<td></td>
+		<td><abbr title="School of Labor and Industrial Relations" style="border-bottom: 1px dotted;">SOLAIR</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 201</td>
+		<td>Introduction to International Studies</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 203</td>
+		<td>The Geographical Context of International Affairs</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 209</td>
+		<td>Readings in International Relations</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 211</td>
+		<td>The Qur'an and its Commentary (Tafsir)</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 214</td>
+		<td>The Biography and Hadith of the Prophet</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 221</td>
+		<td>Arab Historiography</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 225</td>
+		<td>History of Islam</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 231</td>
+		<td>Islamic Political Thought</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 241</td>
+		<td>Kalam and Islamic Philosophy</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 251</td>
+		<td>Islamic Law and Jurisprudence</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 261</td>
+		<td>Seminar: The Muslims in the Philippines</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 262</td>
+		<td>Seminar: The Relations of Muslims and Non-Muslim Communities in a National Society</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 263</td>
+		<td>International peace and security</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 267</td>
+		<td>Special Problems and Topics in  International Security</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 271</td>
+		<td>'Adat and Muslim Personal Laws on Family Relations</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 272</td>
+		<td>Seminar: Social and Political Institutions of the Muslims in the Philippines</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 275</td>
+		<td>Muslim Personal Laws on Inheritance and Succession</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 280</td>
+		<td>International Law and World Order</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 281</td>
+		<td>Seminar: Literary Traditions of the Muslims in the Philippines</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 282</td>
+		<td>Seminar:  Artistic Traditions of the Muslims in the Philippines and Southeast Asia</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 286</td>
+		<td>Seminar:  Islamic Art</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 290</td>
+		<td>The Theory of International Relations</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 291</td>
+		<td>Seminar: Topics in Islamic Studies</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 292</td>
+		<td>Seminar on Islamic Revivalism and Contemporary Muslim Movements</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 293</td>
+		<td>Seminar: Islamic Economics of Banking, Trade and Investments</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 298</td>
+		<td>Special Problem </td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IS 299</td>
+		<td>Materials and Methods for Islamic Studies</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IS 300</td>
+		<td>Thesis in Islamic Studies</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 10</td>
+		<td>Elementary Arabic</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 11</td>
+		<td>Elementary Arabic</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 12</td>
+		<td>Intermediate Arabic</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 13</td>
+		<td>Intermediate Arabic</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 14</td>
+		<td>Advanced Arabic</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 15</td>
+		<td>Advanced Arabic</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 20</td>
+		<td>Practical Arabic</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 101</td>
+		<td>Study of Arabic Texts</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 102</td>
+		<td>Study of Arabic Texts</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 111</td>
+		<td>Survey of Islamic Thought</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 112</td>
+		<td>The Legacy of Islamic Civilization</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 113</td>
+		<td>Survey of Islamic Art</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 121</td>
+		<td>History of Islam</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 122</td>
+		<td>The Rise of Modern Islamic Revivalists Movements and Nationalism</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 123</td>
+		<td>Islam in Southeast Asia</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 131</td>
+		<td>The Social Structure and Institutions of Islam</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 132</td>
+		<td>Islamic Political Thought</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 141</td>
+		<td>History of Islamic Philosophy</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 151</td>
+		<td>Introduction to Islamic Law and Jurisprudence</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 153</td>
+		<td>Islamic Law and Jurisprudence</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 156</td>
+		<td>Al-Kalam</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 161</td>
+		<td>History of Muslims in the Philippines</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 171</td>
+		<td>Customary Law ('Adat') of the Muslims in the Philippines</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 172</td>
+		<td>Political and Social Institutions of the Muslims in the Philippines</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 181</td>
+		<td>The Literary Traditions of the Muslims in the Philippines and Southeast Asia</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 182</td>
+		<td>The Artistic Traditions of the Muslims in the Philippines</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 198B</td>
+		<td>Special Topics in Islamic Studies II</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 198A</td>
+		<td>Special Topics in Islamic Studies I</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 199</td>
+		<td>Materials and Methods in Islamic Studies</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 211</td>
+		<td>The Qur'an and its Commentary (Tafsir)</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 214</td>
+		<td>The Biography and Hadith of the Prophet</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 221</td>
+		<td>Arab Historiography</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 225</td>
+		<td>History of Islam</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 231</td>
+		<td>Islamic Political Thought</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 241</td>
+		<td>Kalam and Islamic Philosophy</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 251</td>
+		<td>Islamic Law and Jurisprudence</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 261</td>
+		<td>Seminar: The Muslims in the Philippines</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 262</td>
+		<td>Seminar: The Relations of Muslims and Non-Muslim Communities in a National Society</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 271</td>
+		<td>A'dat and Muslim Personal Laws on Family Relations</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 272</td>
+		<td>Seminar: Social and Political Institutions of the Muslims in the Philippines</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 275</td>
+		<td>Muslim Personal Laws on Inheritance and Succession</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 281</td>
+		<td>Seminar: Literary Traditions of the Muslims in the Philippines</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 282</td>
+		<td>Seminar: Artistic Traditions of the Muslims in the Philippines and Southeast Asia</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 286</td>
+		<td>Seminar: Islamic Art</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 291</td>
+		<td>Seminar: Topics in Islamic Studies</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 292</td>
+		<td>Seminar on Islamic Revivalism and Contemporary Muslim Movements</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 293</td>
+		<td>Seminar: Islamic Economics on Banking, Trade and Investments</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 298</td>
+		<td>Special Problem</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Isl Stud 299</td>
+		<td>Materials and Methods for Islamic Studies</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Isl Stud 300</td>
+		<td>Thesis in Islamic Studies</td>
+		<td></td>
+		<td><abbr title="Institute of Islamic Studies" style="border-bottom: 1px dotted;">IIS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IT 100</td>
+		<td>Introduction to Information Technology</td>
+		<td></td>
+		<td><abbr title="Department of Computer Science" style="border-bottom: 1px dotted;">DCS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IT 110</td>
+		<td>Information Systems in Enterprises</td>
+		<td></td>
+		<td><abbr title="Department of Computer Science" style="border-bottom: 1px dotted;">DCS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>IT 120</td>
+		<td>Application Development</td>
+		<td></td>
+		<td><abbr title="Department of Computer Science" style="border-bottom: 1px dotted;">DCS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>IT 201</td>
+		<td>Information Systems and Technology</td>
+		<td></td>
+		<td><abbr title="Department of Computer Science" style="border-bottom: 1px dotted;">DCS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 10</td>
+		<td>Elementary Course</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 11</td>
+		<td>Elementary Course</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 12</td>
+		<td>Intermediate Course</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 13</td>
+		<td>Intermediate Course</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 14</td>
+		<td>Advanced Language Course I</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 15</td>
+		<td>Advanced Language Course II</td>
+		<td>Continuation of Italian 14.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 15</td>
+		<td>Advanced Language Course II</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 30</td>
+		<td>Advanced Spoken Italian</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 30</td>
+		<td>Advanced Spoken Italian I</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 31</td>
+		<td>Advanced Spoken Italian II</td>
+		<td>Continuation of Italian 30.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 40</td>
+		<td>Scientific Language</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 40</td>
+		<td>Advanced Grammar</td>
+		<td>Advanced principles of grammar along with practice in their application.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 45</td>
+		<td>Introduction to Italian Phonetics and Phonology</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 50</td>
+		<td>Advanced Syntax and Composition</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 60</td>
+		<td>Composition</td>
+		<td>Mechanics of composition and of its different genres.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 80</td>
+		<td>Italian Stylistics</td>
+		<td>Introduction to Italian stylistics using literary texts.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 100</td>
+		<td>Italian Culture and Civilization</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 100</td>
+		<td>Italian Culture and Civilization</td>
+		<td>Readings in the historical development of civilization in Italy.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 101</td>
+		<td>Contemporary Italian Culture and Civilization</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 110</td>
+		<td>Survey of Italian Literature</td>
+		<td></td>
+		<td><abbr title="Department of European Languages, Department of European Languages" style="border-bottom: 1px dotted;">DEL, DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 120</td>
+		<td>Representative Italian Authors </td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 121</td>
+		<td>Representative Italian Authors II</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 140</td>
+		<td>Technical Italian</td>
+		<td></td>
+		<td><abbr title="Department of European Languages, Department of European Languages" style="border-bottom: 1px dotted;">DEL, DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 142</td>
+		<td>Scientific Language</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 150</td>
+		<td>Masterpieces of Italian Literature</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 151</td>
+		<td>Masterpieces of Italian Literature II</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 160</td>
+		<td>Contemporary Italian Literature</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 161</td>
+		<td>Contemporary Italian Literature II</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital 170</td>
+		<td>Techniques of Italian Translation</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital 197</td>
+		<td>Special Topics</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital O-F</td>
+		<td>Italian Diction</td>
+		<td>An elementary non-collegiate course in the fundamental rules of Italian phonetics, grammar and diction.  Exercises in pronunciation with special emphasis on vowel quantity and quality.  Designed primarily for students of the College of Music.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital O-S</td>
+		<td>Italian Diction</td>
+		<td>Continuation of Italian O-F.  Non-collegiate.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Ital P-F</td>
+		<td>Elementary Grammar and Composition</td>
+		<td>Continuation of Italian O-S.  Non-collegiate.  Reading and translation of easy Italian prose and poetry.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Ital P-S</td>
+		<td>Elementary Grammar and Composition</td>
+		<td>Continuation of Italian P-F.  Non-collegiate.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+	</table>
+
+</div><!-- #content -->
+
+﻿
+<script type="text/javascript">
+			
+		$(document).ready(function() {
+			
+			//set the width per footer_expander element
+			var expander_count = $('.footerlink').length;
+			var expander_width = (83/expander_count);
+			
+			var i = 0;
+			$.each($(".footerlink"), function(index, value){
+				$(this).css('width', expander_width+'%');
+				$(this).css('left', (((expander_width)*i)+10)+'%');
+				i++;
+			});
+			
+			$(".footerlink,.footer_expander").hover(
+				function(){
+					$(this).animate({ height: "30"}, 50);
+				},
+				function(){
+					$(this).animate({ height: "16"}, 50);
+				
+				}
+			);
+			
+			//set the width per footer_expander element
+			var division_count = $('.footer_division').length;
+			var division_width = (88/division_count);
+			division_width = division_width+'%';
+			
+			$.each($(".footer_division"), function(index, value){
+				$(this).css('width', division_width);
+			});
+			
+		function change_acadtermtype() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_acadtermtype/' + $(this).val();
+		}
+
+		function change_role() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_role/' + $(this).val();
+		}
+
+		function show_roles() {
+			$("#span_role").addClass("hidden");
+			$("#span_role-choices").removeClass("hidden");
+		}
+
+		function show_acadtermtypes() {
+			$("#span_acadtermtype").addClass("hidden");
+			$("#span_acadtermtype-choices").removeClass("hidden");
+		}
+
+	 });
+	 
+	
+	function showFooter(){
+		$('#footer').slideDown(150);
+		$('.footermin').hide();
+	}
+	function hideFooter(){
+		$('#footer').slideUp(150);
+		$('.footermin').show();
+	}
+	</script>
+
+<span style="clear:both;"></span>
+
+	<div class="footer_expander footermin" onclick="showFooter();">
+		More ▲
+	</div>
+
+		<div id="footer" align="center">
+		<div id="footer_linktotop" align="right" onclick="hideFooter();">
+			<a href="Javascript:void(0);" onclick="hideFooter();" style="color:white">Less ▼</a>
+		</div>
+		<div style="padding-top: 30px;">
+						<div class="footer_division">
+				<div class="footer_division_header">Flowcharts</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/OnlineDroppingFlowchart.pdf" >
+								Dropping							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ChangeMatFlowchart_modified.pdf" >
+								Change Mat							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ClearanceMechanics.pdf" >
+								Clearance							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/downloads/LOA_mechanics.pdf" >
+								Leave of Absence							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Class Schedules</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/" >
+								Regular Classes							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/mba" >
+								MBA/MS Finance PT							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/schedule/spring" >
+								Spring Asia							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Information</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/course_catalog" >
+								Course Catalog							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/curriculum.html" >
+								Curriculum Checklist							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://our.upd.edu.ph/files/ListofGECourses.pdf" >
+								List of RGEP Courses							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Calendar</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/~updinfo/apr14/articles/BOR_approved_AcadCal_AY_2014_2015.pdf" >
+								BOR Approved<br>Academic Calendar<br>AY 2014-2015							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular" >
+								Regular Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/mba" >
+								MBA/MS Fin PT Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/msfin" >
+								MS Fin FT Calendar							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/spring" >
+								Spring Asia Calendar							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">CRS</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/faq" >
+								CRS FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/faq.html" >
+								OUR FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>History of the CRS<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item ">
+													<span>User Guide<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/about/" >
+								The CRS Team<br/>							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Contact Us</div>
+																		<div class="footer_division_item ">
+																				<a href="http://www.facebook.com/groups/134746139953068/" >
+								Facebook Group							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="mailto:crssupport@list.upd.edu.ph" >
+								E-Mail							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>Phone<br/>(981-8500 local 4560)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+													<span>You may visit us at the CRSRS Office at the 3rd floor of the OUR.</span>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">External Links</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/" >
+								UP Diliman							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://up.edu.ph/" >
+								UP System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/" >
+								OUR Site							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://sts.up.edu.ph/" >
+								Socialized Tuition System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://dormapplication.upd.edu.ph/" >
+								Dorm Application Website							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://uvle.up.edu.ph/" >
+								UvLE							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://ucc.upd.edu.ph/about-us/" >
+								UPCC							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://mail.up.edu.ph/" >
+								UP Webmail							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://www.dzup.org/" >
+								DZUP							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://upd.edu.ph/aup/" >
+								Acceptable Use Policy							</a>
+											</div>
+																	</div>
+					</div>
+	</div>
+
+	<div class="footer_quicklinks footermin">
+		Quick Links:
+	</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/schedule/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/schedule/">
+				Regular Classes			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/course_catalog'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/course_catalog">
+				Course Catalog			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='http://our.upd.edu.ph/curriculum.html'">
+			<a class="a_footerlink" href="http://our.upd.edu.ph/curriculum.html">
+				Curriculum Checklist			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/acadcal_public/index/advanced/regular'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular">
+				Regular Calendar			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/faq'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/faq">
+				CRS FAQ			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/about/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/about/">
+				The CRS Team<br/>			</a>
+		</div>
+	</body>
+</html>

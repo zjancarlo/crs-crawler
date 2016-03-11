@@ -1,0 +1,5499 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>UP CRS - Schedule of Classes</title>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery-1.4.1.min.js"></script>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery.tablesorter.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/layout.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/status.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/schedule.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/tablesorter/tablesorter.css" type="text/css" />
+	<link rel="shortcut icon" href="https://crs.upd.edu.ph/images/favicon.ico" type="image/x-icon" />
+
+	<style type="text/css">
+		#tbl_schedule tbody:hover {
+			background-color: #F0F0AF;
+		}
+	</style>
+	
+	<script type="text/javascript" language="JavaScript">
+	$(document).ready(function() {
+		$('#btn_search').click(searchClasses);
+		$('#frm_schedule').submit(function(e) {
+			e.preventDefault();
+			searchClasses();
+		});
+
+//		// table sorter
+//		$.tablesorter.addParser({
+//			// set uniqueid
+//			id: 'availableslots',
+//			is: function(s) {
+//				// return false so that parser is not automatically detected
+//				return false;
+//			},
+//			format: function(s) {
+//				var temp = s.replace('<strong>','').replace('</strong>','').split('/');
+//				return temp[0];
+//			},
+//			// set type to numeric
+//			type: 'numeric'
+//		});
+
+//		$('#tbl_schedule').tablesorter({widgets:['zebra'], headers: {0:{sorter:false},2:{sorter:false},4:{sorter:'availableslots'},5:{sorter:false}}});
+
+	});
+
+	function searchClasses() {
+		var coursenumber = $.trim($('#txt_coursenumber').val());
+		var term = $.trim($('#txt_term').val());
+		var alphanumeric_pattern = /^[a-zA-Z0-9\.\s]+$/;
+
+		if(coursenumber != '') {
+			if( ! alphanumeric_pattern.test(coursenumber)) {
+				alert('Course number must be alphanumeric.');
+			} else {
+				window.location = 'https://crs.upd.edu.ph/schedule' + '/'+ term + '/'+ coursenumber ;
+			}
+		}
+
+	}
+
+	</script>
+
+<style>
+	#frm_schedule {
+		margin: auto;
+		width: 25%;
+		background: #FCFCF0;
+		border: 3px solid #444444;
+		padding: 1em;
+	}
+	#frm_schedule strong, #search input {
+		padding-right: 1em;
+	}
+</style>
+</head>
+
+<body class="schedule">
+
+<div id="header">
+	<a href="https://crs.upd.edu.ph/user" class="header_link"></a>
+</div>
+<div id="subheader">
+</div>
+
+<div id="content" class="align-center">
+
+<h1>
+	Schedule of Classes<br />
+		<select id="txt_term" name="txt_term" style="padding: 2px; border: 1px solid #CECECE; border-radius: 5px; font-size: 100%; text-align: right;" onchange="searchClasses();">
+					<option value="120144" >Midyear Term 2015</option>
+					<option value="120151" >First Semester AY 2015-2016</option>
+					<option value="120152" selected="selected">Second Semester AY 2015-2016</option>
+					<option value="120154" >Midyear Term 2016</option>
+		</select>
+	</h1>
+
+<br />
+<form id="frm_schedule" action="" method="post">
+Course Number: 
+<input type="text" id="txt_coursenumber" name="txt_coursenumber" placeholder="(e.g., Math 11, Eng 1)"/>
+<br/> 
+<input type="button" id="btn_search" name="btn_search" value="Search" />
+</form>
+
+<br/>
+<p>
+	<a href="https://crs.upd.edu.ph/schedule/120152/A">A</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/B">B</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/C">C</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/D">D</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/E">E</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/F">F</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/G">G</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/H">H</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/I">I</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/J">J</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/K">K</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/L">L</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/M">M</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/N">N</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/O">O</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/P">P</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/Q">Q</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/R">R</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/S">S</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/T">T</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/U">U</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/V">V</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/W">W</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/X">X</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/Y">Y</a>&nbsp;
+	<a href="https://crs.upd.edu.ph/schedule/120152/Z">Z</a>&nbsp;
+<a href="https://crs.upd.edu.ph/">Back to main page</a>
+</p>
+<br />
+<div style="text-align: left; padding: 0; margin: 0;"><strong>Results for: <em>L</em></strong></div>
+<table id="tbl_schedule" style="table-layout: fixed	">
+<thead>
+<tr>
+	<th width="5%">Class Code</th>
+	<th width="15%">Class</th>
+	<th width="5%">Credits</th>
+	<th width="30%">
+		Schedule<br />
+		Instructor(s)<br/>
+		Remarks
+	</th>
+	<th width="15%">Enlisting Unit : Block<br/><b>Block Remarks</b></th>
+	<th width="10%">
+		Available Slots /<br />
+		Total Slots
+	</th>
+	<th width="5%">Demand</th>
+	<th width="15%">Restrictions</th>
+</tr>
+</thead>
+
+	<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11764</td>
+		<td rowspan = "1">L Arch 1 THR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec Archi 106A<br />
+			GOZON, PATRICK ANDREW<br/>
+			<em style="font-weight: bold">Graduating</em>		</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				37			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11765</td>
+		<td rowspan = "1">L Arch 1 THU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec Archi 106A<br />
+			GOZON, PATRICK ANDREW<br/>
+			<em style="font-weight: bold">Graduating</em>		</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: NIGS(5 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11763</td>
+		<td rowspan = "1">L Arch 1 THX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec Archi 103A<br />
+			GALINGAN, ZENAIDA<br/>
+			<em style="font-weight: bold">Graduating</em>		</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				33			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: NIGS(15 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11766</td>
+		<td rowspan = "1">L Arch 1 WFLN</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4:30-6PM lec Archi 101<br />
+			VILLAJUAN, JOSE DAN<br/>
+			<em style="font-weight: bold">Graduating</em>		</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				33			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: NIGS(5 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11767</td>
+		<td rowspan = "1">L Arch 12 THQRU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 7:30-11AM lec Archi 103; T 7:30-11AM lec Archi 5<br />
+			NADAL, CATHE DESIREE<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>14</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11768</td>
+		<td rowspan = "1">L Arch 12 THQRU-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 7:30-11AM lec Archi 103A; T 7:30-11AM lec Archi 6<br />
+			GO, MAUREEN ALFRED<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>13</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11778</td>
+		<td rowspan = "1">L Arch 19 THW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec Archi 103<br />
+			NADAL, CATHE DESIREE<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				31			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11779</td>
+		<td rowspan = "1">L Arch 19 THW-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec Archi 103A<br />
+			GO, MAUREEN ALFRED<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				32			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11784</td>
+		<td rowspan = "1">L Arch 22 WFABCD</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 7-10:30AM lec Archi 101; W 7-10:30AM lec Archi 5<br />
+			VILLAJUAN, JOSE DAN<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>14</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11785</td>
+		<td rowspan = "1">L Arch 22 WFABCD-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 7-10:30AM lec Archi 105A; W 7-10:30AM lec Archi 6<br />
+			DUMALIGAN, FAITH<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11786</td>
+		<td rowspan = "1">L Arch 24 WFVW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 11:30AM-2:30PM lec Archi 101; W 11:30AM-2:30PM lec Archi 5<br />
+			VILLAJUAN, JOSE DAN<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>11</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11787</td>
+		<td rowspan = "1">L Arch 24 WFVW-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 11:30AM-2:30PM lec Archi 102; W 11:30AM-2:30PM lec Archi 6<br />
+			DUMALIGAN, FAITH<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11788</td>
+		<td rowspan = "1">L Arch 25 THXY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-5PM lec Archi 101<br />
+			NADAL, CATHE DESIREE<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11789</td>
+		<td rowspan = "1">L Arch 25 THXY-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-5PM lec Archi GR<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>15</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11792</td>
+		<td rowspan = "1">L Arch 27 WFJKL</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4:30PM lec Archi 102<br />
+			NAVARRA, NAPPY<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11793</td>
+		<td rowspan = "1">L Arch 27 WFJKL-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4:30PM lec Archi 101<br />
+			TBA<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11806</td>
+		<td rowspan = "1">L Arch 27 WFJKL-2</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 2:30-4:30PM lec Archi 102<br />
+			NAVARRA, NAPPY<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11807</td>
+		<td rowspan = "1">L Arch 27 WFJKL-3</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 2:30-4:30PM lec Archi 101<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11769</td>
+		<td rowspan = "1">L Arch 132 WFABCDE</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			F 7AM-12PM lec Archi 106; W 7AM-12PM lec Archi 5<br />
+			NAVARRA, NAPPY<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>16</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11770</td>
+		<td rowspan = "1">L Arch 132 WFABCDE-1</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			F 7AM-12PM lec Archi 105A; W 7AM-12PM lec Archi 6<br />
+			BIMBAO, JOSE ANTONIO<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11771</td>
+		<td rowspan = "1">L Arch 137 WFX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec Archi 103<br />
+			VILLAJUAN, JOSE DAN<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11772</td>
+		<td rowspan = "1">L Arch 137 WFX-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec Archi 103A<br />
+			BIMBAO, JOSE ANTONIO<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>14</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11809</td>
+		<td rowspan = "1">L Arch 139 THGI</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 12-1:30PM lec Archi 101<br />
+			GALINGAN, ZENAIDA<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>19</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11814</td>
+		<td rowspan = "1">L Arch 139 THGI-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 12-1:30PM lec Archi 104A<br />
+			DUL-LOOG, VIC<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>11</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11773</td>
+		<td rowspan = "1">L Arch 139 THW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec Archi 101<br />
+			GALINGAN, ZENAIDA<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11774</td>
+		<td rowspan = "1">L Arch 139 THW-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec Archi GR<br />
+			DUL-LOOG, VIC<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11775</td>
+		<td rowspan = "1">L Arch 146 MBCDE</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8AM-12PM lec Archi 103<br />
+			NADAL, CATHE DESIREE<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11808</td>
+		<td rowspan = "1">L Arch 146 MBCDEWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8AM-12PM lec Archi 103; M 1-4PM lec Archi 103<br />
+			NADAL, CATHE DESIREE<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11777</td>
+		<td rowspan = "1">L Arch 147 HIJKLN</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 1-6PM lec Archi 102<br />
+			NAVARRA, NAPPY<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11776</td>
+		<td rowspan = "1">L Arch 147 MWX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 1-4PM lec Archi 103<br />
+			NADAL, CATHE DESIREE<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11780</td>
+		<td rowspan = "1">L Arch 199.2 THABCDE</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 7AM-12PM lec Archi 101<br />
+			GALINGAN, ZENAIDA<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11781</td>
+		<td rowspan = "1">L Arch 199.2 THABCDE-1</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 7AM-12PM lec Archi 102<br />
+			DUL-LOOG, VIC<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: B LArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11782</td>
+		<td rowspan = "1">L Arch 202 FLNO</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 1-4PM lec Archi GR<br />
+			AQUINO-ONG, SUSAN<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: M TLArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11783</td>
+		<td rowspan = "1">L Arch 205 TLNO</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 4-7PM lec Archi BR<br />
+			ESPINA, MARY ANN<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: M TLArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11790</td>
+		<td rowspan = "1">L Arch 255 WLNOP</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 4:30-7:30PM lec Archi GR<br />
+			NAVARRA, NAPPY<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: M TLArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11791</td>
+		<td rowspan = "1">L Arch 265 HLNO</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 4-7PM lec Archi BR<br />
+			GALINGAN, ZENAIDA<br/>
+					</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: M TLArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11796</td>
+		<td rowspan = "1">L Arch 300 TBA</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			TBA<br/>
+			<em style="font-weight: bold">Proposal or Defense (with proposal during 1st Sem. AY 2015-2016)</em>		</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: M TLArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">11797</td>
+		<td rowspan = "1">L Arch 300 TBA-1</td>
+		<td rowspan = "1">6.0</td>
+		<td rowspan = "1">
+			TBA<br />
+			TBA<br/>
+			<em style="font-weight: bold">Defense (with proposal before 1st Sem. AY 2015-2016)</em>		</td>
+		 
+		<td>Arch<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: M TLArch</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">14987</td>
+		<td rowspan = "1">Latin 10 THR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec CAL 304<br />
+			EBREO, ELVIN<br/>
+					</td>
+		 
+		<td>DEL<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">14988</td>
+		<td rowspan = "1">Latin 10 WFR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec CAL 304<br />
+			EBREO, ELVIN<br/>
+					</td>
+		 
+		<td>DEL<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58420</td>
+		<td rowspan = "1">Law 101 I-A</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			MTh 3:30-6PM lec LAW 307-309<br />
+			DISINI, JOSE JESUS<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58421</td>
+		<td rowspan = "1">Law 101 I-B</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 2:30-5PM lec LAW 200<br />
+			LABITAG, EDUARDO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				38			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58422</td>
+		<td rowspan = "1">Law 101 I-C</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 1-3:30PM lec LAW 308<br />
+			BATONGBACAL, JAY<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58423</td>
+		<td rowspan = "1">Law 101 I-D</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			F 9-11AM lec LAW 312; MW 9:30-11AM lec LAW 312<br />
+			CASIS, ROMMEL<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>11</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58424</td>
+		<td rowspan = "1">Law 101 I-E</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			MTh 1-3:30PM lec LAW 303-305<br />
+			DISINI, JOSE JESUS<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58425</td>
+		<td rowspan = "1">Law 101 I-Evening</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 6:30-9PM lec LAW 200<br />
+			TAN, MARY ROSE<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58522</td>
+		<td rowspan = "1">Law 101 I-G</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			MF 6:30-9PM lec LAW SOLIVEN<br />
+			WAGA, RODOLFO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				36			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58510</td>
+		<td rowspan = "1">Law 103 II-Evening</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			Th 6-8PM lec LAW 203-205<br />
+			AGUIRRE , LEANDRO ANGELO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				37			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58507</td>
+		<td rowspan = "1">Law 104 II-Evening</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			MW 6-7:30PM lec LAW 203-205<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				35			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58426</td>
+		<td rowspan = "1">Law 106 III-A</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 5-7:30PM lec LAW AMB<br />
+			JACINTO, VIRGILIO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				29			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58427</td>
+		<td rowspan = "1">Law 106 III-B</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 2-4:30PM lec LAW 312<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>13</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58428</td>
+		<td rowspan = "1">Law 106 III-C</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			W 9-11:30AM lec LAW 200; S 9-11:30AM lec LAW AMB<br />
+			QUINTOS, MARIE CECILE<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>13</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58429</td>
+		<td rowspan = "1">Law 106 III-D</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 2-4:30PM lec LAW 127<br />
+			QUEVEDO, ROGELIO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58486</td>
+		<td rowspan = "1">Law 107 II-A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 8:30-11:30AM lec LAW 203-205<br />
+			DE LEON, HECTOR<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58487</td>
+		<td rowspan = "1">Law 107 II-B</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10:30AM-12PM lec LAW 204-206<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>11</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58488</td>
+		<td rowspan = "1">Law 107 II-C</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec LAW SOLIVEN<br />
+			REYES, ROCKY<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>19</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58489</td>
+		<td rowspan = "1">Law 107 II-D</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 9-10:30AM lec LAW 204-206<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>21</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58490</td>
+		<td rowspan = "1">Law 107 II-E</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 6-9PM lec LAW 204-206<br />
+			VASQUEZ, RAUL<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58491</td>
+		<td rowspan = "1">Law 107 II-Evening</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec LAW 307-309<br />
+			JOVEN, MARK DENNIS<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				38			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58461</td>
+		<td rowspan = "1">Law 108 IV-Evening</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WTh 6-7:30PM lec LAW 303-305<br />
+			TY, NICHOLAS FELIX<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>16</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58446</td>
+		<td rowspan = "1">Law 110 I-A</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			S 2-6PM lec LAW 203-205<br />
+			MUYOT, ALBERTO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58449</td>
+		<td rowspan = "1">Law 110 I-B</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 4-6PM lec LAW 308<br />
+			OLASO-CORONEL, SANDRA MARIE<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				38			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58465</td>
+		<td rowspan = "1">Law 110 I-C</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			S 10AM-12PM lec LAW 204-206; S 1-3PM lec LAW 204-206<br />
+			JIMENEZ, ILDEFONSO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58466</td>
+		<td rowspan = "1">Law 110 I-D</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			ThS 8-10AM lec LAW 208<br />
+			ARREZA, AUGUSTO JOSE<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58467</td>
+		<td rowspan = "1">Law 110 I-E</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 6-8PM lec LAW 127<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58468</td>
+		<td rowspan = "1">Law 110 I-Evening</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			S 2-4PM lec LAW 208; F 6-8PM lec LAW 208<br />
+			PAMBID, RENATO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58458</td>
+		<td rowspan = "1">Law 111 III-Evening</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 10:30AM-12PM lec LAW 312; Th 6-7:30PM lec LAW 312<br />
+			CASIS, ROMMEL<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				36			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58430</td>
+		<td rowspan = "1">Law 112 III-A</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			TTh 2-3PM lec LAW SOLIVEN<br />
+			MAGALLONA, MERLIN<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>23</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58431</td>
+		<td rowspan = "1">Law 112 III-B</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			M 1-3PM lec LAW 304<br />
+			TY, NICHOLAS FELIX<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58432</td>
+		<td rowspan = "1">Law 112 III-C</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			M 6-8PM lec LAW 200<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>14</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58434</td>
+		<td rowspan = "1">Law 112 III-D</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 2-4PM lec LAW 203-205<br />
+			OLIVA, RYAN<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58463</td>
+		<td rowspan = "1">Law 112 IV-Evening</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			T 6-8PM lec LAW 127<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>13</strong> /
+				41			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58492</td>
+		<td rowspan = "1">Law 114 II-A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec LAW 200<br />
+			DAWAY, PATRICIA ROSALIND<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>18</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58493</td>
+		<td rowspan = "1">Law 114 II-B</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec LAW 204-206<br />
+			BATTAD, EVELYN (LEO)<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>11</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58494</td>
+		<td rowspan = "1">Law 114 II-C</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 3-4:30PM lec LAW 204-206<br />
+			BATTAD, EVELYN (LEO)<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>22</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58495</td>
+		<td rowspan = "1">Law 114 II-D</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 3-4:30PM lec LAW 200<br />
+			DAWAY, PATRICIA ROSALIND<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>18</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58496</td>
+		<td rowspan = "1">Law 114 II-E</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4:30-6PM lec LAW 200<br />
+			DAWAY, PATRICIA ROSALIND<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				42			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58459</td>
+		<td rowspan = "1">Law 114 III-Evening</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 6-9PM lec LAW 200<br />
+			SOBREVINAS, FRANCIS<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				38			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58480</td>
+		<td rowspan = "1">Law 116 I-Evening</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			S 10AM-12PM lec LAW 303-305<br />
+			AGABIN, PACIFICO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				38			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58469</td>
+		<td rowspan = "1">Law 117 I-A</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			T 4-6PM lec LAW 304<br />
+			BATONGBACAL, JAY<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58470</td>
+		<td rowspan = "1">Law 117 I-B</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			T 1-3PM lec LAW 208<br />
+			LAURETA, JOSE<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58471</td>
+		<td rowspan = "1">Law 117 I-C</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			F 4-6PM lec LAW 304<br />
+			LUMBA, SOLOMON<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58472</td>
+		<td rowspan = "1">Law 117 I-D</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			T 2-4PM lec LAW 304<br />
+			BATONGBACAL, JAY<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58473</td>
+		<td rowspan = "1">Law 117 I-E</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 1:30-3:30PM lec LAW 307-309<br />
+			SISON, MAXIMO PAULINO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58454</td>
+		<td rowspan = "1">Law 118 III-A</td>
+		<td rowspan = "1">1.0</td>
+		<td rowspan = "1">
+			S 11AM-12PM lec LAW THEATER<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>18</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58455</td>
+		<td rowspan = "1">Law 118 III-B</td>
+		<td rowspan = "1">1.0</td>
+		<td rowspan = "1">
+			S 1-2PM lec LAW THEATER<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58456</td>
+		<td rowspan = "1">Law 118 III-C</td>
+		<td rowspan = "1">1.0</td>
+		<td rowspan = "1">
+			S 2-3PM lec LAW THEATER<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>23</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58457</td>
+		<td rowspan = "1">Law 118 III-D</td>
+		<td rowspan = "1">1.0</td>
+		<td rowspan = "1">
+			S 3-4PM lec LAW THEATER<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>18</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58526</td>
+		<td rowspan = "1">Law 119 A</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			S 8-10AM lec TBA<br />
+			DAWAY, PATRICIA ROSALIND<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				2			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58474</td>
+		<td rowspan = "1">Law 120 I-A</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 2-4PM lec LAW 204-206<br />
+			JUAN-BAUTISTA, ROSA MARIA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58475</td>
+		<td rowspan = "1">Law 120 I-B</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			Th 10AM-12PM lec LAW 203-205<br />
+			JARDELEZA, CONCEPCION<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58476</td>
+		<td rowspan = "1">Law 120 I-C</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 10AM-12PM lec LAW 203-205<br />
+			JARDELEZA, CONCEPCION<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>19</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58477</td>
+		<td rowspan = "1">Law 120 I-D</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			T 10AM-12PM lec LAW 203-205<br />
+			JARDELEZA, CONCEPCION<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>13</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58478</td>
+		<td rowspan = "1">Law 120 I-E</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			M 8-10AM lec LAW 204-206<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58479</td>
+		<td rowspan = "1">Law 120 I-Evening</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 6-8PM lec LAW 208<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58433</td>
+		<td rowspan = "1">Law 122 I-A</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 10AM-12PM lec LAW 304<br />
+			CRUZ, CARLO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58436</td>
+		<td rowspan = "1">Law 122 I-B</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			WF 10AM-12PM lec LAW AMB<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				38			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58439</td>
+		<td rowspan = "1">Law 122 I-C</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 10AM-12PM lec LAW 303-305<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58441</td>
+		<td rowspan = "1">Law 122 I-D</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			MTh 1-3PM lec LAW 308<br />
+			VISTAN, EDGARDO CARLO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>11</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58444</td>
+		<td rowspan = "1">Law 122 I-E</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			F 8:30-10:30AM lec LAW 307-309; T 12-2PM lec LAW 307-309<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58481</td>
+		<td rowspan = "1">Law 123 II-A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec LAW 200<br />
+			CARLOTA, SALVADOR<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>13</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58482</td>
+		<td rowspan = "1">Law 123 II-B</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec LAW 204-206<br />
+			CARLOTA, SALVADOR<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>11</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58483</td>
+		<td rowspan = "1">Law 123 II-C</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 12-3PM lec LAW 307-309<br />
+			MOLO, ALFREDO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>16</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58484</td>
+		<td rowspan = "1">Law 123 II-D</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 9AM-12PM lec LAW 311-315<br />
+			MOLO, ALFREDO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58485</td>
+		<td rowspan = "1">Law 123 II-E</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			MW 3-4:30PM lec LAW 127<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>22</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58464</td>
+		<td rowspan = "1">Law 123 IV-Evening</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 8-11AM lec LAW 304<br />
+			LAYUG, JOSE<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58508</td>
+		<td rowspan = "1">Law 124 II-Evening</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 6-9PM lec LAW SOLIVEN<br />
+			SANIDAD, ARNO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				36			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58497</td>
+		<td rowspan = "1">Law 125 II-A</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			MW 4-6:30PM lec LAW 304<br />
+			ELEAZAR, VICTOR<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58498</td>
+		<td rowspan = "1">Law 125 II-B</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			F 1-3PM lec LAW 312; MW 2:30-4PM lec LAW 312<br />
+			LUMBA, SOLOMON<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58499</td>
+		<td rowspan = "1">Law 125 II-C</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 1-3:30PM lec LAW 208<br />
+			VISTAN, EDGARDO CARLO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58500</td>
+		<td rowspan = "1">Law 125 II-D</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			TTh 6-8:30PM lec LAW 204-206<br />
+			CALICA, DAN<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58501</td>
+		<td rowspan = "1">Law 125 II-E</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec LAW 127; T 2-4PM lec LAW 303-305<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>11</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58521</td>
+		<td rowspan = "1">Law 125 III-Evening</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			MF 6:30-9PM lec LAW 307-309<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58519</td>
+		<td rowspan = "1">Law 128 FAM</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			F 8AM-12PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				7			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58520</td>
+		<td rowspan = "1">Law 128 FPM</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			F 1-5PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				7			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58511</td>
+		<td rowspan = "1">Law 128 MAM</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			M 8AM-12PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				7			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58512</td>
+		<td rowspan = "1">Law 128 MPM</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			M 1-5PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				7			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58524</td>
+		<td rowspan = "1">Law 128 OGCC</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			S 6-10PM prac TBA<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58523</td>
+		<td rowspan = "1">Law 128 OSG</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			S 6-10PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58513</td>
+		<td rowspan = "1">Law 128 TAM</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			T 8AM-12PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				7			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58517</td>
+		<td rowspan = "1">Law 128 THAM</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			Th 8AM-12PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				7			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58518</td>
+		<td rowspan = "1">Law 128 THPM</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			Th 1-5PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				7			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58514</td>
+		<td rowspan = "1">Law 128 TPM</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			T 1-5PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				7			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58515</td>
+		<td rowspan = "1">Law 128 WAM</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			W 8AM-12PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				7			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58516</td>
+		<td rowspan = "1">Law 128 WPM</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			W 1-5PM prac TBA<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				7			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58450</td>
+		<td rowspan = "1">Law 129-B III-A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 9AM-12PM lec LAW 304<br />
+			LORIEGA, MA. ELIZABETH<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58451</td>
+		<td rowspan = "1">Law 129-B III-B</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 2-5PM lec LAW 204-206<br />
+			LAFORTEZA, CARINA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>14</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58452</td>
+		<td rowspan = "1">Law 129-B III-C</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 2-5PM lec LAW 208<br />
+			SALVADOR, SERAFIN<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58453</td>
+		<td rowspan = "1">Law 129-B III-D</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec LAW 200<br />
+			CARAG, OTHELO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58462</td>
+		<td rowspan = "1">Law 129-B IV-Evening</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 6-9PM lec LAW 204-206<br />
+			LUCENARIO, DINA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>15</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58401</td>
+		<td rowspan = "1">Law 130 A</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WF 10AM-12:30PM lec LAW 208<br />
+			LEGARDA, MA.CAROLINA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58402</td>
+		<td rowspan = "1">Law 130 B</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			WTh 8-10:30AM lec LAW 308<br />
+			URIBE, CRISOSTOMO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				21			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58403</td>
+		<td rowspan = "1">Law 133 A</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			Th 5-7PM lec LAW 127<br />
+			TBA<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58525</td>
+		<td rowspan = "1">Law 133 A-1</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			F 6-8PM lec LAW 200<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				29			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58404</td>
+		<td rowspan = "1">Law 133 B</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			T 6-8PM lec LAW 127<br />
+			CASANOVA, ARNEL PACIANO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>2</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58405</td>
+		<td rowspan = "1">Law 134 A</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 8-10AM lec LAW 304<br />
+			REYES, GILBERT RAYMUND<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58406</td>
+		<td rowspan = "1">Law 134 B</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			F 6-8PM lec LAW 204-206<br />
+			VILLANUEVA, SUSAN PEARL<br/>
+			<em style="font-weight: bold">DO NOT PRE-ENLIST. THIS SECTION IS FOR BLOCK 2-EVENING ONLY.</em>		</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				38			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58407</td>
+		<td rowspan = "1">Law 134 C</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			S 2-4PM lec LAW 307-309<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				18			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58408</td>
+		<td rowspan = "1">Law 136 A</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			W 9-11:30AM lec LAW 127; T 2-4:30PM lec LAW 127<br />
+			ABELLA, EDUARDO JUAN<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58409</td>
+		<td rowspan = "1">Law 136 B</td>
+		<td rowspan = "1">5.0</td>
+		<td rowspan = "1">
+			T 9AM-12PM lec LAW 308; S 1-3PM lec LAW 308<br />
+			DIVINA, NILO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58509</td>
+		<td rowspan = "1">Law 139 II-Evening</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			S 1-3PM lec LAW AMB<br />
+			CARALE, BARTOLOME<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				35			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58410</td>
+		<td rowspan = "1">Law 153 A<br/>Advance Constitutional Litigation</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 12-2PM lec LAW 127<br />
+			HILBAY, FLORIN<br/>
+			<em style="font-weight: bold">FOR 4TH YEAR ONLY. WITH GWA OF NOT LOWER THAN 2.20</em>		</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58443</td>
+		<td rowspan = "1">Law 154 III-A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			MW 9-10:30AM lec LAW 307-309<br />
+			GATMAYTAN, DANTE<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>20</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58445</td>
+		<td rowspan = "1">Law 154 III-B</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 8-11AM lec LAW 200<br />
+			LOANZON, VICTORIA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58448</td>
+		<td rowspan = "1">Law 154 III-C</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 12-1:30PM lec LAW SOLIVEN<br />
+			REYES, MA GISELLA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>22</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58447</td>
+		<td rowspan = "1">Law 154 III-D</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 9-10:30AM lec LAW 307-309<br />
+			GATMAYTAN, DANTE<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>19</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58411</td>
+		<td rowspan = "1">Law 159 A</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			TTh 9-11AM lec LAW 312<br />
+			SALVADOR, TRANQUIL<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58412</td>
+		<td rowspan = "1">Law 159 B</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			MW 7:30-9PM lec LAW SOLIVEN; F 8-9PM lec LAW SOLIVEN<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				23			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58413</td>
+		<td rowspan = "1">Law 163 A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 5-8PM lec LAW 304<br />
+			ABELLA, EDWIN<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				21			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58414</td>
+		<td rowspan = "1">Law 163 B</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 5:30-8:30PM lec LAW AMB<br />
+			BANIQUED, CARLOS<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				21			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58415</td>
+		<td rowspan = "1">Law 169 A</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			M 7-9PM lec LAW 208<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58416</td>
+		<td rowspan = "1">Law 169 B</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 2-4PM lec LAW SOLIVEN<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58417</td>
+		<td rowspan = "1">Law 171 A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 6-9PM lec LAW 203-205<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				34			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58418</td>
+		<td rowspan = "1">Law 172 A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 1-4PM lec LAW 304<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				35			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58502</td>
+		<td rowspan = "1">Law 173 II-A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec LAW 203-205<br />
+			ARELLANO, JESUSA LORETO<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>19</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58503</td>
+		<td rowspan = "1">Law 173 II-B</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 9AM-12PM lec LAW 203-205<br />
+			OLIVA, RYAN<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58504</td>
+		<td rowspan = "1">Law 173 II-C</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 9AM-12PM lec LAW 303-305<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>22</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58505</td>
+		<td rowspan = "1">Law 173 II-D</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 1-4PM lec LAW 307-309<br />
+			SANCHEZ, DIONNE MARIE<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>18</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58506</td>
+		<td rowspan = "1">Law 173 II-E</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			Th 6-9PM lec LAW 208<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>14</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58435</td>
+		<td rowspan = "1">Law 174 III-A</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			S 2-4PM lec LAW 127<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58437</td>
+		<td rowspan = "1">Law 174 III-B</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			M 4-6PM lec LAW 208<br />
+			BAUTISTA, CHRYSILLA CARISSA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58438</td>
+		<td rowspan = "1">Law 174 III-C</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			M 2-4PM lec LAW 208<br />
+			BAUTISTA, CHRYSILLA CARISSA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>19</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58440</td>
+		<td rowspan = "1">Law 174 III-D</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			W 10AM-12PM lec LAW SOLIVEN<br />
+			MORALES, ROWENA E.V<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>16</strong> /
+				40			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58442</td>
+		<td rowspan = "1">Law 174 III-Evening</td>
+		<td rowspan = "1">2.0</td>
+		<td rowspan = "1">
+			T 6-8PM lec LAW 303-305<br />
+			CHAN, GERARD<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				39			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">58419</td>
+		<td rowspan = "1">Law 181 A</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 1-4PM lec LAW 200<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Law<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				35			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: JD, Graduating</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43075</td>
+		<td rowspan = "1">Lingg 1 THU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec PH 400A<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43076</td>
+		<td rowspan = "1">Lingg 1 THV</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 11:30AM-1PM lec PH 428<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43049</td>
+		<td rowspan = "1">Lingg 1 THW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec PH 428<br />
+			NOLASCO, RICARDO MA.<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43052</td>
+		<td rowspan = "1">Lingg 1 THW-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec PH 400A<br />
+			ZUBIRI, LOUWARD ALLEN<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: SE(1 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43077</td>
+		<td rowspan = "1">Lingg 1 TLNO</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 4-7PM lec PH 428<br />
+			NOLASCO, RICARDO MA.<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43054</td>
+		<td rowspan = "1">Lingg 1 WFU</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec PH 430<br />
+			IGNO, JAY-AR<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: SE(1 slots)</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43059</td>
+		<td rowspan = "1">Lingg 1 WFU-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec PH 400A<br />
+			DE CHAVEZ, MARK RAE<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43050</td>
+		<td rowspan = "1">Lingg 1 WFV</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 11:30AM-1PM lec PH 400A<br />
+			HERNANDEZ, JESUS FEDERICO<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43082</td>
+		<td rowspan = "1">Lingg 1 WFV-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 11:30AM-1PM lec PH 432<br />
+			LINGG, LINGG<br/>
+			<em style="font-weight: bold">GE: SSP Domain</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43078</td>
+		<td rowspan = "1">Lingg 1 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec PH 432<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43051</td>
+		<td rowspan = "1">Lingg 1 WFX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec PH 227<br />
+			HERNANDEZ, VIVECA<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43083</td>
+		<td rowspan = "1">Lingg 1 WFX-1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec PH 400A<br />
+			MANAHAN, MICHAEL<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43079</td>
+		<td rowspan = "1">Lingg 1 WFY</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec PH 430<br />
+			IGNO, JAY-AR<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43011</td>
+		<td rowspan = "1">Lingg 110 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec PH 428<br />
+			CONCEALED<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43053</td>
+		<td rowspan = "1">Lingg 110 WFX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec PH 432<br />
+			CONCEALED<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43003</td>
+		<td rowspan = "1">Lingg 115 THV</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 11:30AM-1PM lec TBA<br />
+			ZUBIRI, LOUWARD ALLEN<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 110 (Room PH400A)</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43001</td>
+		<td rowspan = "1">Lingg 115 THX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec PH 428<br />
+			NOLASCO, RICARDO MA.<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 110</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43002</td>
+		<td rowspan = "1">Lingg 115 WFR</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec PH 428<br />
+			OR, ELSIE MARIE<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 110</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43048</td>
+		<td rowspan = "1">Lingg 121 THX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec PH 432<br />
+			MANAHAN, MICHAEL<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 110</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43004</td>
+		<td rowspan = "1">Lingg 121 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec TBA<br />
+			ZUBIRI, LOUWARD ALLEN<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 110 (Room PH424)</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43005</td>
+		<td rowspan = "1">Lingg 132 THV</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 11:30AM-1PM lec PH 400C<br />
+			JAVIER, JEM<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 130</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43006</td>
+		<td rowspan = "1">Lingg 136 THQ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 7-8:30AM lec PH 432<br />
+			CUNANAN, FARAH<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 130</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43008</td>
+		<td rowspan = "1">Lingg 140 THW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec PH 227<br />
+			RAFAEL, RIA<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 130</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43007</td>
+		<td rowspan = "1">Lingg 140 WFX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec PH 430<br />
+			DE CHAVEZ, MARK RAE<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 130</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43009</td>
+		<td rowspan = "1">Lingg 166 THX</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec PH 430<br />
+			DE CHAVEZ, MARK RAE<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 115</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43015</td>
+		<td rowspan = "1">Lingg 166 WLNO</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 2:30-5:30PM lec PH 428<br />
+			NOLASCO, RICARDO MA.<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 115</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43010</td>
+		<td rowspan = "1">Lingg 170 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec PH 400A<br />
+			HERNANDEZ, JESUS FEDERICO<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 110, Anthro 1/COI</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43013</td>
+		<td rowspan = "1">Lingg 180 WFV</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 11:30AM-1PM lec PH 428<br />
+			CONCEALED<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 110/PNI</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43012</td>
+		<td rowspan = "1">Lingg 180 WFW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec PH 432<br />
+			IGNO, JAY-AR<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 110/PNI (Room changed to PH 227)</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				12			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43016</td>
+		<td rowspan = "1">Lingg 199 THW</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec PH 432<br />
+			GALLEGO, MARIA KRISTINA<br/>
+			<em style="font-weight: bold">Prerequisite: 12u of Lingg</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43014</td>
+		<td rowspan = "1">Lingg 199 TLNO</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 4-7PM lec PH 428<br />
+			NOLASCO, RICARDO MA.<br/>
+			<em style="font-weight: bold">Prerequisite: 12u of Lingg (To be dissolved)</em>		</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43080</td>
+		<td rowspan = "1">Lingg 201 TLNO</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 4-7PM disc PH 400A<br />
+			HERNANDEZ, JESUS FEDERICO<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43060</td>
+		<td rowspan = "1">Lingg 204 WZQ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 5:30-8:30PM lec PH 428<br />
+			NOLASCO, RICARDO MA.<br/>
+			<em style="font-weight: bold">Prerequisite: COI</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43061</td>
+		<td rowspan = "1">Lingg 206 SBCD</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 8-11AM lec PH 227<br />
+			MALICSI, JONATHAN<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43062</td>
+		<td rowspan = "1">Lingg 245 WYZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 4-7PM disc PH 400A<br />
+			HERNANDEZ, JESUS FEDERICO<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 245/COI</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43063</td>
+		<td rowspan = "1">Lingg 270 FYZ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 4-7PM lec PH 400A<br />
+			HERNANDEZ, JESUS FEDERICO<br/>
+			<em style="font-weight: bold">Prerequisite: Lingg 170/Anthro 170/COI</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43068</td>
+		<td rowspan = "1">Lingg 299 MIJK</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 1-4PM seminar PH 430<br />
+			LEE, ALDRIN<br/>
+			<em style="font-weight: bold">Prerequisite: 12u of Lingg/COI</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43084</td>
+		<td rowspan = "1">Lingg 300 MIJK</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 1-4PM thesis TBA<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43081</td>
+		<td rowspan = "1">Lingg 300 MLNO</td>
+		<td rowspan = "1">6.0</td>
+		<td rowspan = "1">
+			M 4-7PM thesis TBA<br />
+			TBA<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43069</td>
+		<td rowspan = "1">Lingg 399 MNOP</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 5-8PM lec PH 428<br />
+			MALICSI, JONATHAN<br/>
+					</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43064</td>
+		<td rowspan = "1">LinggPil 280 SJKL</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 2-5PM lec PH 227<br />
+			HERNANDEZ, VIVECA<br/>
+			<em style="font-weight: bold">Prerequisite: COI</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43066</td>
+		<td rowspan = "1">LinggPil 302 SEGI</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 11AM-2PM lec PH 227<br />
+			PENEYRA, IRMA<br/>
+			<em style="font-weight: bold">Prerequisite: COI</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43065</td>
+		<td rowspan = "1">LinggPil 346 SJKL</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 2-5PM seminar PH 400C<br />
+			LEE, ALDRIN<br/>
+			<em style="font-weight: bold">Prerequisite: COI</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43067</td>
+		<td rowspan = "1">LinggPil 385 MGIJ</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 12-3PM lec PH 227<br />
+			PENEYRA, IRMA<br/>
+			<em style="font-weight: bold">Prerequisite: COI</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65585</td>
+		<td rowspan = "1">LIS 51 THY2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec ILS IT APP LAB RM<br />
+			DAR JUAN, ELIJAH JOHN<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				21			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65557</td>
+		<td rowspan = "1">LIS 55 THW1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec ILS COMP LAB RM<br />
+			SANTOS, YHNA THERESE<br/>
+			<em style="font-weight: bold">for 2015 BLIS students ONLY</em>		</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				31			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: Freshman</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65604</td>
+		<td rowspan = "1">LIS 55 WFR2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec ILS IT APP LAB RM<br />
+			OBILLE, KATHLEEN LOURDES<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				18			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65565</td>
+		<td rowspan = "1">LIS 61 THX1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 2:30-4PM lec ILS COMP LAB RM<br />
+			SANTOS, MARK ANTHONY<br/>
+			<em style="font-weight: bold">for 2015 BLIS students ONLY</em>		</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				31			</td>
+												<td rowspan="1">0</td>
+														
+		<td>For: Freshman</td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65566</td>
+		<td rowspan = "1">LIS 61 WFZ2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 5:30-7PM lec ILS IT APP LAB RM<br />
+			SANTOS, MARK ANTHONY<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65567</td>
+		<td rowspan = "1">LIS 62 THY1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec ILS COMP LAB RM<br />
+			SANTOS, MARK ANTHONY<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65594</td>
+		<td rowspan = "1">LIS 62 THY5</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 4-5:30PM lec TBA<br />
+			TARLIT, RODOLFO<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				24			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65562</td>
+		<td rowspan = "1">LIS 64 THW2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec ILS IT APP LAB RM<br />
+			PASCUA, SONIA<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				26			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65563</td>
+		<td rowspan = "1">LIS 64 WFX1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec ILS COMP LAB RM<br />
+			PASCUA, SONIA<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				22			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65558</td>
+		<td rowspan = "1">LIS 71 WFX4</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec ILS 4<br />
+			SANTOS, YHNA THERESE<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65586</td>
+		<td rowspan = "1">LIS 72 WFY3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec ILS 3<br />
+			DAR JUAN, ELIJAH JOHN<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65587</td>
+		<td rowspan = "1">LIS 114 SCDE4</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec ILS 4<br />
+			SILVERIO, ROCHELLE<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65599</td>
+		<td rowspan = "1">LIS 120 WFR3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec ILS 3<br />
+			TBA<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65574</td>
+		<td rowspan = "1">LIS 131 WFW1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec ILS COMP LAB RM<br />
+			ISIP, JONATHAN<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65568</td>
+		<td rowspan = "1">LIS 141 WFW2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec ILS IT APP LAB RM<br />
+			SANTOS, MARK ANTHONY<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65578</td>
+		<td rowspan = "1">LIS 151 WFW4</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lec ILS 4<br />
+			CORNAGO, PIA CHARMAINE<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65579</td>
+		<td rowspan = "1">LIS 152 WFY4</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec ILS 4<br />
+			CORNAGO, PIA CHARMAINE<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65571</td>
+		<td rowspan = "1">LIS 158 THU2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec ILS IT APP LAB RM<br />
+			DORADO, DAN ANTHONY<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				19			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65570</td>
+		<td rowspan = "1">LIS 160 THR1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec ILS COMP LAB RM<br />
+			DORADO, DAN ANTHONY<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65575</td>
+		<td rowspan = "1">LIS 161 WFU1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lab ILS COMP LAB RM<br />
+			ISIP, JONATHAN<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65603</td>
+		<td rowspan = "1">LIS 161 WFW1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 1-2:30PM lab ILS COMP LAB RM<br />
+			ISIP, JONATHAN<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>4</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65564</td>
+		<td rowspan = "1">LIS 163 WFY1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 4-5:30PM lec ILS COMP LAB RM<br />
+			PASCUA, SONIA<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>10</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65590</td>
+		<td rowspan = "1">LIS 166 THZ2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 5:30-7PM lec ILS IT APP LAB RM<br />
+			SURMIEDA, JANNY<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65553</td>
+		<td rowspan = "1">LIS 170 WFU3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec ILS 3<br />
+			OLGADO, BENEDICT<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65576</td>
+		<td rowspan = "1">LIS 171 THW3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 1-2:30PM lec ILS 3<br />
+			ISIP, JONATHAN<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65554</td>
+		<td rowspan = "1">LIS 172 WWX3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 1-4PM lec ILS 3<br />
+			OLGADO, BENEDICT<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65591</td>
+		<td rowspan = "1">LIS 173 FWX3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 1-4PM lec ILS 3<br />
+			REY, EMMA<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65577</td>
+		<td rowspan = "1">LIS 174 THU1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 10-11:30AM lec ILS COMP LAB RM<br />
+			ISIP, JONATHAN<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65600</td>
+		<td rowspan = "1">LIS 181 MCDE1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 9AM-12PM field ILS COMP LAB RM<br />
+			ISIP, JONATHAN<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65601</td>
+		<td rowspan = "1">LIS 181 MCDE2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 9AM-12PM field ILS IT APP LAB RM<br />
+			CABBAB, JOHANN FREDERICK<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				25			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65596</td>
+		<td rowspan = "1">LIS 190 SCDE6</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec TBA<br />
+			TINAO, MARIA MAURA<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				23			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65573</td>
+		<td rowspan = "1">LIS 190 WFU2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 10-11:30AM lec ILS IT APP LAB RM<br />
+			DORADO, DAN ANTHONY<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				23			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65551</td>
+		<td rowspan = "1">LIS 198 THR3<br/>Information Law and Ethics</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec ILS 3<br />
+			OBILLE, KATHLEEN LOURDES<br/>
+			<em style="font-weight: bold">req: Junior standing </em>		</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65572</td>
+		<td rowspan = "1">LIS 198 WFR1<br/>Information and Knowledge Management</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 8:30-10AM lec ILS COMP LAB RM<br />
+			DORADO, DAN ANTHONY<br/>
+			<em style="font-weight: bold">students must CONCURRENTLY be taking LIS 181, otherwise seek permission from Instructor</em>		</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>6</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65569</td>
+		<td rowspan = "1">LIS 198 WFX2<br/>Organization of Information Resources in Health Sciences Libraries</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			WF 2:30-4PM lec ILS IT APP LAB RM<br />
+			SANTOS, MARK ANTHONY<br/>
+			<em style="font-weight: bold">prereq: LIS 62 and LIS 140 or LIS 141</em>		</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>15</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65605</td>
+		<td rowspan = "1">LIS 199 FWX7</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 1-4PM lec TBA<br />
+			OLGADO, BENEDICT<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65582</td>
+		<td rowspan = "1">LIS 199 THR2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			TTh 8:30-10AM lec ILS IT APP LAB RM<br />
+			SANTOS, DANIEL<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				21			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65555</td>
+		<td rowspan = "1">LIS 200 MIJK2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 1-4PM thesis ILS IT APP LAB RM<br />
+			OLGADO, BENEDICT<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				31			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65588</td>
+		<td rowspan = "1">LIS 201 SCDE5</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec TBA<br />
+			ARLANTE, SALVACION<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>12</strong> /
+				20			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65589</td>
+		<td rowspan = "1">LIS 210 SIJK5</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 1-4PM lec TBA<br />
+			ARLANTE, SALVACION<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65593</td>
+		<td rowspan = "1">LIS 212 TZQ5</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			T 5:30-8:30PM lec TBA<br />
+			LAGRAMA, EIMEE RHEA<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				19			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65592</td>
+		<td rowspan = "1">LIS 220 FZQ3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 5:30-8:30PM lec ILS 3<br />
+			REY, EMMA<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				18			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65559</td>
+		<td rowspan = "1">LIS 222 FZQ4</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 5:30-8:30PM lec ILS 4<br />
+			SANTOS, YHNA THERESE<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>3</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65595</td>
+		<td rowspan = "1">LIS 231 WZQ5</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			W 5:30-8:30PM lec TBA<br />
+			TARLIT, RODOLFO<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65581</td>
+		<td rowspan = "1">LIS 234 SCDE3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec ILS 3<br />
+			FADERON, ROSALIE<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65584</td>
+		<td rowspan = "1">LIS 251 SCDE1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec ILS COMP LAB RM<br />
+			ESPOSO-BETAN, SHARON MARIA<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65598</td>
+		<td rowspan = "1">LIS 254 SIJK3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 1-4PM lec ILS 3<br />
+			ENCANTO, JOENABIE<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65597</td>
+		<td rowspan = "1">LIS 260 SIJK6</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 1-4PM lec TBA<br />
+			TINAO, MARIA MAURA<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>7</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65556</td>
+		<td rowspan = "1">LIS 264 SIJK2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 1-4PM lec ILS IT APP LAB RM<br />
+			CABBAB, JOHANN FREDERICK<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				16			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65602</td>
+		<td rowspan = "1">LIS 266 FZQ1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 5:30-8:30PM lec ILS COMP LAB RM<br />
+			ANGELES, CHITO<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>8</strong> /
+				15			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65580</td>
+		<td rowspan = "1">LIS 269.1 FZQ1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			F 5:30-8:30PM lec ILS COMP LAB RM<br />
+			ANGELES, CHITO<br/>
+					</td>
+		 
+		<td><br/><em></em></td>
+					<td colspan="2"><strong>DISSOLVED</strong></td>
+		
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65560</td>
+		<td rowspan = "1">LIS 290 THZQ3</td>
+		<td rowspan = "1">4.0</td>
+		<td rowspan = "1">
+			Th 5:30-8:30PM lec ILS 3<br />
+			SANTOS, YHNA THERESE<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				10			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65583</td>
+		<td rowspan = "1">LIS 299 SCDE2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			S 9AM-12PM lec ILS IT APP LAB RM<br />
+			SANTOS, DANIEL<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				17			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">65552</td>
+		<td rowspan = "1">LIS 300 MIJK3</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 1-4PM thesis ILS 3<br />
+			OBILLE, KATHLEEN LOURDES<br/>
+					</td>
+		 
+		<td>SLIS<br/><em></em></td>
+					<td>
+				<strong>1</strong> /
+				21			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">50703</td>
+		<td rowspan = "1">LTS 2 - EDUC M</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8:30-11:30AM lec TBA<br />
+			ALCAZAR, MARIE YVETTE; SALVADOR, MARGARITA<br/>
+			<em style="font-weight: bold">EDUK M; PREREQUISITE: MUST HAVE TAKEN LTS1 AT UPCED</em>		</td>
+		 
+		<td>Educ<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				62			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">50704</td>
+		<td rowspan = "1">LTS 2 - EDUC M1</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8:30-11:30AM lec TBA<br />
+			ZAMORA, MARIA CECILIA; ALMAZAN, ROMINA<br/>
+			<em style="font-weight: bold">EDUK M1; PREREQUISITE: MUST HAVE TAKEN LTS1 AT UPCED</em>		</td>
+		 
+		<td>Educ<br/><em></em></td>
+					<td>
+				<strong>5</strong> /
+				60			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">50705</td>
+		<td rowspan = "1">LTS 2 - EDUC M2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 8:30-11:30AM lec TBA<br />
+			CALINGASAN, LORINA; LUCMAN, SHAREHANN<br/>
+			<em style="font-weight: bold">EDUK M2; PREREQUISITE: MUST HAVE TAKEN LTS1 AT UPCED</em>		</td>
+		 
+		<td>Educ<br/><em></em></td>
+					<td>
+				<strong>0</strong> /
+				61			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43072</td>
+		<td rowspan = "1">LTS 2 - CSSP Lingg MCDE</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 9AM-12PM lec PH 430<br />
+			DE CHAVEZ, MARK RAE<br/>
+			<em style="font-weight: bold">Prerequisite: LTS 1</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>9</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43073</td>
+		<td rowspan = "1">LTS 2 - CSSP Lingg MCDE-2</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 9AM-12PM lec PH 428<br />
+			JAVIER, JEM<br/>
+			<em style="font-weight: bold">Prerequisite: LTS 1</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>OVERBOOKED</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+		<tbody style="border-bottom: 1px solid gray">
+	<tr>
+		<td rowspan = "1">43074</td>
+		<td rowspan = "1">LTS 2 - CSSP Lingg MJKL</td>
+		<td rowspan = "1">3.0</td>
+		<td rowspan = "1">
+			M 2-5PM lec PH 428<br />
+			MALICSI, JONATHAN<br/>
+			<em style="font-weight: bold">Prerequisite: LTS 1</em>		</td>
+		 
+		<td>Lingg<br/><em></em></td>
+					<td>
+				<strong>15</strong> /
+				30			</td>
+												<td rowspan="1">0</td>
+														
+		<td></td>
+		</tr>
+					</tbody>
+	</table>
+
+</div><!-- #content -->
+
+﻿
+<script type="text/javascript">
+			
+		$(document).ready(function() {
+			
+			//set the width per footer_expander element
+			var expander_count = $('.footerlink').length;
+			var expander_width = (83/expander_count);
+			
+			var i = 0;
+			$.each($(".footerlink"), function(index, value){
+				$(this).css('width', expander_width+'%');
+				$(this).css('left', (((expander_width)*i)+10)+'%');
+				i++;
+			});
+			
+			$(".footerlink,.footer_expander").hover(
+				function(){
+					$(this).animate({ height: "30"}, 50);
+				},
+				function(){
+					$(this).animate({ height: "16"}, 50);
+				
+				}
+			);
+			
+			//set the width per footer_expander element
+			var division_count = $('.footer_division').length;
+			var division_width = (88/division_count);
+			division_width = division_width+'%';
+			
+			$.each($(".footer_division"), function(index, value){
+				$(this).css('width', division_width);
+			});
+			
+		function change_acadtermtype() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_acadtermtype/' + $(this).val();
+		}
+
+		function change_role() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_role/' + $(this).val();
+		}
+
+		function show_roles() {
+			$("#span_role").addClass("hidden");
+			$("#span_role-choices").removeClass("hidden");
+		}
+
+		function show_acadtermtypes() {
+			$("#span_acadtermtype").addClass("hidden");
+			$("#span_acadtermtype-choices").removeClass("hidden");
+		}
+
+	 });
+	 
+	
+	function showFooter(){
+		$('#footer').slideDown(150);
+		$('.footermin').hide();
+	}
+	function hideFooter(){
+		$('#footer').slideUp(150);
+		$('.footermin').show();
+	}
+	</script>
+
+<span style="clear:both;"></span>
+
+	<div class="footer_expander footermin" onclick="showFooter();">
+		More ▲
+	</div>
+
+		<div id="footer" align="center">
+		<div id="footer_linktotop" align="right" onclick="hideFooter();">
+			<a href="Javascript:void(0);" onclick="hideFooter();" style="color:white">Less ▼</a>
+		</div>
+		<div style="padding-top: 30px;">
+						<div class="footer_division">
+				<div class="footer_division_header">Flowcharts</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/OnlineDroppingFlowchart.pdf" >
+								Dropping							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ChangeMatFlowchart_modified.pdf" >
+								Change Mat							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ClearanceMechanics.pdf" >
+								Clearance							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/downloads/LOA_mechanics.pdf" >
+								Leave of Absence							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Class Schedules</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/" >
+								Regular Classes							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/mba" >
+								MBA/MS Finance PT							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/schedule/spring" >
+								Spring Asia							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Information</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/course_catalog" >
+								Course Catalog							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/curriculum.html" >
+								Curriculum Checklist							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://our.upd.edu.ph/files/ListofGECourses.pdf" >
+								List of RGEP Courses							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Calendar</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/~updinfo/apr14/articles/BOR_approved_AcadCal_AY_2014_2015.pdf" >
+								BOR Approved<br>Academic Calendar<br>AY 2014-2015							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular" >
+								Regular Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/mba" >
+								MBA/MS Fin PT Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/msfin" >
+								MS Fin FT Calendar							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/spring" >
+								Spring Asia Calendar							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">CRS</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/faq" >
+								CRS FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/faq.html" >
+								OUR FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>History of the CRS<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item ">
+													<span>User Guide<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/about/" >
+								The CRS Team<br/>							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Contact Us</div>
+																		<div class="footer_division_item ">
+																				<a href="http://www.facebook.com/groups/134746139953068/" >
+								Facebook Group							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="mailto:crssupport@list.upd.edu.ph" >
+								E-Mail							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>Phone<br/>(981-8500 local 4560)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+													<span>You may visit us at the CRSRS Office at the 3rd floor of the OUR.</span>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">External Links</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/" >
+								UP Diliman							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://up.edu.ph/" >
+								UP System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/" >
+								OUR Site							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://sts.up.edu.ph/" >
+								Socialized Tuition System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://dormapplication.upd.edu.ph/" >
+								Dorm Application Website							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://uvle.up.edu.ph/" >
+								UvLE							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://ucc.upd.edu.ph/about-us/" >
+								UPCC							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://mail.up.edu.ph/" >
+								UP Webmail							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://www.dzup.org/" >
+								DZUP							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://upd.edu.ph/aup/" >
+								Acceptable Use Policy							</a>
+											</div>
+																	</div>
+					</div>
+	</div>
+
+	<div class="footer_quicklinks footermin">
+		Quick Links:
+	</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/schedule/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/schedule/">
+				Regular Classes			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/course_catalog'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/course_catalog">
+				Course Catalog			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='http://our.upd.edu.ph/curriculum.html'">
+			<a class="a_footerlink" href="http://our.upd.edu.ph/curriculum.html">
+				Curriculum Checklist			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/acadcal_public/index/advanced/regular'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular">
+				Regular Calendar			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/faq'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/faq">
+				CRS FAQ			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/about/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/about/">
+				The CRS Team<br/>			</a>
+		</div>
+	</body>
+</html>

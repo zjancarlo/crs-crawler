@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>UP CRS - Course Catalog</title>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery-1.4.1.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/layout.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/status.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/schedule.css" type="text/css" />
+	<link rel="shortcut icon" href="https://crs.upd.edu.ph/images/favicon.ico" type="image/x-icon" />
+
+	<script type="text/javascript" language="JavaScript">
+	$(document).ready(function() {
+		$('#btn_search').click(searchcourses);
+		$('#frm_schedule').submit(function(e) {
+			e.preventDefault();
+			searchcourses();
+		});
+	});
+
+	function searchcourses() {
+		var coursenumber = $.trim($('#txt_coursenumber').val());
+		var alphanumeric_pattern = /^[a-zA-Z0-9\s\.\-]+$/;
+
+		if(coursenumber != '') {
+			if( ! alphanumeric_pattern.test(coursenumber)) {
+				alert('Course number must be alphanumeric.');
+			} else {
+				window.location = 'https://crs.upd.edu.ph/course_catalog/index/' + coursenumber;
+			}
+		}
+
+	}
+
+	</script>
+
+</head>
+
+<body class="schedule">
+
+<div id="header">
+	<a href="https://crs.upd.edu.ph/user" class="header_link"></a>
+</div>
+<div id="subheader">
+</div>
+
+<div id="content" class="align-center">
+
+<h1>
+	Course Catalog
+</h1>
+
+<br />
+
+<form id="frm_schedule" action="" method="post">
+<table class="form" align="center">
+	<tr>
+		<td>Course Number:</td>
+		<td><input type="text" id="txt_coursenumber" name="txt_coursenumber" /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>(e.g., Math 11, Eng 1)</td>
+	</tr>
+	<tr class="tr_submit">
+		<td></td>
+		<td><input type="button" id="btn_search" name="btn_search" value="Search" /></td>
+	</tr>
+</table>
+</form>
+
+<p>
+	<a href="https://crs.upd.edu.ph/course_catalog/index/A">A</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/B">B</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/C">C</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/D">D</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/E">E</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/F">F</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/G">G</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/H">H</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/I">I</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/J">J</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/K">K</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/L">L</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/M">M</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/N">N</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/O">O</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/P">P</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Q">Q</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/R">R</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/S">S</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/T">T</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/U">U</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/V">V</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/W">W</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/X">X</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Y">Y</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Z">Z</a>&nbsp;&nbsp;
+<a href="https://crs.upd.edu.ph/">Back to main page</a>
+</p>
+
+<br /><br />
+
+<table >
+<tr>
+	<th width = "15%">Course code & No.</th>
+	<th width = "30%">Course Title</th>
+	<th width = "40%">Course Description</th>
+	<th width = "15%">Offering Unit</th>
+	
+</tr>
+			<tr class="tr_odd">
+		<td>Nat Sci 1</td>
+		<td>Foundations of Natural Science 1</td>
+		<td></td>
+		<td><abbr title="Science and Society Program" style="border-bottom: 1px dotted;">SSP</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nat Sci 2</td>
+		<td>Foundations of Natural Science 2</td>
+		<td></td>
+		<td><abbr title="Science and Society Program" style="border-bottom: 1px dotted;">SSP</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>NC Intsv Eng A</td>
+		<td>Basic Communication Skills in English</td>
+		<td></td>
+		<td><abbr title="Division of Curriculum and Instruction" style="border-bottom: 1px dotted;">DCI</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>NC Intsv Eng B</td>
+		<td>Intermediate Written Language</td>
+		<td></td>
+		<td><abbr title="Division of Curriculum and Instruction" style="border-bottom: 1px dotted;">DCI</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>NC Intsv Fil A</td>
+		<td>Basic Communication Skills in Filipino</td>
+		<td></td>
+		<td><abbr title="Division of Curriculum and Instruction" style="border-bottom: 1px dotted;">DCI</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>NSTP</td>
+		<td>National Service Training Program</td>
+		<td></td>
+		<td><abbr title="Philippine Studies Program, Asian Studies Program, Asian Center, School of Statistics, Departamento ng Linggwistiks, Institute of Biology, Department of Art Studies, Department of Broadcast Communication, Department of Speech Communication and Theater Arts, College of Education, Departamento ng Kasaysayan, Department of English and Comparative Literature, Department of Visual Communication, Center for Public Administration and Governance Education, School of Library and Information Studies, Department of Studio Arts, School of Economics, Institute of Electrical and Electronics Engineering, Department of Anthropology, Institute of Chemistry, College of Social Sciences and Philosophy, Department of Business Administration, Department of Journalism, Marine Science Institute, Department of Music Education, National Institute of Molecular Biology and Biotechnology, College of Social Work and Community Development, Department of Population Institute, Department of Physical Education, College of Home Economics, School of Urban and Regional Planning, Department of Philosophy, College of Architecture, Institute of Civil Engineering, Department of Geography, Department of Community Development, UP Film Institute, National Institute of Geological Sciences, Department of Mining, Metallurgical, and Materials Engineering, Departamento ng Filipino at Panitikan ng Pilipinas, Asian Institute of Tourism, Department of Sociology, Department of Mechanical Engineering, National Institute of Physics, Department of Communication Research, College of Human Kinetics, CMC Office of the College Secretary, College of Arts and Letters, Energy and Environmental Engineering Program, Department of Industrial Engineering and Operations Research, College of Science, Department of Computer Science, CMC Department of Graduate Studies, CSSP Graduate Studies Office, Department of European Languages, Department of Social Work, Cesar E.A. Virata School of Business, CHE Office of the College Secretary, Department of Psychology, Department of Chemical Engineering, Department of Geodetic Engineering, UP Diliman Ext Prog in Pampanga/Olongapo, Department of Military Science and Tactics, Division of Curriculum and Instruction, Department of Political Science, Department of Engineering Sciences, Institute of Mathematics, College of Mass Communication" style="border-bottom: 1px dotted;">PSP, AC-ASP, AC, Stat, Lingg, IB, DAS, DBC, DSCTA, Educ, Kas, DECL, VC, CPAGE, SLIS, SA, SE, EEEI, DAnthro, IC, CSSP, DBA, DJourn, MSI, DMuE, MBBP, CSWCD, PopIns, DPE, CHE, SURP, Philo, Arch, ICE, DGeog, CD, DFAVC, NIGS, DMMM, DFPP, AIT, Socio, DME, NIP, DCRes, CHK, OCS, CAL, EEEP, DIE/OR, CS, DCS, GRADUATE, GRADUATE, DEL, SW, VSB, OCS, Psych, DChE, DGE, UPDEPP/O, DMST, DCI, PolSci, DES, MATH, CMC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>NSTP Common Module</td>
+		<td>NSTP Common Module</td>
+		<td></td>
+		<td><abbr title="UP Diliman Ext Prog in Pampanga/Olongapo, Center for Public Administration and Governance Education, Energy and Environmental Engineering Program, Department of Mining, Metallurgical, and Materials Engineering, Department of Mechanical Engineering, Department of Industrial Engineering and Operations Research, Department of Geodetic Engineering, Department of Computer Science, Institute of Civil Engineering, Department of Chemical Engineering, Department of Engineering Sciences, Institute of Electrical and Electronics Engineering, Division of Curriculum and Instruction, Department of Social Work, Department of Community Development, Department of Anthropology, CSSP Graduate Studies Office, Department of Geography, Departamento ng Kasaysayan, Department of Population Institute, Department of Political Science, Department of Psychology, Department of Sociology, Departamento ng Linggwistiks, Department of Philosophy, National Institute of Physics, National Institute of Geological Sciences, Marine Science Institute, National Institute of Molecular Biology and Biotechnology, Institute of Chemistry, Institute of Biology, Department of Music Education, Department of Communication Research, Department of Broadcast Communication, UP Film Institute, Department of Journalism, CMC Office of the College Secretary, CMC Department of Graduate Studies, Department of Physical Education, CHE Office of the College Secretary, Department of Visual Communication, Department of Studio Arts, Department of Business Administration, Department of Speech Communication and Theater Arts, Departamento ng Filipino at Panitikan ng Pilipinas, Department of European Languages, Department of English and Comparative Literature, Department of Art Studies, Philippine Studies Program, Asian Studies Program, School of Statistics, School of Urban and Regional Planning, School of Economics, School of Library and Information Studies, Asian Institute of Tourism, Department of Military Science and Tactics, College of Education, College of Social Work and Community Development, College of Social Sciences and Philosophy, College of Science, College of Human Kinetics, College of Home Economics, Cesar E.A. Virata School of Business, College of Arts and Letters, College of Architecture, Asian Center, Institute of Mathematics, College of Mass Communication" style="border-bottom: 1px dotted;">UPDEPP/O, CPAGE, EEEP, DMMM, DME, DIE/OR, DGE, DCS, ICE, DChE, DES, EEEI, DCI, SW, CD, DAnthro, GRADUATE, DGeog, Kas, PopIns, PolSci, Psych, Socio, Lingg, Philo, NIP, NIGS, MSI, MBBP, IC, IB, DMuE, DCRes, DBC, DFAVC, DJourn, OCS, GRADUATE, DPE, OCS, VC, SA, DBA, DSCTA, DFPP, DEL, DECL, DAS, PSP, AC-ASP, Stat, SURP, SE, SLIS, AIT, DMST, Educ, CSWCD, CSSP, CS, CHK, CHE, VSB, CAL, Arch, AC, MATH, CMC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nutr 201</td>
+		<td>Molecular Nutrition I</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Nutr 202</td>
+		<td>Molecular Nutrition II</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nutr 225</td>
+		<td>Nutrition Principles in Wellness and Physical Fitness</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Nutr 230</td>
+		<td>Selected Aspects of Food Science and Nutrition</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nutr 235</td>
+		<td>Ecology of Nutrition</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Nutr 240</td>
+		<td>Measurement and Evaluation of Nutritional Status I</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nutr 240.1</td>
+		<td>Measurement and Evaluation of Nutritional Status II</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Nutr 241</td>
+		<td>Measurement and Evaluation of Nutritional Status II</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nutr 250</td>
+		<td>Advances in Medical Nutrition Therapy</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Nutr 260</td>
+		<td>Planning and Management of Food and Nutrition Programs</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nutr 265</td>
+		<td>Nutrition Education, Training and Advocacy</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Nutr 270</td>
+		<td>Molecualr Nutrition I</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nutr 270.1</td>
+		<td>Molecular Nutrition II</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Nutr 275</td>
+		<td>Computer Applications in Nutrition</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nutr 290</td>
+		<td>Nutrition Research I</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Nutr 290.1</td>
+		<td>Nutrition Research II</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nutr 299</td>
+		<td>Nutrition Research</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Nutr 300</td>
+		<td>Master's Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Nutr 350</td>
+		<td>Readings in Food and Nutrition</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Nutr 400</td>
+		<td>Dissertation</td>
+		<td></td>
+		<td><abbr title="Department of Food Science and Nutrition" style="border-bottom: 1px dotted;">DFSN</abbr></td>
+	</tr>
+	</table>
+
+</div><!-- #content -->
+
+﻿
+<script type="text/javascript">
+			
+		$(document).ready(function() {
+			
+			//set the width per footer_expander element
+			var expander_count = $('.footerlink').length;
+			var expander_width = (83/expander_count);
+			
+			var i = 0;
+			$.each($(".footerlink"), function(index, value){
+				$(this).css('width', expander_width+'%');
+				$(this).css('left', (((expander_width)*i)+10)+'%');
+				i++;
+			});
+			
+			$(".footerlink,.footer_expander").hover(
+				function(){
+					$(this).animate({ height: "30"}, 50);
+				},
+				function(){
+					$(this).animate({ height: "16"}, 50);
+				
+				}
+			);
+			
+			//set the width per footer_expander element
+			var division_count = $('.footer_division').length;
+			var division_width = (88/division_count);
+			division_width = division_width+'%';
+			
+			$.each($(".footer_division"), function(index, value){
+				$(this).css('width', division_width);
+			});
+			
+		function change_acadtermtype() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_acadtermtype/' + $(this).val();
+		}
+
+		function change_role() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_role/' + $(this).val();
+		}
+
+		function show_roles() {
+			$("#span_role").addClass("hidden");
+			$("#span_role-choices").removeClass("hidden");
+		}
+
+		function show_acadtermtypes() {
+			$("#span_acadtermtype").addClass("hidden");
+			$("#span_acadtermtype-choices").removeClass("hidden");
+		}
+
+	 });
+	 
+	
+	function showFooter(){
+		$('#footer').slideDown(150);
+		$('.footermin').hide();
+	}
+	function hideFooter(){
+		$('#footer').slideUp(150);
+		$('.footermin').show();
+	}
+	</script>
+
+<span style="clear:both;"></span>
+
+	<div class="footer_expander footermin" onclick="showFooter();">
+		More ▲
+	</div>
+
+		<div id="footer" align="center">
+		<div id="footer_linktotop" align="right" onclick="hideFooter();">
+			<a href="Javascript:void(0);" onclick="hideFooter();" style="color:white">Less ▼</a>
+		</div>
+		<div style="padding-top: 30px;">
+						<div class="footer_division">
+				<div class="footer_division_header">Flowcharts</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/OnlineDroppingFlowchart.pdf" >
+								Dropping							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ChangeMatFlowchart_modified.pdf" >
+								Change Mat							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ClearanceMechanics.pdf" >
+								Clearance							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/downloads/LOA_mechanics.pdf" >
+								Leave of Absence							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Class Schedules</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/" >
+								Regular Classes							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/mba" >
+								MBA/MS Finance PT							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/schedule/spring" >
+								Spring Asia							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Information</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/course_catalog" >
+								Course Catalog							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/curriculum.html" >
+								Curriculum Checklist							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://our.upd.edu.ph/files/ListofGECourses.pdf" >
+								List of RGEP Courses							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Calendar</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/~updinfo/apr14/articles/BOR_approved_AcadCal_AY_2014_2015.pdf" >
+								BOR Approved<br>Academic Calendar<br>AY 2014-2015							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular" >
+								Regular Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/mba" >
+								MBA/MS Fin PT Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/msfin" >
+								MS Fin FT Calendar							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/spring" >
+								Spring Asia Calendar							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">CRS</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/faq" >
+								CRS FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/faq.html" >
+								OUR FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>History of the CRS<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item ">
+													<span>User Guide<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/about/" >
+								The CRS Team<br/>							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Contact Us</div>
+																		<div class="footer_division_item ">
+																				<a href="http://www.facebook.com/groups/134746139953068/" >
+								Facebook Group							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="mailto:crssupport@list.upd.edu.ph" >
+								E-Mail							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>Phone<br/>(981-8500 local 4560)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+													<span>You may visit us at the CRSRS Office at the 3rd floor of the OUR.</span>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">External Links</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/" >
+								UP Diliman							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://up.edu.ph/" >
+								UP System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/" >
+								OUR Site							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://sts.up.edu.ph/" >
+								Socialized Tuition System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://dormapplication.upd.edu.ph/" >
+								Dorm Application Website							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://uvle.up.edu.ph/" >
+								UvLE							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://ucc.upd.edu.ph/about-us/" >
+								UPCC							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://mail.up.edu.ph/" >
+								UP Webmail							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://www.dzup.org/" >
+								DZUP							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://upd.edu.ph/aup/" >
+								Acceptable Use Policy							</a>
+											</div>
+																	</div>
+					</div>
+	</div>
+
+	<div class="footer_quicklinks footermin">
+		Quick Links:
+	</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/schedule/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/schedule/">
+				Regular Classes			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/course_catalog'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/course_catalog">
+				Course Catalog			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='http://our.upd.edu.ph/curriculum.html'">
+			<a class="a_footerlink" href="http://our.upd.edu.ph/curriculum.html">
+				Curriculum Checklist			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/acadcal_public/index/advanced/regular'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular">
+				Regular Calendar			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/faq'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/faq">
+				CRS FAQ			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/about/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/about/">
+				The CRS Team<br/>			</a>
+		</div>
+	</body>
+</html>

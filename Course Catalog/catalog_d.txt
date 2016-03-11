@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>UP CRS - Course Catalog</title>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery-1.4.1.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/layout.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/status.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/schedule.css" type="text/css" />
+	<link rel="shortcut icon" href="https://crs.upd.edu.ph/images/favicon.ico" type="image/x-icon" />
+
+	<script type="text/javascript" language="JavaScript">
+	$(document).ready(function() {
+		$('#btn_search').click(searchcourses);
+		$('#frm_schedule').submit(function(e) {
+			e.preventDefault();
+			searchcourses();
+		});
+	});
+
+	function searchcourses() {
+		var coursenumber = $.trim($('#txt_coursenumber').val());
+		var alphanumeric_pattern = /^[a-zA-Z0-9\s\.\-]+$/;
+
+		if(coursenumber != '') {
+			if( ! alphanumeric_pattern.test(coursenumber)) {
+				alert('Course number must be alphanumeric.');
+			} else {
+				window.location = 'https://crs.upd.edu.ph/course_catalog/index/' + coursenumber;
+			}
+		}
+
+	}
+
+	</script>
+
+</head>
+
+<body class="schedule">
+
+<div id="header">
+	<a href="https://crs.upd.edu.ph/user" class="header_link"></a>
+</div>
+<div id="subheader">
+</div>
+
+<div id="content" class="align-center">
+
+<h1>
+	Course Catalog
+</h1>
+
+<br />
+
+<form id="frm_schedule" action="" method="post">
+<table class="form" align="center">
+	<tr>
+		<td>Course Number:</td>
+		<td><input type="text" id="txt_coursenumber" name="txt_coursenumber" /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>(e.g., Math 11, Eng 1)</td>
+	</tr>
+	<tr class="tr_submit">
+		<td></td>
+		<td><input type="button" id="btn_search" name="btn_search" value="Search" /></td>
+	</tr>
+</table>
+</form>
+
+<p>
+	<a href="https://crs.upd.edu.ph/course_catalog/index/A">A</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/B">B</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/C">C</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/D">D</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/E">E</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/F">F</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/G">G</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/H">H</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/I">I</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/J">J</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/K">K</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/L">L</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/M">M</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/N">N</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/O">O</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/P">P</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Q">Q</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/R">R</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/S">S</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/T">T</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/U">U</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/V">V</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/W">W</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/X">X</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Y">Y</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Z">Z</a>&nbsp;&nbsp;
+<a href="https://crs.upd.edu.ph/">Back to main page</a>
+</p>
+
+<br /><br />
+
+<table >
+<tr>
+	<th width = "15%">Course code & No.</th>
+	<th width = "30%">Course Title</th>
+	<th width = "40%">Course Description</th>
+	<th width = "15%">Offering Unit</th>
+	
+</tr>
+			<tr class="tr_odd">
+		<td>D 20</td>
+		<td>Introduction to Industrial Design I</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 21</td>
+		<td>Introduction to Industrial Design II</td>
+		<td>Continuation of D 20.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 22</td>
+		<td>Techniques III</td>
+		<td>Computer-aided design and drafting for industrial design applications.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 23</td>
+		<td>Techniques IV</td>
+		<td>3D digital imaging for design generation and presentation in industrial design.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 24</td>
+		<td>Industrial Design Workshop I</td>
+		<td>Explorations in non-traditional media and techniques.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 25</td>
+		<td>Industrial Design Workshop II</td>
+		<td>Continuation of D 24.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 26</td>
+		<td>Materials III</td>
+		<td>The study and use of material in relation to contemporary design in industry.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 27</td>
+		<td>Materials IV</td>
+		<td>Continuation of D 26.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 28</td>
+		<td>Perspective</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 29</td>
+		<td>Ergonomics</td>
+		<td>Fundamental concepts of human factors in design.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 30</td>
+		<td>Visual Interface Design</td>
+		<td>Study and application of the fundamental principles in the design of visually communicated information.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 38</td>
+		<td>Ergonomics</td>
+		<td>Fundamental concepts of human factors in design.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 150</td>
+		<td>Intermediate Industrial Design I</td>
+		<td>Design concepts, methodologies and theories of utilitarian forms.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 151</td>
+		<td>Intermediate Industrial Design II</td>
+		<td>Continuation of D 150.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 152</td>
+		<td>Advanced Industrial Design</td>
+		<td>Comprehensive problem analysis on definition and execution of product design projects.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 160</td>
+		<td>Package Design I</td>
+		<td>Design concepts, methodologies and theories of packaging.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 161</td>
+		<td>Package Design II</td>
+		<td>Continuation of D 160.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 162</td>
+		<td>Package Design III</td>
+		<td>Comprehensive problem analysis on structure and graphic production of package design projects.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 170</td>
+		<td>Systems Design I</td>
+		<td>Design concepts, methodologies and theories of interrelated functional structures.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 171</td>
+		<td>Systems Design II</td>
+		<td>Continuation of D 170.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 172</td>
+		<td>Systems Design III</td>
+		<td>Analytical research, planning and design execution of product systems projects.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 193</td>
+		<td>Professional Seminar/Workshop</td>
+		<td>Concentrated production work experience in any major area of specialization.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 195</td>
+		<td>Practicum</td>
+		<td>Apprenticeship in the Design Departments of agencies.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 196</td>
+		<td>Design Management</td>
+		<td>Managing the design process from concept to retail.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>D 197</td>
+		<td>Special Topics in Industrial Design</td>
+		<td>Application of industrial design principles in professional practice.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>D 200</td>
+		<td>Industrial Design Thesis</td>
+		<td>Industrial design research project in 145 any major area of specialization.</td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>DE 201</td>
+		<td>Economic Analysis I</td>
+		<td>The measurement, analysis, and control of aggregate economic activity; money and the price level; the role of government; models of the open economy; international trade and the balance of payments.</td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>DE 202</td>
+		<td>Economic Analysis II</td>
+		<td>The theory of consumer behavior and the theory of the firm; pricing and allocation of goods and factors of production in different market situations; economic efficiency and welfare considerations.</td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>DE 206</td>
+		<td>Quantitative Methods I</td>
+		<td>Mathematical tools for economic analysis and model building; applications to macroeconomic and microeconomic problems; optimization techniques.</td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>DE 231</td>
+		<td>Quantitative Methods II</td>
+		<td>The analysis of economic data; sample survey techniques; statistical tools for model estimation and forecasting; computer applications.</td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>DE 241</td>
+		<td>Trade Policy and Development</td>
+		<td>Theories of trade, trade protection, regionalism and multilaterism; relationship between trade and development; global trade governance; special issues affecting global trade.</td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>DE 251</td>
+		<td>Public Sector Economics for Development</td>
+		<td>Taxation, resource allocation, and welfare; public expenditures and collective consumption; efficiency and equity aspects of fiscal policy.</td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>DE 252</td>
+		<td>Local Public Economics</td>
+		<td>Economic analysis of local or sub-national governments and their roles in and contributions to economic development; public financial management and expenditure analysis; local government performance and innovations.</td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>DE 253</td>
+		<td>Project Analysis and Evaluation</td>
+		<td>Methods of project appraisal, selection, and post-evaluation from the private and social viewpoints; case studies of selected Philippine projects.</td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>DE 291</td>
+		<td>Growth, Poverty and Institutions</td>
+		<td></td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>DE 292</td>
+		<td>Program Evaluation</td>
+		<td>Issues and experiences in economic development; techniques in program evaluation.</td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>DE 293</td>
+		<td>Institutional and Policy Analysis</td>
+		<td>Political economy of policymaking; impact of political institutions, power relations and social dynamics on the efficiency and effectiveness of public policies.</td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>DE 298</td>
+		<td>Special Problems in Development Economics</td>
+		<td></td>
+		<td><abbr title="School of Economics" style="border-bottom: 1px dotted;">SE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 210</td>
+		<td>Theory and Methods of Demography</td>
+		<td></td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Demo 211</td>
+		<td>Techniques of Demographic Analysis I</td>
+		<td>Demographic data sources, evaluation, and use.  Analysis of population composition.  Methods of measuring levels, trends and differentials of mortality, nuptiality, fertility and migration.  Procedures for deriving population change and distribution.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 212</td>
+		<td>Techniques of Demographic Analysis II</td>
+		<td>Methods of data adjustment.  Techniques of estimating demographic parameters on the basis of incomplete and complete data.  Population models and alternative paths to stabilization. </td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Demo 220</td>
+		<td>The Demography of Asia and the Pacific</td>
+		<td>Trends of population growth and prospects of future growth in the Asian and the Pacific region.  Population dynamics and interrelationships with development.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 221</td>
+		<td>Population Growth and Economic Development</td>
+		<td>Analysis of factors involved in the economic development of nations with particular reference to population change.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Demo 225</td>
+		<td>Statistical Analysis of Population and Related Survey Data Using Statistical Software Packages</td>
+		<td>Univariate and bivariate statistical analyses of survey data for the study of population and related processes using statistical software packages.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 226</td>
+		<td>Advanced Statistical Analysis for Population and Related Processes Using Statistical Software Packages</td>
+		<td>Multivariate statistical techniques for analyses of population and related processes using statistical software packages.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Demo 230</td>
+		<td>Population Program Evaluation</td>
+		<td></td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 240</td>
+		<td>Population Policies and Programs</td>
+		<td>Review of policies and programs directly or indirectly affecting population; linkage of empirical findings with activities aimed at formulating specific policies, plans, and programs.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Demo 241</td>
+		<td>Emerging Issues in Population</td>
+		<td>Analysis of socio-economic demographic inter-relationships brought about by recent demographic changes in the trends and patterns of fertility, mortality, migration, and nuptiality.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 295</td>
+		<td>Special Topics in Demography </td>
+		<td>Consideration of chief substantial areas of demography.  Attention is given to the relations of population to other social, economic, and political factors.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Demo 295.1</td>
+		<td>Special Topics in Demography:  Analysis of Nuptiality and Family Formation</td>
+		<td></td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 295.2</td>
+		<td>Special Topics in Demography:  Analysis of Population Spatial Distribution</td>
+		<td></td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Demo 295.3</td>
+		<td>Special Topics in Demography:  Family Planning Program Evaluation</td>
+		<td></td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 295.4</td>
+		<td>Special Topics in Demography:  Analysis of Mortality</td>
+		<td></td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Demo 295.5</td>
+		<td>Special Topics in Demography:  Techniques of Population Projection</td>
+		<td></td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 297.1</td>
+		<td>Seminar in Population and Development I</td>
+		<td>Theoretical and methodological developments in the analysis of interrelationships of population, resources and environment.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Demo 297.2</td>
+		<td>Seminar in Population and Development II</td>
+		<td>Theoretical and methodological development in the understanding of interrelationships of population, reproductive health, sexuality, epidemiologic transition, aging, and other population related issues and concerns.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 298</td>
+		<td>Applied Population Research</td>
+		<td>Applied research in population issues.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Demo 299</td>
+		<td>Research Methods in Demography</td>
+		<td>Research proposal writing, data analysis and survey techniques appropriate to the field of demography.</td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Demo 300</td>
+		<td>Master's Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Population Institute" style="border-bottom: 1px dotted;">PopIns</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Deutsch 201</td>
+		<td>Kulturkunde (Contemporary German Culture)</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies, Department of European Languages" style="border-bottom: 1px dotted;">DAS, DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Deutsch 210</td>
+		<td>Burodeutsch (Business German in the Philippine Context)</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Deutsch 220</td>
+		<td>Geschichte der deutschen Literatur (History of German)</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Deutsch 230</td>
+		<td>Deutsch fur Fortgeschrittene (Advanced Oral and Written German)</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Deutsch 260</td>
+		<td>Deutsche Semantik (German Semantics)</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Deutsch 270</td>
+		<td>Ubersetzungswissenschaft (Theories of Translation)</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Deutsch 271</td>
+		<td>Praktische Ubersetzungsubungen (Translation of Selected Texts)</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Deutsch 280</td>
+		<td>Sprachlehr - und lernforschung DaF (Methodology of Teaching German as a Foreign Language)</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Deutsch 290</td>
+		<td>Kurse Mit Besonderer Themenstellung (Special Topics)</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Deutsch 299</td>
+		<td>Kolloquium (Areas and Techniques of Research)</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Deutsch 300</td>
+		<td>Magisterarbeit (Thesis)</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Dutch 10</td>
+		<td>Elementary Dutch</td>
+		<td>Pronunciation, grammar, easy readings, dictation and translation.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Dutch 11</td>
+		<td>Elementary Dutch</td>
+		<td>A continuation of Dutch 10.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Dutch 12</td>
+		<td>Intermediate Dutch</td>
+		<td>Advanced grammar, readings, dictation, translation, composition and conversation.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Dutch 13</td>
+		<td>Intermediate Dutch</td>
+		<td>A continuation of Dutch 12</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+	</table>
+
+</div><!-- #content -->
+
+﻿
+<script type="text/javascript">
+			
+		$(document).ready(function() {
+			
+			//set the width per footer_expander element
+			var expander_count = $('.footerlink').length;
+			var expander_width = (83/expander_count);
+			
+			var i = 0;
+			$.each($(".footerlink"), function(index, value){
+				$(this).css('width', expander_width+'%');
+				$(this).css('left', (((expander_width)*i)+10)+'%');
+				i++;
+			});
+			
+			$(".footerlink,.footer_expander").hover(
+				function(){
+					$(this).animate({ height: "30"}, 50);
+				},
+				function(){
+					$(this).animate({ height: "16"}, 50);
+				
+				}
+			);
+			
+			//set the width per footer_expander element
+			var division_count = $('.footer_division').length;
+			var division_width = (88/division_count);
+			division_width = division_width+'%';
+			
+			$.each($(".footer_division"), function(index, value){
+				$(this).css('width', division_width);
+			});
+			
+		function change_acadtermtype() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_acadtermtype/' + $(this).val();
+		}
+
+		function change_role() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_role/' + $(this).val();
+		}
+
+		function show_roles() {
+			$("#span_role").addClass("hidden");
+			$("#span_role-choices").removeClass("hidden");
+		}
+
+		function show_acadtermtypes() {
+			$("#span_acadtermtype").addClass("hidden");
+			$("#span_acadtermtype-choices").removeClass("hidden");
+		}
+
+	 });
+	 
+	
+	function showFooter(){
+		$('#footer').slideDown(150);
+		$('.footermin').hide();
+	}
+	function hideFooter(){
+		$('#footer').slideUp(150);
+		$('.footermin').show();
+	}
+	</script>
+
+<span style="clear:both;"></span>
+
+	<div class="footer_expander footermin" onclick="showFooter();">
+		More ▲
+	</div>
+
+		<div id="footer" align="center">
+		<div id="footer_linktotop" align="right" onclick="hideFooter();">
+			<a href="Javascript:void(0);" onclick="hideFooter();" style="color:white">Less ▼</a>
+		</div>
+		<div style="padding-top: 30px;">
+						<div class="footer_division">
+				<div class="footer_division_header">Flowcharts</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/OnlineDroppingFlowchart.pdf" >
+								Dropping							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ChangeMatFlowchart_modified.pdf" >
+								Change Mat							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ClearanceMechanics.pdf" >
+								Clearance							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/downloads/LOA_mechanics.pdf" >
+								Leave of Absence							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Class Schedules</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/" >
+								Regular Classes							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/mba" >
+								MBA/MS Finance PT							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/schedule/spring" >
+								Spring Asia							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Information</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/course_catalog" >
+								Course Catalog							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/curriculum.html" >
+								Curriculum Checklist							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://our.upd.edu.ph/files/ListofGECourses.pdf" >
+								List of RGEP Courses							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Calendar</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/~updinfo/apr14/articles/BOR_approved_AcadCal_AY_2014_2015.pdf" >
+								BOR Approved<br>Academic Calendar<br>AY 2014-2015							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular" >
+								Regular Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/mba" >
+								MBA/MS Fin PT Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/msfin" >
+								MS Fin FT Calendar							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/spring" >
+								Spring Asia Calendar							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">CRS</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/faq" >
+								CRS FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/faq.html" >
+								OUR FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>History of the CRS<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item ">
+													<span>User Guide<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/about/" >
+								The CRS Team<br/>							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Contact Us</div>
+																		<div class="footer_division_item ">
+																				<a href="http://www.facebook.com/groups/134746139953068/" >
+								Facebook Group							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="mailto:crssupport@list.upd.edu.ph" >
+								E-Mail							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>Phone<br/>(981-8500 local 4560)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+													<span>You may visit us at the CRSRS Office at the 3rd floor of the OUR.</span>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">External Links</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/" >
+								UP Diliman							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://up.edu.ph/" >
+								UP System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/" >
+								OUR Site							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://sts.up.edu.ph/" >
+								Socialized Tuition System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://dormapplication.upd.edu.ph/" >
+								Dorm Application Website							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://uvle.up.edu.ph/" >
+								UvLE							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://ucc.upd.edu.ph/about-us/" >
+								UPCC							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://mail.up.edu.ph/" >
+								UP Webmail							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://www.dzup.org/" >
+								DZUP							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://upd.edu.ph/aup/" >
+								Acceptable Use Policy							</a>
+											</div>
+																	</div>
+					</div>
+	</div>
+
+	<div class="footer_quicklinks footermin">
+		Quick Links:
+	</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/schedule/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/schedule/">
+				Regular Classes			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/course_catalog'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/course_catalog">
+				Course Catalog			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='http://our.upd.edu.ph/curriculum.html'">
+			<a class="a_footerlink" href="http://our.upd.edu.ph/curriculum.html">
+				Curriculum Checklist			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/acadcal_public/index/advanced/regular'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular">
+				Regular Calendar			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/faq'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/faq">
+				CRS FAQ			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/about/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/about/">
+				The CRS Team<br/>			</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,2448 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>UP CRS - Course Catalog</title>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery-1.4.1.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/layout.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/status.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/schedule.css" type="text/css" />
+	<link rel="shortcut icon" href="https://crs.upd.edu.ph/images/favicon.ico" type="image/x-icon" />
+
+	<script type="text/javascript" language="JavaScript">
+	$(document).ready(function() {
+		$('#btn_search').click(searchcourses);
+		$('#frm_schedule').submit(function(e) {
+			e.preventDefault();
+			searchcourses();
+		});
+	});
+
+	function searchcourses() {
+		var coursenumber = $.trim($('#txt_coursenumber').val());
+		var alphanumeric_pattern = /^[a-zA-Z0-9\s\.\-]+$/;
+
+		if(coursenumber != '') {
+			if( ! alphanumeric_pattern.test(coursenumber)) {
+				alert('Course number must be alphanumeric.');
+			} else {
+				window.location = 'https://crs.upd.edu.ph/course_catalog/index/' + coursenumber;
+			}
+		}
+
+	}
+
+	</script>
+
+</head>
+
+<body class="schedule">
+
+<div id="header">
+	<a href="https://crs.upd.edu.ph/user" class="header_link"></a>
+</div>
+<div id="subheader">
+</div>
+
+<div id="content" class="align-center">
+
+<h1>
+	Course Catalog
+</h1>
+
+<br />
+
+<form id="frm_schedule" action="" method="post">
+<table class="form" align="center">
+	<tr>
+		<td>Course Number:</td>
+		<td><input type="text" id="txt_coursenumber" name="txt_coursenumber" /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>(e.g., Math 11, Eng 1)</td>
+	</tr>
+	<tr class="tr_submit">
+		<td></td>
+		<td><input type="button" id="btn_search" name="btn_search" value="Search" /></td>
+	</tr>
+</table>
+</form>
+
+<p>
+	<a href="https://crs.upd.edu.ph/course_catalog/index/A">A</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/B">B</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/C">C</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/D">D</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/E">E</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/F">F</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/G">G</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/H">H</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/I">I</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/J">J</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/K">K</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/L">L</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/M">M</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/N">N</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/O">O</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/P">P</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Q">Q</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/R">R</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/S">S</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/T">T</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/U">U</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/V">V</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/W">W</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/X">X</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Y">Y</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Z">Z</a>&nbsp;&nbsp;
+<a href="https://crs.upd.edu.ph/">Back to main page</a>
+</p>
+
+<br /><br />
+
+<table >
+<tr>
+	<th width = "15%">Course code & No.</th>
+	<th width = "30%">Course Title</th>
+	<th width = "40%">Course Description</th>
+	<th width = "15%">Offering Unit</th>
+	
+</tr>
+			<tr class="tr_odd">
+		<td>Hapon 10</td>
+		<td>Elementaring Hapon I (Elementary Japanese I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hapon 11</td>
+		<td>Elementaring Hapon II (Elementary Japanese II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hapon 12</td>
+		<td>Intermidyet na Hapon I (Intermediate Japanese I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hapon 13</td>
+		<td>Intermidyet na Hapon II (Intermediate Japanese II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hapon 20</td>
+		<td>Pagbasa sa Hapon (Reading in Japanese)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hapon 100</td>
+		<td>Advans na Hapon I (Advanced Japanese I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hapon 101</td>
+		<td>Advans na Hapon II (Advanced Japanese II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hapon 110</td>
+		<td>Mga Babasahin sa Hapon (Readings in Japanese)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hapon 111</td>
+		<td>Advans na Komposisyon sa Hapon (Advanced Composition in Japanese)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hapon 112</td>
+		<td>Advans na Kanji (Advanced Kanji)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hapon 113</td>
+		<td>Pagsasalin (Japanese Translation)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hapon 121</td>
+		<td>Pagbasa ng Dyaryong Hapon (Reading Japanese Newspaper)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hapon 122</td>
+		<td>Advans na Pagbasa I (Advanced Reading I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hapon 123</td>
+		<td>Advans na Pagbasa II (Advanced Reading II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hapon 124</td>
+		<td>Sayantifik at Teknikal na Hapon (Scientific and Technical Japanese)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hapon 141</td>
+		<td>Kasaysayan at Teknikal na Hapon (History and Technical Japanese)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hapon 142</td>
+		<td>Semantiks na Hapon (Japanese Semantics)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HE 100</td>
+		<td>Family Life and Societal Development</td>
+		<td></td>
+		<td><abbr title="CHE Office of the College Secretary" style="border-bottom: 1px dotted;">OCS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HE 101</td>
+		<td>Ethics and Values in Family and Society</td>
+		<td></td>
+		<td><abbr title="CHE Office of the College Secretary" style="border-bottom: 1px dotted;">OCS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HE 290</td>
+		<td>Graduate Seminar</td>
+		<td></td>
+		<td><abbr title="CHE Office of the College Secretary" style="border-bottom: 1px dotted;">OCS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HE 390</td>
+		<td>Graduate Seminar</td>
+		<td></td>
+		<td><abbr title="CHE Office of the College Secretary" style="border-bottom: 1px dotted;">OCS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 11</td>
+		<td>History and Philosophy of Home Economics Education</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 110</td>
+		<td>Household Resource Management</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 114</td>
+		<td>Home Economics and Livelihood Education I</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 114.1</td>
+		<td>Home Economics and Livelihood Education II</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 115</td>
+		<td>Consumer Education</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 116</td>
+		<td>Instructional Strategies in Home Economics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 117</td>
+		<td>Evaluation in Home Economics Education</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 118</td>
+		<td>Curriculum Planning in Home Economics Education</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 131</td>
+		<td>Consumer Education</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 133</td>
+		<td>Home Economics and Livelihood Education I</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 133.1</td>
+		<td>Home Economics and Livelihood Education II</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 135</td>
+		<td>Instructional Strategies in Home Economics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 137</td>
+		<td>Evaluation in Home Economics Education</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 139</td>
+		<td>Curriculum Planning in Home Economics Education</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 150</td>
+		<td>Computer Applications in Home Economics Education</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 175</td>
+		<td>Management of School Food Service Centers</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 176</td>
+		<td>Adult and Out-of-School Youth Programs in Home Economics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 177</td>
+		<td>Practicum I (Practicum in Management of School Food Service Centers)</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 178</td>
+		<td>Practicum II (Practicum in Teaching Home Economics)</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 197</td>
+		<td>Special Topics in Home Economics Education</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 199</td>
+		<td>Research Methods in Home Economics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 200</td>
+		<td>Undergraduate Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 201</td>
+		<td>Principles and Philosophies of Home Economics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 203</td>
+		<td>Organization and Management of Technology in Home Economics and Livelihood Programs</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 204</td>
+		<td>Comparative Education in Home Economics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 207</td>
+		<td>Food and Nutrition Programs in Schools</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 211</td>
+		<td>School Food Service Center Management</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 212</td>
+		<td>Supervision and Evaluation in Home Economics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 214</td>
+		<td>Home Economics in the Educational System</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 217</td>
+		<td>Designs of Training Programs in Home Economics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 220</td>
+		<td>Resource Management in Households</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 288</td>
+		<td>Cross Cultural Development of Household Technologies</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 290</td>
+		<td>Consumerism and the Environment</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 292</td>
+		<td>Seminar in Values and Professional Ethics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 299</td>
+		<td>Research Methods in Home Economics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 300</td>
+		<td>Master's Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 341</td>
+		<td>Management of Home Economics Programs</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HEEd 380</td>
+		<td>Special Problems in Home Economics</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HEEd 400</td>
+		<td>Dissertation</td>
+		<td></td>
+		<td><abbr title="Department of Home Economics Education" style="border-bottom: 1px dotted;">HEED</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hibro 10</td>
+		<td>Elementaring Hibro I (Elementary Hebrew I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hibro 11</td>
+		<td>Elementaring Hibro II (Elementary Hebrew II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hibro 12</td>
+		<td>Intermidyet na Hibro I (Intermediate Hebrew I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hibro 13</td>
+		<td>Intermidyet na Hibro II (Intermediate Hebrew II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hindi 10</td>
+		<td>Elementaring Hindi I (Elementary Hindi I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hindi 11</td>
+		<td>Elementaring Hindi II (Elementary Hindi II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hindi 12</td>
+		<td>Intermidyet na Hindi I (Intermediate Hindi I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hindi 13</td>
+		<td>Intermidyet na Hindi II (Intermediate Hindi II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hindi 100</td>
+		<td>Advans na Hindi I (Advanced Hindi I)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hindi 101</td>
+		<td>Advans na Hindi II (Advanced Hindi II)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hindi 110</td>
+		<td>Mga Babasahin sa Hindi (Readings in Hindi)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hindi 111</td>
+		<td>Advans na Komposisyon sa Hindi (Advanced Composition in Hindi)</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HIRM 121</td>
+		<td>Food and Culture</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>History 1</td>
+		<td>Philippine History</td>
+		<td>The political, economic, social and cultural development of the Philippines.</td>
+		<td><abbr title="Departamento ng Kasaysayan" style="border-bottom: 1px dotted;">Kas</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>History 104</td>
+		<td>Philippine History (Pre-Spanish)</td>
+		<td>From the earliest times to the establishment of the Spanish colonial government in the Philippines, with particular emphasis on Pre-Spanish sources, the discovery, the exploration and conquest, the social, economic and political conditions during the period of discovery and conquest, and the establishment of the Spanish government.</td>
+		<td><abbr title="Departamento ng Kasaysayan" style="border-bottom: 1px dotted;">Kas</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 91</td>
+		<td>Fundamental Rhythms</td>
+		<td>Study of musical form & structure in relation to rhythm & movement</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 92</td>
+		<td>Philippine Games</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 93</td>
+		<td>First Aid</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 100</td>
+		<td>Management of Sports and Recreation Related Services</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 101</td>
+		<td>Methods of Physical Conditioning</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 102</td>
+		<td>Tests and Measurements in Human Movements</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 103</td>
+		<td>Biomechanics I</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 104</td>
+		<td>Biomechanics II</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 105</td>
+		<td>Acquisition of Motor Skills</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 106</td>
+		<td>Psychology in Sports</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 107</td>
+		<td>Sports in Society and Culture</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 108</td>
+		<td>Sports Science</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 109</td>
+		<td>Philosophy of Sports and Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 110</td>
+		<td>History and Theory of Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 111</td>
+		<td>First Aid</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 112</td>
+		<td>Human Anatomy</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 113</td>
+		<td>Human Physiology</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 114</td>
+		<td>Exercise Physiology I</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 115</td>
+		<td>Exercise Physiology II</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 116</td>
+		<td>Adapted Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 117</td>
+		<td>Administration and Supervision of Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 118</td>
+		<td>Prevention and Management of Human Movement Related Injuries</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 119</td>
+		<td>Ergogenics in Human Movement Related Activities</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 120.1</td>
+		<td>Basic Basketball</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 120.2</td>
+		<td>Advanced Basketball</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 121.1</td>
+		<td>Basic Volleyball</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 121.2</td>
+		<td>Advanced Volleyball</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 122.1</td>
+		<td>Basic Baseball and Softball</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 122.2</td>
+		<td>Advanced Baseball and Softball</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 123.1</td>
+		<td>Basic Soccer</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 123.2</td>
+		<td>Advanced Soccer</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 129</td>
+		<td>Principles of Coaching</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 130.1</td>
+		<td>Basic Aquatics</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 130.2</td>
+		<td>Advanced Aquatics</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 131.1</td>
+		<td>Basic Track and Field</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 131.2</td>
+		<td>Advanced Track and Field</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 132.1</td>
+		<td>Basic Gymnastics</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 132.2</td>
+		<td>Advanced Gymnastics</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 133.1</td>
+		<td>Basic Badminton</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 133.2</td>
+		<td>Advanced Badminton</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 134.1</td>
+		<td>Basic Table Tennis</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 134.2</td>
+		<td>Advanced Table Tennis</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 135.1</td>
+		<td>Basic Tennis</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 135.2</td>
+		<td>Advanced Tennis</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 136.1</td>
+		<td>Basic Arnis and Sipa</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 137</td>
+		<td>Basic Archery and Golf</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 139.1</td>
+		<td>Basic Judo</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 139.2</td>
+		<td>Advanced Judo</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 141.1</td>
+		<td>Basic Weight Training</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 141.2</td>
+		<td>Advanced Weight Training</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 142.1</td>
+		<td>Basic Fitness Dance</td>
+		<td>Theory & practice basic skills and principles of fitness dance as a rhythmic group exercise</td>
+		<td><abbr title="DILIMAN, Department of Sports Science" style="border-bottom: 1px dotted;">UPD, DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 142.2</td>
+		<td>Advanced Fitness Dance</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 143.1</td>
+		<td>Basic Arnis and Sipa</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 150</td>
+		<td>Fundamental Rhythms</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 151</td>
+		<td>Folk Dance</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 152</td>
+		<td>Philippine Ethnic Dance</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 153.1</td>
+		<td>Basic Ballroom Dance</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 153.2</td>
+		<td>Advanced Ballroom Dance</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 154</td>
+		<td>Asian Dance</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 155.1</td>
+		<td>Ballet I</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 155.2</td>
+		<td>Ballet II</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 155.3</td>
+		<td>Ballet III</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 156.1</td>
+		<td>Modern Dance I</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 156.2</td>
+		<td>Modern Dance II</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 156.3</td>
+		<td>Modern Dance III</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 157</td>
+		<td>Jazz</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 158</td>
+		<td>History of Dance</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 159.1</td>
+		<td>Dance Studies I.</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 170</td>
+		<td>Philippine Games</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 172</td>
+		<td>Community Recreation</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 173</td>
+		<td>Recreation and Leisure</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 174</td>
+		<td>Outdoor Recreation</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 176</td>
+		<td>Recreation for Special Groups</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 177</td>
+		<td>Administration of Recreation Systems</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 183</td>
+		<td>Methods of Physical Conditioning</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 184</td>
+		<td>Methods and Strategies in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 185</td>
+		<td>Student Teaching in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 196</td>
+		<td>CSS Internship</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 197</td>
+		<td>BSS Internship</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 199</td>
+		<td>Research Methods</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 200</td>
+		<td>Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 201</td>
+		<td>Historical and Philosophical Foundation of Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 202</td>
+		<td>Analysis of Human Motion</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 203</td>
+		<td>Curriculum Development in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 204</td>
+		<td>Current Trends in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 205</td>
+		<td>Research Methods in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 206</td>
+		<td>Tests and Measurements in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 211</td>
+		<td>Organization and Management of Sports</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 212</td>
+		<td>Physical Fitness Programs</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 213</td>
+		<td>Physiological Foundation of Coaching</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 214</td>
+		<td>Sports Psychology</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 215</td>
+		<td>Motor Skill Learning</td>
+		<td>The teaching & learning of motor skills.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 221</td>
+		<td>Dance in Culture</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 222</td>
+		<td>Dance Composition I</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 223</td>
+		<td>Dance Composition II</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 224</td>
+		<td>Dance Production I</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 225</td>
+		<td>Dance Production II</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 231</td>
+		<td>Recreation Activity Leadership</td>
+		<td>Methods & techniques of group & individual leadership in recreational activities. Leadership experience in various recreational settings. </td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 232</td>
+		<td>Organization and Administration of Recreation</td>
+		<td>Planning, organizing, executing, & evaluating recreational activities & programs for school, government agencies, industrial firms, hospitals, civic organization & youth agencies. Includes practicum.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 233</td>
+		<td>Camping Administration</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 234</td>
+		<td>Recreation for Special Groups</td>
+		<td>Techniques in programming & adaptation of activities to meet the leisure needs of special groups.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 235</td>
+		<td>Contemporary Problems in Recreation</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 241</td>
+		<td>Advanced Administration of Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 298</td>
+		<td>Seminar in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HK 299</td>
+		<td>Research in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HK 300</td>
+		<td>Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 201</td>
+		<td>Philosophy of Human Movement Science</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 202</td>
+		<td>Analysis of Human Motion</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 203</td>
+		<td>Curriculum Development in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 204</td>
+		<td>Current Trends in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 205</td>
+		<td>Research Methods in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 206</td>
+		<td>Measurement and Evaluation in Human Movement Science</td>
+		<td>Data generation, analysis and appraisal in the various aspects of human movement science.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 211</td>
+		<td>Organization and Management of Sports</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 212</td>
+		<td>Physical Fitness Programs</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 213</td>
+		<td>Physiological Foundation of Coaching</td>
+		<td>Circulatory & respiratory adjustment, metabolism, nutrition, drugs, conditioning, strength, & endurance training. </td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 214</td>
+		<td>Sports Psychology</td>
+		<td>Analysis of psychological factors & principles affecting performance behavior & emotions in sports.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 215</td>
+		<td>Motor Control</td>
+		<td>Anatomical and physiological aspects of the control of human movement. </td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 216</td>
+		<td>Analysis of Human Movement</td>
+		<td>Kinesiological analysis of motor skills in physical education & sports.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 217</td>
+		<td>Applied Exercise Physiology</td>
+		<td>Utilization of the concept of exercise physiology in fitness programming, training and teaching in human movement science.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 221</td>
+		<td>Dance in Culture</td>
+		<td>Evolution of dance forms from primitive to contemporary societies with emphasis on the relationship of dance to other cultural developments & to education. </td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 222</td>
+		<td>Dance Composition I</td>
+		<td>Analysis of the dance medium & the relationship of the aspects of time, space & force to the medium. Principles of form basic to dance composition. </td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 223</td>
+		<td>Dance Composition II</td>
+		<td>Composition forms & styles in dance. </td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 224</td>
+		<td>Dance Production I</td>
+		<td>Production problems of staging, lighting, & costuming for the dance.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 225</td>
+		<td>Dance Production II</td>
+		<td>Dance demonstration & concert.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 231</td>
+		<td>Leisure Education</td>
+		<td>Theories, approaches and strategies in educating for leisure.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 232</td>
+		<td>Management of Leisure</td>
+		<td>Planning, organizing, executing & evaluating recreational activities & programs in the leisure system. </td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 233</td>
+		<td>Camping Administration</td>
+		<td>Organizational & administrative aspects of camping, including site development, personnel, safety, sanitation, programs, finance & public relations. Includes practicum.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 234</td>
+		<td>Leisure for Special Groups</td>
+		<td>Techniques in programming & adaptation of activities to meet the leisure needs of special groups</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 235</td>
+		<td>Contemporary Problems in Leisure</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 241</td>
+		<td>Advanced Administration of Physical Education</td>
+		<td>Application of administrative theory to physical education.</td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 242</td>
+		<td>Current Trends in Physical Education</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 243</td>
+		<td>Psycho-social Issues in Physical Education</td>
+		<td>Analysis of psychological and sociological factors associated with the teaching and learning of physical activities. </td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 298</td>
+		<td>Seminar in Human Movement Science</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HMS 299</td>
+		<td>Research in Human Movement Science</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HMS 300</td>
+		<td>Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Sports Science" style="border-bottom: 1px dotted;">DSS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRA 100</td>
+		<td>Introduction to Hotels, Restaurants and Related Operations</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRA 101</td>
+		<td>Quantity Food Production</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRA 102</td>
+		<td>Rooms Division Management</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRA 103</td>
+		<td>Nutrition in Hotels, Restaurants and Related Operations</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRA 105</td>
+		<td>Beverage Management</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRA 109</td>
+		<td>Purchasing Management</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRA 110</td>
+		<td>Work Study in Hotels, Restaurants and Related Operations</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRA 111</td>
+		<td>Catering Management</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRA 127</td>
+		<td>Human Resources Management in Hotels, Restaurants and Related Operations</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRA 128</td>
+		<td>Facilities Planning and Design</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRA 130</td>
+		<td>Cost Control and Analysis</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRA 174</td>
+		<td>Practicum I</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRA 175</td>
+		<td>Practicum II</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRA 199</td>
+		<td>Research in Hotel and Restaurant Administration</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 100</td>
+		<td>Introduction to Operations in Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 101</td>
+		<td>Introduction to Financial Accounting in Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 102</td>
+		<td>Rooms Division Management</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 103</td>
+		<td>Nutrition in Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 104</td>
+		<td>Food and Beverage Management I</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 105</td>
+		<td>Beverage Management I</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 106</td>
+		<td>Computers in the Management of Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 107</td>
+		<td>Management Information Systems for Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 108</td>
+		<td>Franchise Management in Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 109</td>
+		<td>Purchasing Management</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 111</td>
+		<td>Food and Beverage Management II</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 112</td>
+		<td>Business Management in Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 115</td>
+		<td>Management Accounting in Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 121</td>
+		<td>Food and Culture</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 125</td>
+		<td>Beverage Management II</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 127</td>
+		<td>Human Resource Management I</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 128</td>
+		<td>Facilities Planning and Design</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 130</td>
+		<td>Cost Control and Analysis</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 137</td>
+		<td>Human Resource Management II</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 138</td>
+		<td>Properties Management for Hotels, Restaurants, and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 141</td>
+		<td>Financial Management in Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 160</td>
+		<td>Law and the Management of Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 170</td>
+		<td>Marketing Management in Hotels, Restaurants and Related Institutions I</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 171</td>
+		<td>Marketing Management in Hotels, Restaurants and Related Institutions II</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 174</td>
+		<td>Practicum I</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 175</td>
+		<td>Practicum II</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 188</td>
+		<td>Multicultural Management in Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 190</td>
+		<td>Strategic Management in Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 194</td>
+		<td>Practicum III</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 199</td>
+		<td>Research in HRIM</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 201</td>
+		<td>Systems Management in Hotels, Restaurants and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 201</td>
+		<td>Systems Management in Hotels, Restaurants, and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 227</td>
+		<td>Organizational Behavior in Hotels, Restaurants, and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 228</td>
+		<td>Facilities Design Systems for Hotels, Restaurants, and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 230</td>
+		<td>Management Control for Hotels, Restaurants, and Related Institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 233</td>
+		<td>Operations management in hotels, restaurants, and related institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 270</td>
+		<td>Marketing management in hotels, restaurants, and related institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 280</td>
+		<td>Strategic management in hotels, restaurants, and related institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 297</td>
+		<td>Special Topics</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>HRIM 299</td>
+		<td>Research methods in hotels, restaurants, and related institutions</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>HRIM 300</td>
+		<td>Master's Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Hotel, Restaurant and Institution Management" style="border-bottom: 1px dotted;">HRIM</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 1</td>
+		<td>Panitikan, Tao at Lipunang Filipino</td>
+		<td>Ang pag-aaral ng iba't ibang anyong pampanitikan bilang malikhaing pahayag ng mga indibidwal na karanasan at mga pagpapahalaga at mithiin ng lipunang Filipino.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 2</td>
+		<td>Art, Man, and Society</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 3</td>
+		<td>Readings in Speculative Thought</td>
+		<td>A study of the major problems of speculative thought in terms of the selected documents in the history of human speculations from ancient to modern times.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 10</td>
+		<td>The Refinements of Style in the Arts - Paintings, Sculpture, Architecture, and Music</td>
+		<td>Definition and analysis of devices of artistic structure (humor, irony, satire, caricature) and style (realism, idealism, Fauvism, etc.).</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 11</td>
+		<td>History of the Visual Arts of the West from their Beginnings to High Renaissance</td>
+		<td>  </td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 12</td>
+		<td>History of the Visual Arts of the West from the Mannerist to the Modern Period</td>
+		<td>  </td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 13</td>
+		<td>History of the Visual Arts of China, Japan, and India</td>
+		<td>  </td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 51</td>
+		<td>The Elements of Music</td>
+		<td>Basic sources and concepts of musical elements in some major cultures and societies.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 52</td>
+		<td>The Structure of Music</td>
+		<td>Basic sources and concepts of musical organization in some major cultures and societies.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 100</td>
+		<td>History of the Visual Arts of the West from their Beginning to High Renaissance</td>
+		<td>  </td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 101</td>
+		<td>History of the Visual Arts of the West from the Mannerist to the Modern Period</td>
+		<td>  </td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 102</td>
+		<td>Image of Man in the Arts</td>
+		<td>A comparative and thematic study of various ideas and images of space, time and reality as revealed through the arts, particularly as they have a bearing on man's relationships, attitudes and actions toward himself, other men and nature.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 103</td>
+		<td>Image of Man in the Arts II</td>
+		<td>A comparative and thematic study of Eastern and Western ideas and images of man as revealed through the arts, particularly as they have a bearing on man's relationships, attitudes and actions toward himself, other men and nature.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 104</td>
+		<td>History of the Visual Arts of China, Japan, and India</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 105</td>
+		<td>The Elements of Music</td>
+		<td>Basis sources and concepts of musical elements in some major cultures and societies.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 106</td>
+		<td>The Structure of Music</td>
+		<td>Basic sources and concepts of musical organization in some major cultures and societies.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 107</td>
+		<td>Philippine Music, Society, and Culture</td>
+		<td>Basic concepts of musical creation, performance and experience.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 108</td>
+		<td>Music in Asian Cultures</td>
+		<td>Basic concepts underlying musical creation, performance and experience in Eastern Asian cultures.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 109</td>
+		<td>Music in Western Cultures</td>
+		<td>Basic concepts underlying musical creation, performance and experience in Western cultures especially as it developed in the European and American traditions.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 110</td>
+		<td>The Classical Tradition in the Visual Arts</td>
+		<td>Classic Greek Art and the phenomenon of classicism as a vital stylistic resource for succeeding art periods outside of Greece.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 115</td>
+		<td>The Performing Arts</td>
+		<td>Introduction to the aesthetics of the performing arts:  music, dance, theater, and cinema.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 116</td>
+		<td>Literature, Man, and Society (Tao, Panitikan at Lipunan)</td>
+		<td>History and criticism of the traditional art forms - literary, musical, visual - as utilized and transformed by cinematic artists.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 117</td>
+		<td>Folk Art</td>
+		<td>Introduction to folk art; its nature, scope and characteristic forms and styles.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 120</td>
+		<td>The Medieval Spirit in the Visual Arts</td>
+		<td>Medieval Art as shaped by the development of Christian concepts and its vicissitudes in the art of the Philippines and Latin America.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 130</td>
+		<td>The Spirit of the Renaissance in Visual Arts</td>
+		<td>European Renaissance art, its modifications and manifestations in later periods outside Europe, particularly in Philippine arts.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 140</td>
+		<td>The Spirit of the Baroque and Rococo in the Visual Arts</td>
+		<td>Baroque and Rococo art, their development and influence in later periods outside Europe, with particular emphasis on the Philippines and Latin America.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 150</td>
+		<td>The Romantic Tradition in the Visual Arts</td>
+		<td>The romantic spirit in art and its manifestations in later periods and various cultures in the East and West, with particular reference to Philippine art.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 155</td>
+		<td>American Art</td>
+		<td>American Art from the Colonial Period to the present as shaped by varied native American Indian, Folk, African and European artistic developments.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 160</td>
+		<td>Modern Art</td>
+		<td>Modern art, its diversity, tentativeness as well as its revolutionary attitude towards stylistic traditions.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 161</td>
+		<td>Modern Painting from the Impressionists to the Present</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 165</td>
+		<td>Elements of the Dance</td>
+		<td>Theories of dance as art.  The creative process in the organization of space, time and movement for artistic expression within the context of various cultures and styles.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 166</td>
+		<td>Philippine Traditional Dance</td>
+		<td>The aesthetics and development of Philippine traditional dance.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 167</td>
+		<td>Dance in Asian Cultures</td>
+		<td>Asian dance in its cultural and social contexts.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 168</td>
+		<td>Dance in Western Cultures</td>
+		<td>Western dance in its cultural and social contexts.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 169</td>
+		<td>Photography as Art</td>
+		<td>The history and aesthetics of photography.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 170</td>
+		<td>Philippine Art and Society</td>
+		<td>The nature and development of Philippine art in all major historical periods up to the present as it reflects Filipino culture and identity.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 171</td>
+		<td>Philippine Art and Society</td>
+		<td>The nature and development of Philippine art in all major historical periods up to the present as it reflects Filipino culture and identity.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 172</td>
+		<td>Philippine Sculpture and Architecture</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 173</td>
+		<td>Philippine Traditional Arts</td>
+		<td>The traditional art forms of folk and ethnic cultures in the Philippines.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 174</td>
+		<td>Popular Art and Culture in the Philippines</td>
+		<td>The rise of popular cultures as manifested in visual, musical, cinematic and literary forms and its major social implications; the role of commerce and the mass media in its dissemination.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 175</td>
+		<td>The Tradition of the Visual Arts in Islamic and Near Eastern Cultures</td>
+		<td>The art of Near Eastern cultures with major emphasis on Arabic and Persian works of the classical age of Islam.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 176</td>
+		<td>Art in African Cultures</td>
+		<td>Tradition and change in African art; its impact on other cultures.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 177</td>
+		<td>Mexican Art</td>
+		<td>Painting, sculpture and architecture from the pre-Columbian period to the present and thier influences on Philippine art.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 180</td>
+		<td>The Tradition of the Visual Arts in Chinese Civilization</td>
+		<td>Chinese art up to 1800 and its influences on Korea, Japan and Southeast Asia.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 181</td>
+		<td>Chinese Painting from T'ang to Ch'ing Dynasty</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 185</td>
+		<td>The Tradition of the Visual Arts in Japanese Culture</td>
+		<td>Japanese art, its growth and the development from the 4th to the 19th century.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 186</td>
+		<td>Japanese Painting and Graphic Arts from their Beginnings to the Nineteenth Century</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 190</td>
+		<td>The Tradition of Visual Arts in the Indian Civilization</td>
+		<td>Indian art, its growth, development and impact on the arts of the rest of Asia.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 194</td>
+		<td>Senior Seminar in Aesthetics</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 195</td>
+		<td>The Visual Arts in Southeast Asia</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 196</td>
+		<td>Contemporary Arts of Asia</td>
+		<td>The contemporary spirit and its manifestations in the various artistic traditions of Asia.</td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 198</td>
+		<td>Special Problems:  An Interdisciplinary Approach to the Arts</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 199</td>
+		<td>Research</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 199.1</td>
+		<td>Research</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 202</td>
+		<td>Image of the Filipino in the Arts</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 205</td>
+		<td>Cinematic Arts in the Philippines</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 210</td>
+		<td>Philippine Art:  Sources and Influences</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 211</td>
+		<td>Seminar in Philippine Traditional Arts</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 220</td>
+		<td>Seminar in Philippine Art and Society</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 225</td>
+		<td>Seminar in Art Criticism</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 226</td>
+		<td>Seminar:  Aesthetics of Philippine Music</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 240</td>
+		<td>Readings in Art History</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 245</td>
+		<td>Readings in Aesthetic and Art Theory</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 250</td>
+		<td>Seminar in  Art History</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 271</td>
+		<td>Philippine Painting</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 275</td>
+		<td>Philippine Sculpture and Architecture</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 298</td>
+		<td>Special Problems in Philippine Art</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 299</td>
+		<td>Research</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 299.1</td>
+		<td>Special Problems in Philippine Painting</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 299.2</td>
+		<td>Special Problems in Philippine Sculpture and Architecture</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 299.3</td>
+		<td>Seminar in Art History</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 299.4</td>
+		<td>Special Problems in Philippine Sculpture and Architecture</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum 299.5</td>
+		<td>Special Problems in Philippine Folk and Ethnic Art</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Hum 300</td>
+		<td>Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies" style="border-bottom: 1px dotted;">DAS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Humad 1</td>
+		<td>Panitikan, Tao, at Lipunang Filipino</td>
+		<td>Ang pag-aaral ng iba’t ibang anyong pampanitikan bilang malikhaing pahayag ng mga indibidwal na karanasan at mga pagpapahalaga at mithiin ng lipunang Filipino.</td>
+		<td><abbr title="Departamento ng Filipino at Panitikan ng Pilipinas, Department of Art Studies" style="border-bottom: 1px dotted;">DFPP, DAS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Humad 2</td>
+		<td>Sining, Tao at Lipunan</td>
+		<td></td>
+		<td><abbr title="Departamento ng Filipino at Panitikan ng Pilipinas" style="border-bottom: 1px dotted;">DFPP</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Humad I</td>
+		<td>Tao, Panitikan at Lipunan</td>
+		<td></td>
+		<td><abbr title="Departamento ng Filipino at Panitikan ng Pilipinas" style="border-bottom: 1px dotted;">DFPP</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Humanidades 1</td>
+		<td>Panitikan, Tao at Lipunang Filipino</td>
+		<td></td>
+		<td><abbr title="Departamento ng Filipino at Panitikan ng Pilipinas" style="border-bottom: 1px dotted;">DFPP</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Hum I</td>
+		<td>Literature, Society and the Individual</td>
+		<td></td>
+		<td><abbr title="Department of Art Studies, Department of English and Comparative Literature" style="border-bottom: 1px dotted;">DAS, DECL</abbr></td>
+	</tr>
+	</table>
+
+</div><!-- #content -->
+
+﻿
+<script type="text/javascript">
+			
+		$(document).ready(function() {
+			
+			//set the width per footer_expander element
+			var expander_count = $('.footerlink').length;
+			var expander_width = (83/expander_count);
+			
+			var i = 0;
+			$.each($(".footerlink"), function(index, value){
+				$(this).css('width', expander_width+'%');
+				$(this).css('left', (((expander_width)*i)+10)+'%');
+				i++;
+			});
+			
+			$(".footerlink,.footer_expander").hover(
+				function(){
+					$(this).animate({ height: "30"}, 50);
+				},
+				function(){
+					$(this).animate({ height: "16"}, 50);
+				
+				}
+			);
+			
+			//set the width per footer_expander element
+			var division_count = $('.footer_division').length;
+			var division_width = (88/division_count);
+			division_width = division_width+'%';
+			
+			$.each($(".footer_division"), function(index, value){
+				$(this).css('width', division_width);
+			});
+			
+		function change_acadtermtype() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_acadtermtype/' + $(this).val();
+		}
+
+		function change_role() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_role/' + $(this).val();
+		}
+
+		function show_roles() {
+			$("#span_role").addClass("hidden");
+			$("#span_role-choices").removeClass("hidden");
+		}
+
+		function show_acadtermtypes() {
+			$("#span_acadtermtype").addClass("hidden");
+			$("#span_acadtermtype-choices").removeClass("hidden");
+		}
+
+	 });
+	 
+	
+	function showFooter(){
+		$('#footer').slideDown(150);
+		$('.footermin').hide();
+	}
+	function hideFooter(){
+		$('#footer').slideUp(150);
+		$('.footermin').show();
+	}
+	</script>
+
+<span style="clear:both;"></span>
+
+	<div class="footer_expander footermin" onclick="showFooter();">
+		More ▲
+	</div>
+
+		<div id="footer" align="center">
+		<div id="footer_linktotop" align="right" onclick="hideFooter();">
+			<a href="Javascript:void(0);" onclick="hideFooter();" style="color:white">Less ▼</a>
+		</div>
+		<div style="padding-top: 30px;">
+						<div class="footer_division">
+				<div class="footer_division_header">Flowcharts</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/OnlineDroppingFlowchart.pdf" >
+								Dropping							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ChangeMatFlowchart_modified.pdf" >
+								Change Mat							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ClearanceMechanics.pdf" >
+								Clearance							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/downloads/LOA_mechanics.pdf" >
+								Leave of Absence							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Class Schedules</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/" >
+								Regular Classes							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/mba" >
+								MBA/MS Finance PT							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/schedule/spring" >
+								Spring Asia							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Information</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/course_catalog" >
+								Course Catalog							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/curriculum.html" >
+								Curriculum Checklist							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://our.upd.edu.ph/files/ListofGECourses.pdf" >
+								List of RGEP Courses							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Calendar</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/~updinfo/apr14/articles/BOR_approved_AcadCal_AY_2014_2015.pdf" >
+								BOR Approved<br>Academic Calendar<br>AY 2014-2015							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular" >
+								Regular Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/mba" >
+								MBA/MS Fin PT Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/msfin" >
+								MS Fin FT Calendar							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/spring" >
+								Spring Asia Calendar							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">CRS</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/faq" >
+								CRS FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/faq.html" >
+								OUR FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>History of the CRS<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item ">
+													<span>User Guide<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/about/" >
+								The CRS Team<br/>							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Contact Us</div>
+																		<div class="footer_division_item ">
+																				<a href="http://www.facebook.com/groups/134746139953068/" >
+								Facebook Group							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="mailto:crssupport@list.upd.edu.ph" >
+								E-Mail							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>Phone<br/>(981-8500 local 4560)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+													<span>You may visit us at the CRSRS Office at the 3rd floor of the OUR.</span>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">External Links</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/" >
+								UP Diliman							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://up.edu.ph/" >
+								UP System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/" >
+								OUR Site							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://sts.up.edu.ph/" >
+								Socialized Tuition System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://dormapplication.upd.edu.ph/" >
+								Dorm Application Website							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://uvle.up.edu.ph/" >
+								UvLE							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://ucc.upd.edu.ph/about-us/" >
+								UPCC							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://mail.up.edu.ph/" >
+								UP Webmail							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://www.dzup.org/" >
+								DZUP							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://upd.edu.ph/aup/" >
+								Acceptable Use Policy							</a>
+											</div>
+																	</div>
+					</div>
+	</div>
+
+	<div class="footer_quicklinks footermin">
+		Quick Links:
+	</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/schedule/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/schedule/">
+				Regular Classes			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/course_catalog'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/course_catalog">
+				Course Catalog			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='http://our.upd.edu.ph/curriculum.html'">
+			<a class="a_footerlink" href="http://our.upd.edu.ph/curriculum.html">
+				Curriculum Checklist			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/acadcal_public/index/advanced/regular'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular">
+				Regular Calendar			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/faq'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/faq">
+				CRS FAQ			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/about/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/about/">
+				The CRS Team<br/>			</a>
+		</div>
+	</body>
+</html>

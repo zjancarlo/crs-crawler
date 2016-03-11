@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>UP CRS - Course Catalog</title>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery-1.4.1.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/layout.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/status.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/schedule.css" type="text/css" />
+	<link rel="shortcut icon" href="https://crs.upd.edu.ph/images/favicon.ico" type="image/x-icon" />
+
+	<script type="text/javascript" language="JavaScript">
+	$(document).ready(function() {
+		$('#btn_search').click(searchcourses);
+		$('#frm_schedule').submit(function(e) {
+			e.preventDefault();
+			searchcourses();
+		});
+	});
+
+	function searchcourses() {
+		var coursenumber = $.trim($('#txt_coursenumber').val());
+		var alphanumeric_pattern = /^[a-zA-Z0-9\s\.\-]+$/;
+
+		if(coursenumber != '') {
+			if( ! alphanumeric_pattern.test(coursenumber)) {
+				alert('Course number must be alphanumeric.');
+			} else {
+				window.location = 'https://crs.upd.edu.ph/course_catalog/index/' + coursenumber;
+			}
+		}
+
+	}
+
+	</script>
+
+</head>
+
+<body class="schedule">
+
+<div id="header">
+	<a href="https://crs.upd.edu.ph/user" class="header_link"></a>
+</div>
+<div id="subheader">
+</div>
+
+<div id="content" class="align-center">
+
+<h1>
+	Course Catalog
+</h1>
+
+<br />
+
+<form id="frm_schedule" action="" method="post">
+<table class="form" align="center">
+	<tr>
+		<td>Course Number:</td>
+		<td><input type="text" id="txt_coursenumber" name="txt_coursenumber" /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>(e.g., Math 11, Eng 1)</td>
+	</tr>
+	<tr class="tr_submit">
+		<td></td>
+		<td><input type="button" id="btn_search" name="btn_search" value="Search" /></td>
+	</tr>
+</table>
+</form>
+
+<p>
+	<a href="https://crs.upd.edu.ph/course_catalog/index/A">A</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/B">B</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/C">C</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/D">D</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/E">E</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/F">F</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/G">G</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/H">H</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/I">I</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/J">J</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/K">K</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/L">L</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/M">M</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/N">N</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/O">O</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/P">P</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Q">Q</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/R">R</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/S">S</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/T">T</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/U">U</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/V">V</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/W">W</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/X">X</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Y">Y</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Z">Z</a>&nbsp;&nbsp;
+<a href="https://crs.upd.edu.ph/">Back to main page</a>
+</p>
+
+<br /><br />
+
+<table >
+<tr>
+	<th width = "15%">Course code & No.</th>
+	<th width = "30%">Course Title</th>
+	<th width = "40%">Course Description</th>
+	<th width = "15%">Offering Unit</th>
+	
+</tr>
+			<tr class="tr_odd">
+		<td>WD 201</td>
+		<td>History and Perspectives of Gender and Development</td>
+		<td>A historical survey of the major issues in the women's movement</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>WD 201</td>
+		<td>Women, Gender and Development: History and Perspectives</td>
+		<td>A historical overview of women's issues and of gender relations in the context of development.</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>WD 210</td>
+		<td>Feminist Theories and Movements</td>
+		<td>An examination of main currents of feminist thought and movement</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>WD 220</td>
+		<td>Women's Studies</td>
+		<td>A discussion of theoretical and methodological issues in women's studies </td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>WD 221</td>
+		<td>Feminist Perspectives and Strategies in Organizing</td>
+		<td>Presentation and critique of local and international experiences in women's organizing, linking the feminist perspectives learned in other WD core courses to the strategies and processes involved in organizing women</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>WD 225</td>
+		<td>Seminar on Gender, Culture and Ideology</td>
+		<td></td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>WD 227</td>
+		<td>Gender and Sexuality</td>
+		<td>The study of gender and sexuality as a core area of women and development studies, with emphasis on the centrality of investigating and reconstructing sexuality to feminist theorizing and politics</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>WD 230</td>
+		<td>Women, Gender, and Work</td>
+		<td>An examination of concepts of work from an interdisciplinary perspective, the work situation of women and men in the light of globalization, and strategies for change.</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>WD 230</td>
+		<td>Women and Work</td>
+		<td>An examination of the different spheres within which women work and an analysis of their respective situations in relation to women and development</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>WD 231</td>
+		<td>Gender Responsive Planning and Administration</td>
+		<td>Gender responsive planning process and methodology covering three continuous stages; policy-making, planning, and the administrative actions to transform the plans into reality, thereby ensuring that development programs, projects and institutions contribute to women's empowerment</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>WD 240</td>
+		<td>Seminar on Feminism in the Third World</td>
+		<td></td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>WD 270</td>
+		<td>Special Topics I</td>
+		<td></td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>WD 271</td>
+		<td>Special Topics II</td>
+		<td></td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>WD 280</td>
+		<td>Women, Gender and Development Field Instruction I</td>
+		<td>Supervised field practice in actual community work with focus on women's situation and gender relations.</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>WD 281</td>
+		<td>Women, Gender and Development Field Instruction II</td>
+		<td>Supervised field practice for students to develop critical analysis of the situation of women and men, implement interventions and develop specialized skills in organizational and program management and other aspects of development work.</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>WD 281</td>
+		<td>WD Field Instruction 2</td>
+		<td></td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>WD 291</td>
+		<td>Introduction to Women, Gender and Development Research</td>
+		<td>Basic theoretical and methodological perspectives and issues in feminist developmental research.</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>WD 292</td>
+		<td>Feminist Research: Perspectives and Methods</td>
+		<td>Study of qualitative and quantitative perspectives and methods in women, gender and development studies</td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>WD 300</td>
+		<td>Thesis on Women and Development</td>
+		<td></td>
+		<td><abbr title="Department of Women and Development Studies" style="border-bottom: 1px dotted;">WD</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>WP 99</td>
+		<td>Kaalaman sa Pagbasa ng Isang Wika ng Pilipinas</td>
+		<td></td>
+		<td><abbr title="Departamento ng Linggwistiks" style="border-bottom: 1px dotted;">Lingg</abbr></td>
+	</tr>
+	</table>
+
+</div><!-- #content -->
+
+﻿
+<script type="text/javascript">
+			
+		$(document).ready(function() {
+			
+			//set the width per footer_expander element
+			var expander_count = $('.footerlink').length;
+			var expander_width = (83/expander_count);
+			
+			var i = 0;
+			$.each($(".footerlink"), function(index, value){
+				$(this).css('width', expander_width+'%');
+				$(this).css('left', (((expander_width)*i)+10)+'%');
+				i++;
+			});
+			
+			$(".footerlink,.footer_expander").hover(
+				function(){
+					$(this).animate({ height: "30"}, 50);
+				},
+				function(){
+					$(this).animate({ height: "16"}, 50);
+				
+				}
+			);
+			
+			//set the width per footer_expander element
+			var division_count = $('.footer_division').length;
+			var division_width = (88/division_count);
+			division_width = division_width+'%';
+			
+			$.each($(".footer_division"), function(index, value){
+				$(this).css('width', division_width);
+			});
+			
+		function change_acadtermtype() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_acadtermtype/' + $(this).val();
+		}
+
+		function change_role() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_role/' + $(this).val();
+		}
+
+		function show_roles() {
+			$("#span_role").addClass("hidden");
+			$("#span_role-choices").removeClass("hidden");
+		}
+
+		function show_acadtermtypes() {
+			$("#span_acadtermtype").addClass("hidden");
+			$("#span_acadtermtype-choices").removeClass("hidden");
+		}
+
+	 });
+	 
+	
+	function showFooter(){
+		$('#footer').slideDown(150);
+		$('.footermin').hide();
+	}
+	function hideFooter(){
+		$('#footer').slideUp(150);
+		$('.footermin').show();
+	}
+	</script>
+
+<span style="clear:both;"></span>
+
+	<div class="footer_expander footermin" onclick="showFooter();">
+		More ▲
+	</div>
+
+		<div id="footer" align="center">
+		<div id="footer_linktotop" align="right" onclick="hideFooter();">
+			<a href="Javascript:void(0);" onclick="hideFooter();" style="color:white">Less ▼</a>
+		</div>
+		<div style="padding-top: 30px;">
+						<div class="footer_division">
+				<div class="footer_division_header">Flowcharts</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/OnlineDroppingFlowchart.pdf" >
+								Dropping							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ChangeMatFlowchart_modified.pdf" >
+								Change Mat							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ClearanceMechanics.pdf" >
+								Clearance							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/downloads/LOA_mechanics.pdf" >
+								Leave of Absence							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Class Schedules</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/" >
+								Regular Classes							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/mba" >
+								MBA/MS Finance PT							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/schedule/spring" >
+								Spring Asia							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Information</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/course_catalog" >
+								Course Catalog							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/curriculum.html" >
+								Curriculum Checklist							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://our.upd.edu.ph/files/ListofGECourses.pdf" >
+								List of RGEP Courses							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Calendar</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/~updinfo/apr14/articles/BOR_approved_AcadCal_AY_2014_2015.pdf" >
+								BOR Approved<br>Academic Calendar<br>AY 2014-2015							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular" >
+								Regular Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/mba" >
+								MBA/MS Fin PT Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/msfin" >
+								MS Fin FT Calendar							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/spring" >
+								Spring Asia Calendar							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">CRS</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/faq" >
+								CRS FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/faq.html" >
+								OUR FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>History of the CRS<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item ">
+													<span>User Guide<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/about/" >
+								The CRS Team<br/>							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Contact Us</div>
+																		<div class="footer_division_item ">
+																				<a href="http://www.facebook.com/groups/134746139953068/" >
+								Facebook Group							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="mailto:crssupport@list.upd.edu.ph" >
+								E-Mail							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>Phone<br/>(981-8500 local 4560)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+													<span>You may visit us at the CRSRS Office at the 3rd floor of the OUR.</span>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">External Links</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/" >
+								UP Diliman							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://up.edu.ph/" >
+								UP System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/" >
+								OUR Site							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://sts.up.edu.ph/" >
+								Socialized Tuition System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://dormapplication.upd.edu.ph/" >
+								Dorm Application Website							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://uvle.up.edu.ph/" >
+								UvLE							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://ucc.upd.edu.ph/about-us/" >
+								UPCC							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://mail.up.edu.ph/" >
+								UP Webmail							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://www.dzup.org/" >
+								DZUP							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://upd.edu.ph/aup/" >
+								Acceptable Use Policy							</a>
+											</div>
+																	</div>
+					</div>
+	</div>
+
+	<div class="footer_quicklinks footermin">
+		Quick Links:
+	</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/schedule/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/schedule/">
+				Regular Classes			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/course_catalog'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/course_catalog">
+				Course Catalog			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='http://our.upd.edu.ph/curriculum.html'">
+			<a class="a_footerlink" href="http://our.upd.edu.ph/curriculum.html">
+				Curriculum Checklist			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/acadcal_public/index/advanced/regular'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular">
+				Regular Calendar			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/faq'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/faq">
+				CRS FAQ			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/about/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/about/">
+				The CRS Team<br/>			</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>UP CRS - Course Catalog</title>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery-1.4.1.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/layout.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/status.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/schedule.css" type="text/css" />
+	<link rel="shortcut icon" href="https://crs.upd.edu.ph/images/favicon.ico" type="image/x-icon" />
+
+	<script type="text/javascript" language="JavaScript">
+	$(document).ready(function() {
+		$('#btn_search').click(searchcourses);
+		$('#frm_schedule').submit(function(e) {
+			e.preventDefault();
+			searchcourses();
+		});
+	});
+
+	function searchcourses() {
+		var coursenumber = $.trim($('#txt_coursenumber').val());
+		var alphanumeric_pattern = /^[a-zA-Z0-9\s\.\-]+$/;
+
+		if(coursenumber != '') {
+			if( ! alphanumeric_pattern.test(coursenumber)) {
+				alert('Course number must be alphanumeric.');
+			} else {
+				window.location = 'https://crs.upd.edu.ph/course_catalog/index/' + coursenumber;
+			}
+		}
+
+	}
+
+	</script>
+
+</head>
+
+<body class="schedule">
+
+<div id="header">
+	<a href="https://crs.upd.edu.ph/user" class="header_link"></a>
+</div>
+<div id="subheader">
+</div>
+
+<div id="content" class="align-center">
+
+<h1>
+	Course Catalog
+</h1>
+
+<br />
+
+<form id="frm_schedule" action="" method="post">
+<table class="form" align="center">
+	<tr>
+		<td>Course Number:</td>
+		<td><input type="text" id="txt_coursenumber" name="txt_coursenumber" /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>(e.g., Math 11, Eng 1)</td>
+	</tr>
+	<tr class="tr_submit">
+		<td></td>
+		<td><input type="button" id="btn_search" name="btn_search" value="Search" /></td>
+	</tr>
+</table>
+</form>
+
+<p>
+	<a href="https://crs.upd.edu.ph/course_catalog/index/A">A</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/B">B</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/C">C</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/D">D</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/E">E</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/F">F</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/G">G</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/H">H</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/I">I</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/J">J</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/K">K</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/L">L</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/M">M</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/N">N</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/O">O</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/P">P</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Q">Q</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/R">R</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/S">S</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/T">T</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/U">U</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/V">V</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/W">W</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/X">X</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Y">Y</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Z">Z</a>&nbsp;&nbsp;
+<a href="https://crs.upd.edu.ph/">Back to main page</a>
+</p>
+
+<br /><br />
+
+<table >
+<tr>
+	<th width = "15%">Course code & No.</th>
+	<th width = "30%">Course Title</th>
+	<th width = "40%">Course Description</th>
+	<th width = "15%">Offering Unit</th>
+	
+</tr>
+			<tr class="tr_odd">
+		<td>GE 1</td>
+		<td>Earth Trek</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 10</td>
+		<td>General Surveying I</td>
+		<td>Use of principal surveying instruments; surveying measurements and error theory, basic plane surveying operations and computational method of position, horizontal and vertical distance measurements, traverse and areas; basic cartography</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 11</td>
+		<td>Elementary Surveying</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 12</td>
+		<td>General Surveying II</td>
+		<td>Introduction to different surveying operations and techniques; control, topographic, hydrographic, and mine surveying; introduction to astronomic and satellite geodesy.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 16</td>
+		<td>Elementary Photo-Interpretation</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 36</td>
+		<td>Map Projections</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 38</td>
+		<td>Digital Cartography</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 115</td>
+		<td>Mine Surveying</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 117</td>
+		<td>Construction and Industrial Surveying</td>
+		<td>Route surveying: horizontal route alignment, route surveying, vertical route alignment, earthworks, construction surveys, construction management, computer aided design for construction and industrial surveying.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 118</td>
+		<td>Hydrographic Surveying</td>
+		<td>Introduction to hydrographic surveying; sounding; bathymetry; precise instrumentations for hydrographic surveying; applications of hydrographic surveying.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 119</td>
+		<td>Land Surveying</td>
+		<td>Survey project controls; comparative equipment, procedures and precision; regulations governing property surveys in the country; transformation of coordinates to the Philippine Plane Coordinate System (PPCS), PRS '92, land management and administrative titling and survey requirements, basic CADD. </td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 120</td>
+		<td>Introductory Object-Oriented Programming for Geospatial Applications</td>
+		<td>Concept of object-based and object-oriented programming; applications; control structures; array and methods; exception handling; graphics and GUI programming in developing numerical computation application for Geodetic Engineers.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 122</td>
+		<td>Mathematical Methods in Geodetic Engineering</td>
+		<td>Matrices; systems of equations; interpolation; differentiation and integration; ordinary differential equations; linear differential equations; code development for numerical solutions.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 128</td>
+		<td>Adjustment Computations for Spatial Data Analysis</td>
+		<td>Concepts of measurement and error; statistical testing; variance-covariance propagation; error propagation in survey measurements; introduction to least square adjustments.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 129</td>
+		<td>Adjustment Computation for Geodetic Applications</td>
+		<td>Standard and general least squares adjustment; adjustment of geodetic control network adjustment (trilateration, triangulation and traverse network; GPS adjustment); constraint equations.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 143</td>
+		<td>Laws on Natural Resources</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 145</td>
+		<td>Mining Laws</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 146</td>
+		<td>Law of Contracts</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 147</td>
+		<td>Geodetic Engineering Law and Code of Ethics</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 148</td>
+		<td>Land Registration Law</td>
+		<td>Fundamentals of the law on ordinary and cadastral land registration in connection with the Torrens system; Real Estate Development Laws, Indigenous People's  Rights Act; Agrarian and Urban Land Reform.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 149</td>
+		<td>Contracts, Surveying Laws and Ethics</td>
+		<td>Requisites of contracts; obligations of contracting parties; nullity and enforcement of contracts; stud of actual cases involving contract; Republic Act 9200 - The Geodetic Engineering Law; Code of Ethical and Professional Standards; other surveying laws.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 151</td>
+		<td>Introduction to Geodesy</td>
+		<td>History and development of geodesy; the international geodetic community; basic concepts in geodesy; positioning systems and positioning methods; time systems and time coordination; applications of geodesy.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 152</td>
+		<td>Reference Systems and Reference Frames</td>
+		<td>Different kinds of reference systems and reference frames; geometry of the reference ellipsoid; computation of geodetic positions; coordinate transformation and map projections; International Terrestrial Reference Frames (ITRF); the Philippine Reference System (PRS).</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 153</td>
+		<td>Earth's Gravity and Geoid Modelling</td>
+		<td>Earth's gravity field; normal and anomalous gravity field; geoid; height systems; geoid height modeling and methods; geoid models; geodynamics of the earth.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 154</td>
+		<td>Satellite Positioning Systems</td>
+		<td>Introduction and overview of satellite-based positioning systems (SPS); orbit description; structure, acquisition and processing of SPS signals; mathematical methods for positioning using SPS; SPS surveying; processing transformation; error sources; software modules, SPS applications; prospects satellite geodesy.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 155</td>
+		<td>Geodetic Control Network</td>
+		<td>Principles and methods of the establishment and densification of geodetic control network including horizontal, vertical and gravity control network; accuracy standards and specifications of geodetic control network.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 155.1</td>
+		<td>Horizontal Control Network Laboratory</td>
+		<td>Project planning and implementation of a horizontal geodetic control network establishment and densification.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 155.2</td>
+		<td>Vertical and Gravity Network Laboratory</td>
+		<td>Project planning and implementation of a vertical and gravity control network establishment and densification.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 157</td>
+		<td>Photogrammetry I</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 158</td>
+		<td>Photogrammetry II</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 159</td>
+		<td>Photo Interpretation and Remote Sensing</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 160</td>
+		<td>Introduction to Geographic Information Systems (GIS)</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 161</td>
+		<td>Geometric Geodesy</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 162</td>
+		<td>Physical Geodesy</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 163</td>
+		<td>Geodetic Leveling and Hydrography</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 164</td>
+		<td>Geodetic Surveying</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 166</td>
+		<td>Geodetic Astronomy</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 168</td>
+		<td>Satellite Geodesy</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 170</td>
+		<td>Object-oriented Programming for Geodetic Engineering Applications</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 171</td>
+		<td>Geodetic Computation and Adjustment I</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 172</td>
+		<td>Geodetic Computation and Adjustment II</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 173</td>
+		<td>Digital Cartography</td>
+		<td>Overview of cartography; maps; mapping standards in the Philippines; terrain modeling; computer-aided design (CAD) for survey applications; basic Geographic Information Systems (GIS).</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 174</td>
+		<td>Satellite Positioning Systems</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 178</td>
+		<td>Digital Photogrammetry</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 179</td>
+		<td>Remote Sensing and Image Interpretation</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 190</td>
+		<td>Seminar in Geodetic and Geospatial  Engineering and Geoinformatics</td>
+		<td>Undergraduate research proposol and data gathering.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 191</td>
+		<td>Geodetic and Geospatial Engineering and Geoinformatics Practicum I</td>
+		<td>On-the-Job Training Preparation</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 192</td>
+		<td>Geodetic and Geospatial Engineering and Geoinformatics Practicum II</td>
+		<td>On-the-Job Training</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 198</td>
+		<td>Special Problems</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 199</td>
+		<td>Undergraduate Research</td>
+		<td>Undergraduate research proper and defense.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 202</td>
+		<td>Principles of Remote Sensing</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 203</td>
+		<td>Principles of Geographic Information Sytems</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 204</td>
+		<td>Applied Resource Information Systems</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 212</td>
+		<td>Remote Sensing Systems</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 214</td>
+		<td>Applied Image Processing</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GE 290</td>
+		<td>Special Project</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GE 300</td>
+		<td>Master's Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 1</td>
+		<td>Places and Landscapes in a Changing World</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 10</td>
+		<td>Physical Geography</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 10</td>
+		<td>Physical Geography</td>
+		<td>Systematic study of land forms, climate, natural vegetation, and soils.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 11</td>
+		<td>Commercial and Industrial Geography</td>
+		<td>A study of the major human adjustments to the natural environment which result from the effect to make a living.  The course deals with the leading commercial products of farm, range, forest, mine, sea and factory, and trade routes and centers.  The course aims (1) to give the students a comprehensive survey of the principal industries of the world in their environmental setting, (2) to establish by concrete illustrations the principles set forth in Geography 1, and (3) to construct a framework of geographic adjustment throughout the world.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 11</td>
+		<td>Economic Geography</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 12</td>
+		<td>Climatology</td>
+		<td>Climatic element, types and regions.  </td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 31</td>
+		<td>Economic Geography of the Philippines</td>
+		<td>Distribution, variety and significance of natural resources and how the physical environment affects their use.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 100</td>
+		<td>Physical Geography</td>
+		<td>Systematic study of land forms, climate, natural vegetation, and soils.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 101</td>
+		<td>Climatology</td>
+		<td></td>
+		<td><abbr title="Department of Geography, Department of Geography" style="border-bottom: 1px dotted;">DGeog, DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 102</td>
+		<td>Geography of the Philippine Islands</td>
+		<td>A survey of the principal economic activities of the Islands from the standpoint of their relation to natural environmental complex.  Emphasis  is placed on the study of the commercial relations of the Philippines with other trade regions; the factors and problems in the development of Philippine trade; the shipping services, and the ports and port facilities.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 104</td>
+		<td>Economic Geography of North America</td>
+		<td>A survey of the principal economic activities in each of the major geographic regions of North America from the standpoint of their relations to the natural environmental complex.  Emphasis is placed on the regional equipment for industry in the several divisions of the continent.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 105</td>
+		<td>Economic Geography</td>
+		<td>The major human adjustments to the natural environment which result from the effort to make a living.  The leading commercial products of farm, range,forest, mine, sea, and factory, and trade routes and centers.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 106</td>
+		<td>Human Geography</td>
+		<td>Principles of human geography.  The distribution of mankind on the earth.  Human establishments.  Man as a geographical factor.  The distribution of cultivated lands.  Types of cultural landscapes in various parts of the world.  Industrial landscapes.  The settlement of an area.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 109</td>
+		<td>Quantitative Methods in Geographic Analysis</td>
+		<td>Elements and application of quantitative techniques in geography.</td>
+		<td><abbr title="Department of Geography, Department of Geography" style="border-bottom: 1px dotted;">DGeog, DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 111</td>
+		<td>Resource Management and Conservation</td>
+		<td>Planning, management, and conservation in the exploitation and development of natural resources.</td>
+		<td><abbr title="Department of Geography, Department of Geography" style="border-bottom: 1px dotted;">DGeog, DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 119</td>
+		<td>Geography of Movement</td>
+		<td>Causes of movements, concepts and measures of distance and transport development.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 121</td>
+		<td>Landform Analysis</td>
+		<td>Landform evaluation and analysis, map reading and photo interpretation, and applications of Geographic Information Systems (GIS) in terrain evaluation.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 122</td>
+		<td>Geography of Europe</td>
+		<td>A survey of the land forms, climate, resources and economic activities of Europe and their interrelations.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 131</td>
+		<td>Geography of the Philippines</td>
+		<td>The role of human and natural resources in the economic growth and development of the Philippines.</td>
+		<td><abbr title="Department of Geography, Department of Geography" style="border-bottom: 1px dotted;">DGeog, DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 133</td>
+		<td>Geography of the Tropics</td>
+		<td>Physical environment and resource potential of the tropics.  Problems of human use and occupance.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 135</td>
+		<td>Rural and Urban Geography</td>
+		<td>Concepts of urban and rural land uses.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 141</td>
+		<td>Geography of Southeast Asia</td>
+		<td>The natural and human resources of Malaya, Burma, Indonesia, Borneo, Thailand, Indochina, and the Philippines; the influence of these resources on these countries and their roles in world affairs.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 143</td>
+		<td>Geography of Asia</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 143</td>
+		<td>Geography of Asia</td>
+		<td>The lands and peoples, climate, resources and economic activities of the countries of Southwest Asia; South Asia; Southeast Asia; East Asia; Central Asia; and Russian Siberia and Russian Far East, and their interrelations.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 145</td>
+		<td>Geography of the Pacific</td>
+		<td>The physical environment, natural and human resources, and economic development of Australia, New Zealand, New Guinea, Melanesia, Micronesia and Polynesia.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 151</td>
+		<td>Geography of Europe</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 151</td>
+		<td>Geography of Europe</td>
+		<td>Patterns of landforms, climate, resources and economic activities of the countries of Western Europe, Eastern Europe and Transcaucasia, and their interrelations.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 153</td>
+		<td>Geography of the Soviet Union</td>
+		<td>The land forms, climate, resources and economic activities of the Soviet Union and their interrelations.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 155</td>
+		<td>Geography of North America</td>
+		<td>The physical environment, natural resources, and economic development of the countries of North America.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 157</td>
+		<td>Geography of South America</td>
+		<td>The physical environment, natural and human resources, and economic development of the countries of South America.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 159</td>
+		<td>Geography of Africa</td>
+		<td>The physical environment, natural and human resources, and economic development of the countries of Africa.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 161</td>
+		<td>Concepts and Principles of Land Use</td>
+		<td>Utilization and evaluation of land resources and land use allocation, development and causes of land misuse; land management and the application of Environmental Impact Assessment (EIA) principles to land use change.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 171</td>
+		<td>Political Geography</td>
+		<td>The relation between man's political activities and his natural environment.  The political development of type states in the light of their location, size, climate, land forms, and natural resources.  The political organization of the world today in terms of contrasted environmental conditions.  Current political issues and changing adjustments to natural environment. </td>
+		<td><abbr title="Department of Geography, Department of Geography" style="border-bottom: 1px dotted;">DGeog, DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 173</td>
+		<td>Cultural Geography</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 183</td>
+		<td>Transport Geography</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 185</td>
+		<td>Medical Geography</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 190</td>
+		<td>Map and Air Photo Interpretation</td>
+		<td>Elements, principles and techniques of map and air photo interpretation for spatial analysis and planning.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 192</td>
+		<td>Field Methods in Geography</td>
+		<td>Methods and techniques of observing geographic features, recording  geographic data, and writing geographic reports.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 197</td>
+		<td>Digital Cartography</td>
+		<td>Introduction to the concepts, principles, theories and applied components of Digital Cartography and Geographic Information Systems (GIS).</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 199</td>
+		<td>Seminar</td>
+		<td>Methods, techniques and problems of research.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 200</td>
+		<td>Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 201</td>
+		<td>Political Geography</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 202</td>
+		<td>Field Geography</td>
+		<td>Training in methods of geographic fieldwork for advanced students who have not had a field course in geography.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 209</td>
+		<td>Spatial Analysis</td>
+		<td>Methods and concepts of regional and interregional analysis.</td>
+		<td><abbr title="Department of Geography, Department of Geography" style="border-bottom: 1px dotted;">DGeog, DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 210</td>
+		<td>Marine Geography</td>
+		<td>Man and the sea; oceanic climate and landforms; regulation and control of the utilization of the sea and sea bed.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 211</td>
+		<td>Seminar in Geography</td>
+		<td>Important contemporary literature and problems in geography.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 212</td>
+		<td>Applied Climatology</td>
+		<td>Regional genesis and dynamics of climate and its effects on resource development.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 213</td>
+		<td>Agricultural and Soil Geography</td>
+		<td>Distribution variation and significance of the different types of soils and agricultural systems.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 214</td>
+		<td>Industrial Geography</td>
+		<td>Location theories and analyses concerned with industrial development.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 222</td>
+		<td>Problems of Economic Geography</td>
+		<td>Problems, methods, and techniques of geographic study and research with emphasis on resource, agricultural, mineral, manufactural, transportational, and recreational geography.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 223</td>
+		<td>Geography of South Asia</td>
+		<td>The lands and people, climate, relief, resources and economic activities of India, Pakistan, Ceylon, Afghanistan, Nepal, Sikkim, and Bhutan.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 226</td>
+		<td>Cultural Geography</td>
+		<td>Man's relationship to his environment.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 228</td>
+		<td>Population Geography</td>
+		<td>Population distribution in relation to natural resources and economic development.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 231</td>
+		<td>Geography of East Asia</td>
+		<td>The natural and human resources of China, (including Taiwan), Korea, and Japan; the influence of these resources in the development of these countries.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 235</td>
+		<td>Geography of Southeast Asia</td>
+		<td>The natural and human resources of Malaysia, Burma, Indonesia, Thailand, Vietnam, Laos, Cambodia, and the Philippines and their roles in world affairs.</td>
+		<td><abbr title="Department of Geography, Department of Geography" style="border-bottom: 1px dotted;">DGeog, DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 241</td>
+		<td>Applied Geography I</td>
+		<td>Principles, problems, and strategies of regional geographic planning.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 242</td>
+		<td>Applied Geography II</td>
+		<td>Concepts of regional geographic planning in developing countries.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 243</td>
+		<td>Geographic Information Systems Applications in the Social Sciences</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 255</td>
+		<td>Environmental Hazards and Disaster Management</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 291</td>
+		<td>Geographic Aspects of Philippine Economic Development</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 292</td>
+		<td>Cultural and Population Geography of the Philippines</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 300</td>
+		<td>Master's Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 301</td>
+		<td>Environmental Geography</td>
+		<td>Component of the physical geographic environments, their integration and problems.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geog 321</td>
+		<td>Urban Systems</td>
+		<td>Physical development of city systems and related morphological patterns.</td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geog 400</td>
+		<td>Doctoral Dissertation</td>
+		<td></td>
+		<td><abbr title="Department of Geography" style="border-bottom: 1px dotted;">DGeog</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 1</td>
+		<td>Our Dynamic Earth</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 11</td>
+		<td>Principles of Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 11.1</td>
+		<td>Laboratory in Principles of Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 40</td>
+		<td>Elementary Mineralogy</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 50</td>
+		<td>Elementary Petrology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 60</td>
+		<td>Historical Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 70</td>
+		<td>Field Methods in Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 105</td>
+		<td>Introduction to Geochemistry</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 112</td>
+		<td>Structural Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 120</td>
+		<td>Principles of Stratigraphy</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 122</td>
+		<td>Principles of Geomorphology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 130</td>
+		<td>Elementary Paleontology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 131</td>
+		<td>Micropaleontology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 140</td>
+		<td>Optical Mineralogy</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 150</td>
+		<td>Petrography and Petrology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 170</td>
+		<td>Field Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 171</td>
+		<td>Mineral Data Analysis</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 172</td>
+		<td>Introduction to Geostatistics</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 173</td>
+		<td>Introduction to Earth Resource Economics</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 174</td>
+		<td>Introduction to Earth Resources Project Evaluation</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 175</td>
+		<td>Computer Methods in Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 177</td>
+		<td>Geology of the Philippines and Southeast Asia</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 181</td>
+		<td>Elementary Geophysics</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 190</td>
+		<td>Petroleum Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 192</td>
+		<td>Non-Metallic Ore Deposits</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 194</td>
+		<td>Metalliferous Ore Deposits</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 196</td>
+		<td>Undergraduate Seminar</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 203</td>
+		<td>Geochemical Exploration</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 205</td>
+		<td>Geochemistry</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 207</td>
+		<td>Mineral Equilibria</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 208</td>
+		<td>Geochemistry of Hydrocarbons</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 212</td>
+		<td>Advanced Structural Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 213</td>
+		<td>Photogeology and Remote Sensing</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 214</td>
+		<td>Geotectonics</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 215</td>
+		<td>Advanced Field Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 216</td>
+		<td>Geology for Large Infrastructures</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 217</td>
+		<td>Hydrogeology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 218</td>
+		<td>Urban Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 230</td>
+		<td>Marine Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 232</td>
+		<td>Systematic Invertebrate Paleontology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 237</td>
+		<td>Advanced Micropaleontology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 241</td>
+		<td>X-Ray Crystallography and Spectrography</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 243</td>
+		<td>Crystal Chemistry and Crystal Physics</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 250</td>
+		<td>Igneous Petrology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 251</td>
+		<td>Metamorphic Petrology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 252</td>
+		<td>Sedimentology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 253</td>
+		<td>Sedimentary Petrology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 254</td>
+		<td>Volcanism</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 255</td>
+		<td>Geothermal Resources</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 260</td>
+		<td>Stratigraphic Analysis</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 261</td>
+		<td>Paleogeology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 270</td>
+		<td>Ore Microscopy</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 271</td>
+		<td>Mining Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 272</td>
+		<td>Advanced Petroleum Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 273</td>
+		<td>Advanced Mineral Deposits</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 274</td>
+		<td>Environmental Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 275</td>
+		<td>Mineral Resource Economics</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 276.2</td>
+		<td>Metallic Mineral Resources</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 276.3</td>
+		<td>Nonmetallic Mineral Resources</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 276.4</td>
+		<td>Energy Resources</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 277.1</td>
+		<td>Quantitative Methods in Mineral Economics I</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 277.2</td>
+		<td>Quantitative Methods in Mineral Economics II</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 278</td>
+		<td>Quantitative Methods Applied to Exploration</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 279</td>
+		<td>Energy and Mineral Policies</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 281</td>
+		<td>Geophysical Exploration I</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 282</td>
+		<td>Geophysical Exploration II</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 283</td>
+		<td>Geophysical Exploration III</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 284</td>
+		<td>Solid Earth Geophysics</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 285</td>
+		<td>Geophysical Prospecting</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 289</td>
+		<td>Economics and Management of Mineral Exploration and Development</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 290</td>
+		<td>Fundamental Problems in Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 296</td>
+		<td>Seminar</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 297</td>
+		<td>Special Topics</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 298</td>
+		<td>Seminar in Mineral Economics</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 300</td>
+		<td>Master's Thesis</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 331</td>
+		<td>Environmental Geology</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Geol 399</td>
+		<td>Research</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Geol 400</td>
+		<td>PhD Dissertation</td>
+		<td></td>
+		<td><abbr title="National Institute of Geological Sciences" style="border-bottom: 1px dotted;">NIGS</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 00</td>
+		<td>Lectures in German</td>
+		<td>A phonetic German course, including pronunciation, diction and grammar.  Open only to students of the Conservatory of Music.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 10</td>
+		<td>A First Year College Course in German</td>
+		<td>Pronunciation, grammar, easy readings, with practice in speaking and writing German.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 10</td>
+		<td>Elementary Course</td>
+		<td>Pronunciation, grammar, easy readings, with practice in speaking and writing German.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 11</td>
+		<td>A First Year College Course in German</td>
+		<td>Continuation of German 10</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 11</td>
+		<td>Elementary Course</td>
+		<td>Continuation of German 10</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 12</td>
+		<td>A Reading Course in Literary and Scientific German</td>
+		<td>Class and outside reading of selected texts. Grammar and written exercises continued.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 12</td>
+		<td>Intermediate Course</td>
+		<td>Class and outside reading of selected texts. Grammar and written exercises continued.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 13</td>
+		<td>Intermediate Course</td>
+		<td>Continuation of German 12</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 13</td>
+		<td>A Reading Course in Literary and Scientific German</td>
+		<td>Continuation of German 12</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 14</td>
+		<td>Advanced Language Course I</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 15</td>
+		<td>Advanced Language Course II</td>
+		<td>Continuation of German 14</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 20</td>
+		<td>Advanced Language Course I</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 21</td>
+		<td>Advanced Language Course II</td>
+		<td>Continuation of German 20</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 30</td>
+		<td>Advanced Spoken German I</td>
+		<td>Prerequisite: 12 units of German</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 31</td>
+		<td>Advanced Spoken German II</td>
+		<td>Continuation of German 30</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 40</td>
+		<td>Advanced Grammar</td>
+		<td>Advanced principles of grammar along with practice in their application.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 45</td>
+		<td>Introduction to German Phonetics and Phonology</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 50</td>
+		<td>Advanced Syntax and Composition</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 60</td>
+		<td>Composition</td>
+		<td>Mechanics of composition and of its different genres.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 80</td>
+		<td>German Stylistics</td>
+		<td>Introduction to German stylistics using literary texts.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 100</td>
+		<td>History of German Literature</td>
+		<td>This course is designed to introduce the students to the lives and works of the more important authors and to give an insight into the different epochs of German literature.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 100</td>
+		<td>German Culture and Civilization</td>
+		<td>Readings in the historical development of civilization in Germany.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 101</td>
+		<td>Contemporary German Culture and Civilization</td>
+		<td>Continuation of German 100</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 105</td>
+		<td>Masterpieces of German Literature</td>
+		<td>This course enables the student to read intelligently the great authors of Germany. Special attention is given to prosody, to vocabulary and syntax and to the literary merits of each work.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 106</td>
+		<td>Masterpieces of German Literature</td>
+		<td>Continuation of German 105</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 110</td>
+		<td>Survey of German Literature</td>
+		<td></td>
+		<td><abbr title="Department of European Languages, Department of European Languages" style="border-bottom: 1px dotted;">DEL, DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 120</td>
+		<td>Representative German Authors</td>
+		<td>Designed to introduce the students to the lives and works of the more important authors and to give an insight into the different epochs of German literature.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 121</td>
+		<td>Representative German Authors II</td>
+		<td>Continuation of German 120</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 140</td>
+		<td>Technical German</td>
+		<td></td>
+		<td><abbr title="Department of European Languages, Department of European Languages" style="border-bottom: 1px dotted;">DEL, DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 142</td>
+		<td>Scientific Language</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 150</td>
+		<td>Masterpieces of German Literature</td>
+		<td>The great authors of Germany, with special attention to prosody, vocabulary and syntax and the literary merits of each work.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 151</td>
+		<td>Masterpieces of German Literature II</td>
+		<td>Continuation of German 150</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 152</td>
+		<td>History of the German Language</td>
+		<td>A survey of the historical development of the German language; beginnings in the Indo-European Period; evolution of Primitive Germanic characteristics of Germanic languages; development of Old High German; study of early texts.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 153</td>
+		<td>History of the German Language</td>
+		<td>Development of the Germanic language through Old High German, Middle High German to Modern German, and changes in the language from Luther to the present time. Reading and discussion of representative texts.</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 160</td>
+		<td>Contemporary German Literature</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 161</td>
+		<td>Contemporary German Literature II</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German 170</td>
+		<td>Techniques of German Translation</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German 197</td>
+		<td>Special Topics</td>
+		<td></td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>German O-F</td>
+		<td>German Diction</td>
+		<td>German phonetics, including pronunciation, diction and grammar.  (Open only to students of the Conservatory of Music)</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>German O-S</td>
+		<td>German Diction</td>
+		<td>Continuation of German O-F</td>
+		<td><abbr title="Department of European Languages" style="border-bottom: 1px dotted;">DEL</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GIM 175</td>
+		<td>Geographic Information Systems: Theory and Applications</td>
+		<td>Design and implementation of geographical information systems (GIS) and Spatial data management including: concept of information and GIS; georeferencing; spatial data modeling; spatial representation; geoprocessing; input/output operations; file storage; database management systems and distributed processing. GIS data models and structures. Spatial indexing. Algorithms for data manipulation, transformation. Spatial analysis and visualization. Techniques involved in project specification, design and implementation and the selection of computer hardware and software for GIS. Strategies and steps on GIS design and implementation. Interoperability, including internet-based handling of spatial data and web-based geo-information services.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GIM 177</td>
+		<td>Land Development and Valuation</td>
+		<td>Land development patterns and concepts; growth and sustainability; land development design elements and processes; site analysis and land use planning; land valuation types; land valuation methods.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GmE 202</td>
+		<td>Principles of Remote Sensing</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GmE 203</td>
+		<td>Principles of Geographic Information Systems</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GmE 205</td>
+		<td>Object-Oriented Programming for Geomatic Applications</td>
+		<td></td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GmE 210</td>
+		<td>Spatial Visualization</td>
+		<td>Theory and application of both abstract and realistic visualization in two, three and four dimensions. Color theory; communication theory; cartography; map animation; hypermapping; environmental visualization; and augmented reality; three-dimensional modeling and transformations; perspective; hidden surface algorithms; illumination models; texture mapping; ray tracing; animation; applications of scientific and environmental visualization for planning and management in built and natural environments.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GmE 211</td>
+		<td>Satellite Geodesy</td>
+		<td>Theory and applications of modern satellite geodesy; theory and applications of satellite positioning, particularly in a geodetic context. Specific topics include: time systems, orbit computation, geodetic datum definition and coordinate systems, introduction to satellite positioning, error modeling, practical applications and considerations, data processing strategies, heights from GPS and geoid modeling and recent developments in satellite geodesy.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GmE 216</td>
+		<td>Field Techniques in Applied Geodesy and Remote Sensing</td>
+		<td>Field techniques for analysis, modeling accuracy assessment in remote sensing and geographic information systems. Application in resource mapping, monitoring and prediction.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GmE 217</td>
+		<td>Cadastral Data Management</td>
+		<td>Introduction to Land Administration, Land Policy; Land Tenure and Security; Legal Aspects; Land Registration and Cadastre; Land Reform; Spatial Data Infrastructure; Land Information Systems; ICT and Land Administration; Information system modeling - UML Cadastral data analysis and modeling; Core Cadastral Domain Model; Marine cadastre; Property valuation and taxation.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GmE 220</td>
+		<td>Spatial Databases</td>
+		<td>Fundamentals of spatial databases; spatial data modeling including entity-relationship and object-oriented data models; indexes and access methods including B-trees, quadtrees, and R-trees; and query languages and query processing.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GmE 221</td>
+		<td>Spatial Analysis</td>
+		<td>Spatial data types; data structures for spatial data; point patterns; measures of dispersion, arrangements; patterns of lines; paths, branching, topology and concepts of distance; patterns of area; patterns in fields; the role of spatial scale and spatial aggregation problems; exploratory spatial data analysis; and spatial autocorrelation.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GmE 222</td>
+		<td>Advanced Geographic Information Systems</td>
+		<td>Theory and application of advanced techniques in resource estimation, prediction and evaluation using GIS. Design of GIS; Temporal GIS; 3-D GIS; Spatial data quality; Error propagation; Model integration/coupling with GIS; Agent-Based Modeling.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GmE 223</td>
+		<td>Integrated Spatial Systems</td>
+		<td>Fundamental concepts, theory, and applications of integrating spatial technologies with enabling technologies, such as wireless communications and the Internet: studies in positioning techniques and measurement integration; distributed GIS, web mapping, interoperability; location-based services.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GmE 230</td>
+		<td>Microwave Remote Sensing</td>
+		<td>Theory and application of microwave remote sensing in resource mapping, monitoring and prediction; Radar development; Side Looking Radars (SLAR); Synthetic Aperture Radar, Imaging polarimetry, interferometry, radar altimetry, passive microwave systems.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GmE 231</td>
+		<td>Lidar Remote Sensing</td>
+		<td>Principles, technologies and applications of hyperspectral remote sensing; spectral matching; spectral mixing analysis; high-dimensional implications for supervised classification.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GmE 232</td>
+		<td>Hyperspectral Remote Sensing</td>
+		<td>Principles, technologies and applications of hyperspectral remote sensing; spectral matching; spectral mixing analysis; high-dimensional implications for supervised classification.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GmE 233</td>
+		<td>Close-Range Photogrammetry</td>
+		<td>Principle and methods of close-range digital photogrammetry; industrial, engineering and other applications of vision metrology.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GmE 241</td>
+		<td>Mathematical Geodesy and Adjustments of Geodetic Observations</td>
+		<td>Review of Least Square Adjustments; Network deformation and analysis; Theory of Elasticity; Least-squares Collocation; Non-linear Adjustments; Datum Transformation Techniques; Ring Theory and Polynomial Theory as applied to problems in Geodesy.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GmE 242</td>
+		<td>Satellite Positioning, Signal Processing and Numerical Methods</td>
+		<td>Space-based positioning systems (such as GPS) are used in conjunction with sophisticated mathematical modelling to solve the problems of determining 3-D position on and near the surface of the earth. Static and kinematic positioning with the Global Positioning System (GPS). Inertial positioning; astronomic positioning; VLBI positioning; satellite laser ranging. Horizontal, vertical and three-dimensional networks; pre-analysis and post-analysis; theory of heights; gravimetry; global and local geoid determination; astrogeodetic, gravimetric and combined methods; leveling by GPS and the geoid. Introduction to signal processing, time series analysis and FFT techniques. Kalman filtering.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GmE 243</td>
+		<td>Satellite-Based Positioning Systems (SBPS) Technology Development</td>
+		<td>SBPS receiver-software interface development; GPS functional library; GPS data platform and processing core; Concept of precise kinematic positioning and flight-state monitoring; precision estimation and comparisons. Application of GPS Theory and Algorithms.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GS 197</td>
+		<td>Special Topics</td>
+		<td></td>
+		<td><abbr title="Center for International Studies" style="border-bottom: 1px dotted;">CIS</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>GsE 188</td>
+		<td>Modern Photogrammetry</td>
+		<td>Mono and stereo photogrammetry; principles of vertical photogrammetry; principles of vertical photography and stereoscopy; optics; image coordinate refinement; theory of orientation and aerial triangulation; digital image processing; DEM, contour and orthophoto generation; principles of satellite photogrammetry; close-range applications.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>GsE 189</td>
+		<td>Remote Sensing: Theory and Applications</td>
+		<td>Fundamental concepts of remote sensing; electromagnetic radiation principles; history of aerial photography and space imaging; elements of visual interpretation; sensors and platform characteristics; digital image processing; information extraction; thermal infrared, microwave and LIDAR remote sensing; thematic mapping applications.</td>
+		<td><abbr title="Department of Geodetic Engineering" style="border-bottom: 1px dotted;">DGE</abbr></td>
+	</tr>
+	</table>
+
+</div><!-- #content -->
+
+﻿
+<script type="text/javascript">
+			
+		$(document).ready(function() {
+			
+			//set the width per footer_expander element
+			var expander_count = $('.footerlink').length;
+			var expander_width = (83/expander_count);
+			
+			var i = 0;
+			$.each($(".footerlink"), function(index, value){
+				$(this).css('width', expander_width+'%');
+				$(this).css('left', (((expander_width)*i)+10)+'%');
+				i++;
+			});
+			
+			$(".footerlink,.footer_expander").hover(
+				function(){
+					$(this).animate({ height: "30"}, 50);
+				},
+				function(){
+					$(this).animate({ height: "16"}, 50);
+				
+				}
+			);
+			
+			//set the width per footer_expander element
+			var division_count = $('.footer_division').length;
+			var division_width = (88/division_count);
+			division_width = division_width+'%';
+			
+			$.each($(".footer_division"), function(index, value){
+				$(this).css('width', division_width);
+			});
+			
+		function change_acadtermtype() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_acadtermtype/' + $(this).val();
+		}
+
+		function change_role() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_role/' + $(this).val();
+		}
+
+		function show_roles() {
+			$("#span_role").addClass("hidden");
+			$("#span_role-choices").removeClass("hidden");
+		}
+
+		function show_acadtermtypes() {
+			$("#span_acadtermtype").addClass("hidden");
+			$("#span_acadtermtype-choices").removeClass("hidden");
+		}
+
+	 });
+	 
+	
+	function showFooter(){
+		$('#footer').slideDown(150);
+		$('.footermin').hide();
+	}
+	function hideFooter(){
+		$('#footer').slideUp(150);
+		$('.footermin').show();
+	}
+	</script>
+
+<span style="clear:both;"></span>
+
+	<div class="footer_expander footermin" onclick="showFooter();">
+		More ▲
+	</div>
+
+		<div id="footer" align="center">
+		<div id="footer_linktotop" align="right" onclick="hideFooter();">
+			<a href="Javascript:void(0);" onclick="hideFooter();" style="color:white">Less ▼</a>
+		</div>
+		<div style="padding-top: 30px;">
+						<div class="footer_division">
+				<div class="footer_division_header">Flowcharts</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/OnlineDroppingFlowchart.pdf" >
+								Dropping							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ChangeMatFlowchart_modified.pdf" >
+								Change Mat							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ClearanceMechanics.pdf" >
+								Clearance							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/downloads/LOA_mechanics.pdf" >
+								Leave of Absence							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Class Schedules</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/" >
+								Regular Classes							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/mba" >
+								MBA/MS Finance PT							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/schedule/spring" >
+								Spring Asia							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Information</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/course_catalog" >
+								Course Catalog							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/curriculum.html" >
+								Curriculum Checklist							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://our.upd.edu.ph/files/ListofGECourses.pdf" >
+								List of RGEP Courses							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Calendar</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/~updinfo/apr14/articles/BOR_approved_AcadCal_AY_2014_2015.pdf" >
+								BOR Approved<br>Academic Calendar<br>AY 2014-2015							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular" >
+								Regular Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/mba" >
+								MBA/MS Fin PT Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/msfin" >
+								MS Fin FT Calendar							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/spring" >
+								Spring Asia Calendar							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">CRS</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/faq" >
+								CRS FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/faq.html" >
+								OUR FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>History of the CRS<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item ">
+													<span>User Guide<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/about/" >
+								The CRS Team<br/>							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Contact Us</div>
+																		<div class="footer_division_item ">
+																				<a href="http://www.facebook.com/groups/134746139953068/" >
+								Facebook Group							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="mailto:crssupport@list.upd.edu.ph" >
+								E-Mail							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>Phone<br/>(981-8500 local 4560)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+													<span>You may visit us at the CRSRS Office at the 3rd floor of the OUR.</span>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">External Links</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/" >
+								UP Diliman							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://up.edu.ph/" >
+								UP System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/" >
+								OUR Site							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://sts.up.edu.ph/" >
+								Socialized Tuition System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://dormapplication.upd.edu.ph/" >
+								Dorm Application Website							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://uvle.up.edu.ph/" >
+								UvLE							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://ucc.upd.edu.ph/about-us/" >
+								UPCC							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://mail.up.edu.ph/" >
+								UP Webmail							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://www.dzup.org/" >
+								DZUP							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://upd.edu.ph/aup/" >
+								Acceptable Use Policy							</a>
+											</div>
+																	</div>
+					</div>
+	</div>
+
+	<div class="footer_quicklinks footermin">
+		Quick Links:
+	</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/schedule/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/schedule/">
+				Regular Classes			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/course_catalog'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/course_catalog">
+				Course Catalog			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='http://our.upd.edu.ph/curriculum.html'">
+			<a class="a_footerlink" href="http://our.upd.edu.ph/curriculum.html">
+				Curriculum Checklist			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/acadcal_public/index/advanced/regular'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular">
+				Regular Calendar			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/faq'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/faq">
+				CRS FAQ			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/about/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/about/">
+				The CRS Team<br/>			</a>
+		</div>
+	</body>
+</html>

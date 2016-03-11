@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>UP CRS - Course Catalog</title>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery-1.4.1.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/layout.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/status.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/schedule.css" type="text/css" />
+	<link rel="shortcut icon" href="https://crs.upd.edu.ph/images/favicon.ico" type="image/x-icon" />
+
+	<script type="text/javascript" language="JavaScript">
+	$(document).ready(function() {
+		$('#btn_search').click(searchcourses);
+		$('#frm_schedule').submit(function(e) {
+			e.preventDefault();
+			searchcourses();
+		});
+	});
+
+	function searchcourses() {
+		var coursenumber = $.trim($('#txt_coursenumber').val());
+		var alphanumeric_pattern = /^[a-zA-Z0-9\s\.\-]+$/;
+
+		if(coursenumber != '') {
+			if( ! alphanumeric_pattern.test(coursenumber)) {
+				alert('Course number must be alphanumeric.');
+			} else {
+				window.location = 'https://crs.upd.edu.ph/course_catalog/index/' + coursenumber;
+			}
+		}
+
+	}
+
+	</script>
+
+</head>
+
+<body class="schedule">
+
+<div id="header">
+	<a href="https://crs.upd.edu.ph/user" class="header_link"></a>
+</div>
+<div id="subheader">
+</div>
+
+<div id="content" class="align-center">
+
+<h1>
+	Course Catalog
+</h1>
+
+<br />
+
+<form id="frm_schedule" action="" method="post">
+<table class="form" align="center">
+	<tr>
+		<td>Course Number:</td>
+		<td><input type="text" id="txt_coursenumber" name="txt_coursenumber" /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>(e.g., Math 11, Eng 1)</td>
+	</tr>
+	<tr class="tr_submit">
+		<td></td>
+		<td><input type="button" id="btn_search" name="btn_search" value="Search" /></td>
+	</tr>
+</table>
+</form>
+
+<p>
+	<a href="https://crs.upd.edu.ph/course_catalog/index/A">A</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/B">B</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/C">C</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/D">D</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/E">E</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/F">F</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/G">G</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/H">H</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/I">I</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/J">J</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/K">K</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/L">L</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/M">M</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/N">N</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/O">O</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/P">P</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Q">Q</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/R">R</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/S">S</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/T">T</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/U">U</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/V">V</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/W">W</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/X">X</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Y">Y</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Z">Z</a>&nbsp;&nbsp;
+<a href="https://crs.upd.edu.ph/">Back to main page</a>
+</p>
+
+<br /><br />
+
+<table >
+<tr>
+	<th width = "15%">Course code & No.</th>
+	<th width = "30%">Course Title</th>
+	<th width = "40%">Course Description</th>
+	<th width = "15%">Offering Unit</th>
+	
+</tr>
+			<tr class="tr_odd">
+		<td>Zoology 1</td>
+		<td>Introduction to Zoology</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 2</td>
+		<td>Zoology for Pharmacy Students</td>
+		<td>This course is designed more particularly for pharmacy students but it can be taken by others. It is a course which will deal primarily in General Zoology, taking up the different organs and systems which are found in animals especially the vertebrates, together with their functions. Likewise, a rapid survey of the different phyla of animals together with examples of various groups are taken up, but special emphasis shall be given to those forms which are of particular importance to pharmacy.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 3</td>
+		<td>Biological Problems in Engineering</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 10</td>
+		<td>Fundamentals of Zoology</td>
+		<td>Basic aspects & principles of Zoology</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 20</td>
+		<td>Vertebrate Structure and Function</td>
+		<td>Structure-function relations in selected classes of vertebrates.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 25</td>
+		<td>Systematic Ichthyology</td>
+		<td>Classification and Anatomy of fishes.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 30</td>
+		<td>Genetics and Developmental Biology</td>
+		<td>Nature of genetic material as expressed in the development of organisms with emphasis on factors leading to abnormal development. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 100</td>
+		<td>Microtechnique</td>
+		<td>basic methods and principles of preparing animal materials for microscopic study.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 101</td>
+		<td>Histology of Skins and Leathers</td>
+		<td>A lecture and laboratory course dealing with the comparative study of the microscopic structure of the skin of vertebrates especially those which provide materials for leather manufacture. training in microtechnique methods will include the preparation of sections of the skin together with its derivatives. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 101</td>
+		<td>Invertebrate Zoology</td>
+		<td>A thorough study of the representative of invertebrates including morphology. physiology, and life history, together with some discussions of the habits, distribution and methods of classification. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 102</td>
+		<td>Comparative Anatomy of Vertebrates</td>
+		<td>Phylogenetic development of the organ systems in the various classes of vertebrates.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 102</td>
+		<td>Invertebrate Zoology</td>
+		<td>A sequence of course 101 which may be taken separately. This course takes up in a similar manner the representatives of invertebrates not considered in 101. This and the above course is designed to prepare those who expect to teach and those who expect to do research work in the Philippine invertebrate fauna. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 106</td>
+		<td>General Histology</td>
+		<td>Structure of representative invertebrate and vertebrate tissues.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 109</td>
+		<td>Invertebrate Zoology</td>
+		<td>A detailed systematic survey of invertebrate excluding insects and the study of their morphology, physiology, and distribution. Methods of collection and preservation will also be taken up. Special emphasis will be given to Philippine forms. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 110</td>
+		<td>Vertebrate Zoology</td>
+		<td>A detailed survey of vertebrate animals and the study of their morphology and distribution. Special emphasis will be given on Philippine fishes, amphibians, reptiles, birds and mammals. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 111</td>
+		<td>Invertebrate Zoology</td>
+		<td>General survey of invertebrates.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 111.1</td>
+		<td>Invertebrate Zoology Laboratory</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 114</td>
+		<td>Entomology</td>
+		<td>Structure, function, development, taxonomy and distribution of insects and allied forms. Methods of collection for study.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 120</td>
+		<td>Organic Evolution</td>
+		<td>A course dealing with the factors involved in the organic evolution and the theories on how they operate in nature. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 120</td>
+		<td>Animal Physiology</td>
+		<td>Principles of functional Zoology with emphasis on physiological adaptations. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 120.1</td>
+		<td>Animal Physiology Laboratory</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 121</td>
+		<td>General Physiology</td>
+		<td>Basic principles and fundamental problems in animal physiology.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 122</td>
+		<td>Planktology</td>
+		<td>Classification, adaptations, and interrelationship of the microscopic fauna of the sea. Field work in Puerto Galera and Varadero Bay, Manila Bay, Batangas Bay, or other places. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 124</td>
+		<td>Early Life History of Fishes</td>
+		<td>Natural and artificial spawning, egg production, care of young, and larval history of fresh water and marine fishes.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 125</td>
+		<td>Economic Zoology</td>
+		<td>A study of the life history, distribution, and economic aspects of commercially important feral animals and insects. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 126</td>
+		<td>Ichthyology I</td>
+		<td>First part is designed to acquaint students with general anatomy, morphology and general diagnostic characteristics used in classification. Second part is classification of soft-rayed fishes. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 127</td>
+		<td>Ichthyology II</td>
+		<td>This is a continuation course of Zoology 126, with emphasis on spiny-rayed fishes.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 128</td>
+		<td>Commercial and Aquatic Invertebrates</td>
+		<td>Commercially important aquatic invertebrates are studied which will include anatomy, morphology, habit and habitat-spawning habit and life history as well as their distribution. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 129</td>
+		<td>Spawning Habits and Early Life History</td>
+		<td>A course consisting of observing the actual spawning habits in aquaria ponds or in the field going through studies of the life history which includes determination of sexual maturity, development and natural factors exerting influence on the fate of eggs, larvae and fingerlings. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 130</td>
+		<td>Natural Fish Food</td>
+		<td>This course is devoted to the study of fish foods as they occur in nature whether in fresh or saltwater, their interrelationship and propagation including examination of stomach or intestinal contents of commercially important fishes to determine their specific food habits. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 131</td>
+		<td>Invertebrate Embryology</td>
+		<td>Morphology and physiology of development of representative invertebrates. Embryological theories and techniques.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 132</td>
+		<td>Hatchery Biology</td>
+		<td>A course intended to study algae, planktonic population and their relation to fish. Studies of pollution and pollution indices. Disease prevention and pond improvement.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 132</td>
+		<td>Vertebrate Embryology</td>
+		<td>Processes and theories of development of representative vertebrates. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 133</td>
+		<td>Fish Diseases and Predators</td>
+		<td>Studies of fish diseases, their nature and courses. Fish parasitism by both plants and animals. Predators and their control. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 135</td>
+		<td>Fisheries Laws, Rules, Regulations, Etc.</td>
+		<td>Discussion of laws affecting directly or indirectly our fisheries; rules, regulations and other safeguards promulgated to protect the national fisheries including proclamations and executive orders issued.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 161</td>
+		<td>Field Zoology</td>
+		<td>Animals in their natural environment and methods of processing them for laboratory study.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 164</td>
+		<td>Limnology</td>
+		<td>Classification and interrelationship of various organisms found in fresh water lakes and streams Field work in neighboring fresh water bodies.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 173</td>
+		<td>Parasitology</td>
+		<td>Origin and degree of parasitism, structural similarities of parasites, life cycles and host-parasite relationships.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 181</td>
+		<td>Soil Invertebrates</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 198</td>
+		<td>Seminar</td>
+		<td>Reports, discussion and symposia on current fisheries literature.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 199</td>
+		<td>Research</td>
+		<td> </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 201</td>
+		<td>Analytical Morphology</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 202</td>
+		<td>Literature on General Physiology, Ecology and Animal Geography</td>
+		<td>reports and discussion of current literature dealing with general physiology, ecology and animal geography.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 203</td>
+		<td>Literature on Entomology, Genetics, Biometry, Eugenics and Evolution</td>
+		<td>Reports and discussion of current literature dealing with entomology, genetics, biometry, eugenics and evolution. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 205</td>
+		<td>Special Topics</td>
+		<td>Some recent developments in zoology.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 207</td>
+		<td>Histology of Invertebrates</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 208</td>
+		<td>Histology of Vertebrates</td>
+		<td> </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 210</td>
+		<td>Systematic Zoology</td>
+		<td>Methods and principles of classification and nomenclature.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 213</td>
+		<td>Systematic Helminthology</td>
+		<td>Classification and nomenclature, morphological and physiological relationships, and distribution of representative species. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 214</td>
+		<td>Evolution and Classification of Insects</td>
+		<td>The phylogeny and taxonomy of the various insect groups.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 215</td>
+		<td>Research</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 221</td>
+		<td>Physiology of Invertebrates</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 222</td>
+		<td>Physiology of Vertebrates</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 225</td>
+		<td>Radiation Biology of Vertebrates</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 225</td>
+		<td>Comparative and Experimental Embryology</td>
+		<td>A study of the development of living eggs and embryos, with experimental analysis of certain developmental phenomena. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 226</td>
+		<td>Problems in Human Genetics</td>
+		<td>Recent progress and theories of human genetics.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 227</td>
+		<td>Physiology of Reproduction</td>
+		<td>A study of the reproductive process and the relation of hormones to reproduction.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 228</td>
+		<td>Comparative Endocrinology</td>
+		<td>Hormonal and para-hormonal mechanisms, with emphasis on the comparative endocrinology of vertebrates.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 230</td>
+		<td>Differentiation in Embryonic Systems</td>
+		<td>Current concepts on embryonic development.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 231</td>
+		<td>Developmental Biology of Invertebrates</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 232</td>
+		<td>Developmental Biology of Vertebrates</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 233</td>
+		<td>Embryonic Patterns in Representative Parasitic Helminths</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 233</td>
+		<td>Experimental Embryology</td>
+		<td>Experiments on differentiation and organization in embryonic systems.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 235</td>
+		<td>Methods and Principles of Systematic Zoology</td>
+		<td>The concepts and procedures used in zoological nomenclature.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 241</td>
+		<td>A Critique of Theory of Evolution</td>
+		<td>An advanced lecture course dealing on the evaluation of the old as well as of the more recent theories regarding evolutionary process. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 243</td>
+		<td>Advanced Animal Genetics</td>
+		<td>Literature on the genetics and cytogenetics of Drosophila and laboratory mammals.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 244</td>
+		<td>Problems in Genetics</td>
+		<td>Recent advances in and theories of Genetics.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 245</td>
+		<td>Animal Radiation Genetics</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 261</td>
+		<td>Theoretical Zoology</td>
+		<td>A critical review of classic and contemporary literature on more important Zoological problems: Organisms as a whole, reproduction, senescence and rejuvenescence, heredity, sex determination, hormone action, etc. Lectures, recitations and reports on original literature. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 262</td>
+		<td>Marine Communities</td>
+		<td>Mutual relationship between marine animals and their physical and biotic environment, marine communities and their integrating factors. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 263</td>
+		<td>Terrestrial Communities</td>
+		<td>Formation and organization of terrestrial communities and their relationship with their environment.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 263</td>
+		<td>Ecology of Animal Parasites</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 269</td>
+		<td>Zoogeography</td>
+		<td>Patterns of animal distribution and factors determining them.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 273</td>
+		<td>Experimental Parasitology</td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 276</td>
+		<td>History of Zoology</td>
+		<td>Presentation and discussion of the more important events in the development of the science of Zoology.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 280</td>
+		<td>Protozoology</td>
+		<td>Classification, morphology, physiology and reproduction of free-living and parasitic species of Protozoa.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 285</td>
+		<td>Host-Parasite Relations </td>
+		<td></td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 285</td>
+		<td>Mollusca and the Lophophorates</td>
+		<td>Phoronida, Bryozoa, Brachiopoda</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 288</td>
+		<td>Ornithology</td>
+		<td>Morphology, classification, distribution, migration, food and feeding habits, breeding and social behavior of birds. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>Zoology 288</td>
+		<td>Herptiles: Amphibia and Reptilia</td>
+		<td>Natural history and phylogeny of fishes and herptiles. </td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>Zoology 298</td>
+		<td>Seminar</td>
+		<td>Reports and discussion of current literature dealing with cytology, general embryology and systematic zoology.</td>
+		<td><abbr title="Institute of Biology" style="border-bottom: 1px dotted;">IB</abbr></td>
+	</tr>
+	</table>
+
+</div><!-- #content -->
+
+﻿
+<script type="text/javascript">
+			
+		$(document).ready(function() {
+			
+			//set the width per footer_expander element
+			var expander_count = $('.footerlink').length;
+			var expander_width = (83/expander_count);
+			
+			var i = 0;
+			$.each($(".footerlink"), function(index, value){
+				$(this).css('width', expander_width+'%');
+				$(this).css('left', (((expander_width)*i)+10)+'%');
+				i++;
+			});
+			
+			$(".footerlink,.footer_expander").hover(
+				function(){
+					$(this).animate({ height: "30"}, 50);
+				},
+				function(){
+					$(this).animate({ height: "16"}, 50);
+				
+				}
+			);
+			
+			//set the width per footer_expander element
+			var division_count = $('.footer_division').length;
+			var division_width = (88/division_count);
+			division_width = division_width+'%';
+			
+			$.each($(".footer_division"), function(index, value){
+				$(this).css('width', division_width);
+			});
+			
+		function change_acadtermtype() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_acadtermtype/' + $(this).val();
+		}
+
+		function change_role() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_role/' + $(this).val();
+		}
+
+		function show_roles() {
+			$("#span_role").addClass("hidden");
+			$("#span_role-choices").removeClass("hidden");
+		}
+
+		function show_acadtermtypes() {
+			$("#span_acadtermtype").addClass("hidden");
+			$("#span_acadtermtype-choices").removeClass("hidden");
+		}
+
+	 });
+	 
+	
+	function showFooter(){
+		$('#footer').slideDown(150);
+		$('.footermin').hide();
+	}
+	function hideFooter(){
+		$('#footer').slideUp(150);
+		$('.footermin').show();
+	}
+	</script>
+
+<span style="clear:both;"></span>
+
+	<div class="footer_expander footermin" onclick="showFooter();">
+		More ▲
+	</div>
+
+		<div id="footer" align="center">
+		<div id="footer_linktotop" align="right" onclick="hideFooter();">
+			<a href="Javascript:void(0);" onclick="hideFooter();" style="color:white">Less ▼</a>
+		</div>
+		<div style="padding-top: 30px;">
+						<div class="footer_division">
+				<div class="footer_division_header">Flowcharts</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/OnlineDroppingFlowchart.pdf" >
+								Dropping							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ChangeMatFlowchart_modified.pdf" >
+								Change Mat							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ClearanceMechanics.pdf" >
+								Clearance							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/downloads/LOA_mechanics.pdf" >
+								Leave of Absence							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Class Schedules</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/" >
+								Regular Classes							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/mba" >
+								MBA/MS Finance PT							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/schedule/spring" >
+								Spring Asia							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Information</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/course_catalog" >
+								Course Catalog							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/curriculum.html" >
+								Curriculum Checklist							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://our.upd.edu.ph/files/ListofGECourses.pdf" >
+								List of RGEP Courses							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Calendar</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/~updinfo/apr14/articles/BOR_approved_AcadCal_AY_2014_2015.pdf" >
+								BOR Approved<br>Academic Calendar<br>AY 2014-2015							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular" >
+								Regular Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/mba" >
+								MBA/MS Fin PT Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/msfin" >
+								MS Fin FT Calendar							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/spring" >
+								Spring Asia Calendar							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">CRS</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/faq" >
+								CRS FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/faq.html" >
+								OUR FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>History of the CRS<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item ">
+													<span>User Guide<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/about/" >
+								The CRS Team<br/>							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Contact Us</div>
+																		<div class="footer_division_item ">
+																				<a href="http://www.facebook.com/groups/134746139953068/" >
+								Facebook Group							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="mailto:crssupport@list.upd.edu.ph" >
+								E-Mail							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>Phone<br/>(981-8500 local 4560)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+													<span>You may visit us at the CRSRS Office at the 3rd floor of the OUR.</span>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">External Links</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/" >
+								UP Diliman							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://up.edu.ph/" >
+								UP System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/" >
+								OUR Site							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://sts.up.edu.ph/" >
+								Socialized Tuition System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://dormapplication.upd.edu.ph/" >
+								Dorm Application Website							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://uvle.up.edu.ph/" >
+								UvLE							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://ucc.upd.edu.ph/about-us/" >
+								UPCC							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://mail.up.edu.ph/" >
+								UP Webmail							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://www.dzup.org/" >
+								DZUP							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://upd.edu.ph/aup/" >
+								Acceptable Use Policy							</a>
+											</div>
+																	</div>
+					</div>
+	</div>
+
+	<div class="footer_quicklinks footermin">
+		Quick Links:
+	</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/schedule/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/schedule/">
+				Regular Classes			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/course_catalog'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/course_catalog">
+				Course Catalog			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='http://our.upd.edu.ph/curriculum.html'">
+			<a class="a_footerlink" href="http://our.upd.edu.ph/curriculum.html">
+				Curriculum Checklist			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/acadcal_public/index/advanced/regular'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular">
+				Regular Calendar			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/faq'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/faq">
+				CRS FAQ			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/about/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/about/">
+				The CRS Team<br/>			</a>
+		</div>
+	</body>
+</html>

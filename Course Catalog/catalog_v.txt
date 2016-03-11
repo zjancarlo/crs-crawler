@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>UP CRS - Course Catalog</title>
+	<script type="text/javascript" src="https://crs.upd.edu.ph/javascripts/jquery-1.4.1.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/layout.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/status.css" type="text/css" />
+	<link rel="stylesheet" href="https://crs.upd.edu.ph/stylesheets/schedule.css" type="text/css" />
+	<link rel="shortcut icon" href="https://crs.upd.edu.ph/images/favicon.ico" type="image/x-icon" />
+
+	<script type="text/javascript" language="JavaScript">
+	$(document).ready(function() {
+		$('#btn_search').click(searchcourses);
+		$('#frm_schedule').submit(function(e) {
+			e.preventDefault();
+			searchcourses();
+		});
+	});
+
+	function searchcourses() {
+		var coursenumber = $.trim($('#txt_coursenumber').val());
+		var alphanumeric_pattern = /^[a-zA-Z0-9\s\.\-]+$/;
+
+		if(coursenumber != '') {
+			if( ! alphanumeric_pattern.test(coursenumber)) {
+				alert('Course number must be alphanumeric.');
+			} else {
+				window.location = 'https://crs.upd.edu.ph/course_catalog/index/' + coursenumber;
+			}
+		}
+
+	}
+
+	</script>
+
+</head>
+
+<body class="schedule">
+
+<div id="header">
+	<a href="https://crs.upd.edu.ph/user" class="header_link"></a>
+</div>
+<div id="subheader">
+</div>
+
+<div id="content" class="align-center">
+
+<h1>
+	Course Catalog
+</h1>
+
+<br />
+
+<form id="frm_schedule" action="" method="post">
+<table class="form" align="center">
+	<tr>
+		<td>Course Number:</td>
+		<td><input type="text" id="txt_coursenumber" name="txt_coursenumber" /></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>(e.g., Math 11, Eng 1)</td>
+	</tr>
+	<tr class="tr_submit">
+		<td></td>
+		<td><input type="button" id="btn_search" name="btn_search" value="Search" /></td>
+	</tr>
+</table>
+</form>
+
+<p>
+	<a href="https://crs.upd.edu.ph/course_catalog/index/A">A</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/B">B</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/C">C</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/D">D</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/E">E</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/F">F</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/G">G</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/H">H</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/I">I</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/J">J</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/K">K</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/L">L</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/M">M</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/N">N</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/O">O</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/P">P</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Q">Q</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/R">R</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/S">S</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/T">T</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/U">U</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/V">V</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/W">W</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/X">X</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Y">Y</a>&nbsp;&nbsp;
+	<a href="https://crs.upd.edu.ph/course_catalog/index/Z">Z</a>&nbsp;&nbsp;
+<a href="https://crs.upd.edu.ph/">Back to main page</a>
+</p>
+
+<br /><br />
+
+<table >
+<tr>
+	<th width = "15%">Course code & No.</th>
+	<th width = "30%">Course Title</th>
+	<th width = "40%">Course Description</th>
+	<th width = "15%">Offering Unit</th>
+	
+</tr>
+			<tr class="tr_odd">
+		<td>VC 20</td>
+		<td>Visual Design I</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 21</td>
+		<td>Visual Design II</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 22</td>
+		<td>Figure Drawing I</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 23</td>
+		<td>Figure Drawing II</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 24</td>
+		<td>Production Methods I</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 25</td>
+		<td>Production Methods II</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 26</td>
+		<td>Design Workshop I</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 26.1</td>
+		<td>Applied Design Workshop I</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 26.2</td>
+		<td>Applied Design Workshop II</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 27</td>
+		<td>Design Workshop II</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 28</td>
+		<td>Photography I</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 29</td>
+		<td>Photography II</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 36</td>
+		<td>Applied Graphics Workshop</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 40</td>
+		<td>Advanced Figure Illustration</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 41</td>
+		<td>Technical and Scientific Illustration</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 42</td>
+		<td>Screen Printing</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 43</td>
+		<td>Graphic Workshop</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 50</td>
+		<td>Animation</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 100</td>
+		<td>Advertising Design I</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 101</td>
+		<td>Advertising Design II</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 120</td>
+		<td>Editorial Design and Illustration I</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 121</td>
+		<td>Editorial Design and Illustration II</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 130</td>
+		<td>Production for Electronic Media</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 131</td>
+		<td>Advanced Production for Electronic Media</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 134.1</td>
+		<td>Intermediate Advertising Design</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 134.2</td>
+		<td>Advanced Advertising Design</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 135.1</td>
+		<td>Intermediate Editorial Design and Illustration</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 135.2</td>
+		<td>Advanced Editorial Design and Illustration</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 136</td>
+		<td>Photography</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 137</td>
+		<td>Visual Verbal Communication</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 138</td>
+		<td>Problems in Visual Communication</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 143</td>
+		<td>Advanced Film Animation</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 150</td>
+		<td>Advanced Advertising Design</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 152</td>
+		<td>Advanced Editorial Design and Illustration</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_odd">
+		<td>VC 195</td>
+		<td>Professional Seminar/Workshop</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+		<tr class="tr_even">
+		<td>VC 200</td>
+		<td>Thesis</td>
+		<td></td>
+		<td><abbr title="Department of Visual Communication" style="border-bottom: 1px dotted;">VC</abbr></td>
+	</tr>
+	</table>
+
+</div><!-- #content -->
+
+﻿
+<script type="text/javascript">
+			
+		$(document).ready(function() {
+			
+			//set the width per footer_expander element
+			var expander_count = $('.footerlink').length;
+			var expander_width = (83/expander_count);
+			
+			var i = 0;
+			$.each($(".footerlink"), function(index, value){
+				$(this).css('width', expander_width+'%');
+				$(this).css('left', (((expander_width)*i)+10)+'%');
+				i++;
+			});
+			
+			$(".footerlink,.footer_expander").hover(
+				function(){
+					$(this).animate({ height: "30"}, 50);
+				},
+				function(){
+					$(this).animate({ height: "16"}, 50);
+				
+				}
+			);
+			
+			//set the width per footer_expander element
+			var division_count = $('.footer_division').length;
+			var division_width = (88/division_count);
+			division_width = division_width+'%';
+			
+			$.each($(".footer_division"), function(index, value){
+				$(this).css('width', division_width);
+			});
+			
+		function change_acadtermtype() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_acadtermtype/' + $(this).val();
+		}
+
+		function change_role() {
+			return document.location = 'https://crs.upd.edu.ph/user/switch_role/' + $(this).val();
+		}
+
+		function show_roles() {
+			$("#span_role").addClass("hidden");
+			$("#span_role-choices").removeClass("hidden");
+		}
+
+		function show_acadtermtypes() {
+			$("#span_acadtermtype").addClass("hidden");
+			$("#span_acadtermtype-choices").removeClass("hidden");
+		}
+
+	 });
+	 
+	
+	function showFooter(){
+		$('#footer').slideDown(150);
+		$('.footermin').hide();
+	}
+	function hideFooter(){
+		$('#footer').slideUp(150);
+		$('.footermin').show();
+	}
+	</script>
+
+<span style="clear:both;"></span>
+
+	<div class="footer_expander footermin" onclick="showFooter();">
+		More ▲
+	</div>
+
+		<div id="footer" align="center">
+		<div id="footer_linktotop" align="right" onclick="hideFooter();">
+			<a href="Javascript:void(0);" onclick="hideFooter();" style="color:white">Less ▼</a>
+		</div>
+		<div style="padding-top: 30px;">
+						<div class="footer_division">
+				<div class="footer_division_header">Flowcharts</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/OnlineDroppingFlowchart.pdf" >
+								Dropping							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ChangeMatFlowchart_modified.pdf" >
+								Change Mat							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/downloads/ClearanceMechanics.pdf" >
+								Clearance							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/downloads/LOA_mechanics.pdf" >
+								Leave of Absence							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Class Schedules</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/" >
+								Regular Classes							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/schedule/mba" >
+								MBA/MS Finance PT							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/schedule/spring" >
+								Spring Asia							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Information</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/course_catalog" >
+								Course Catalog							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/curriculum.html" >
+								Curriculum Checklist							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://our.upd.edu.ph/files/ListofGECourses.pdf" >
+								List of RGEP Courses							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Academic Calendar</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/~updinfo/apr14/articles/BOR_approved_AcadCal_AY_2014_2015.pdf" >
+								BOR Approved<br>Academic Calendar<br>AY 2014-2015							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular" >
+								Regular Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/mba" >
+								MBA/MS Fin PT Calendar							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/msfin" >
+								MS Fin FT Calendar							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/acadcal_public/index/advanced/spring" >
+								Spring Asia Calendar							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">CRS</div>
+																		<div class="footer_division_item ">
+																				<a href="https://crs.upd.edu.ph/faq" >
+								CRS FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/faq.html" >
+								OUR FAQ							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>History of the CRS<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item ">
+													<span>User Guide<br/>(Coming Soon)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="https://crs.upd.edu.ph/about/" >
+								The CRS Team<br/>							</a>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">Contact Us</div>
+																		<div class="footer_division_item ">
+																				<a href="http://www.facebook.com/groups/134746139953068/" >
+								Facebook Group							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="mailto:crssupport@list.upd.edu.ph" >
+								E-Mail							</a>
+											</div>
+																								<div class="footer_division_item ">
+													<span>Phone<br/>(981-8500 local 4560)</span>
+											</div>
+																								<div class="footer_division_item fdt_last">
+													<span>You may visit us at the CRSRS Office at the 3rd floor of the OUR.</span>
+											</div>
+																	</div>
+						<div class="footer_division">
+				<div class="footer_division_header">External Links</div>
+																		<div class="footer_division_item ">
+																				<a href="http://upd.edu.ph/" >
+								UP Diliman							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://up.edu.ph/" >
+								UP System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://our.upd.edu.ph/" >
+								OUR Site							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="https://sts.up.edu.ph/" >
+								Socialized Tuition System							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://dormapplication.upd.edu.ph/" >
+								Dorm Application Website							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://uvle.up.edu.ph/" >
+								UvLE							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://ucc.upd.edu.ph/about-us/" >
+								UPCC							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://mail.up.edu.ph/" >
+								UP Webmail							</a>
+											</div>
+																								<div class="footer_division_item ">
+																				<a href="http://www.dzup.org/" >
+								DZUP							</a>
+											</div>
+																								<div class="footer_division_item fdt_last">
+																				<a href="http://upd.edu.ph/aup/" >
+								Acceptable Use Policy							</a>
+											</div>
+																	</div>
+					</div>
+	</div>
+
+	<div class="footer_quicklinks footermin">
+		Quick Links:
+	</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/schedule/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/schedule/">
+				Regular Classes			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/course_catalog'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/course_catalog">
+				Course Catalog			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='http://our.upd.edu.ph/curriculum.html'">
+			<a class="a_footerlink" href="http://our.upd.edu.ph/curriculum.html">
+				Curriculum Checklist			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/acadcal_public/index/advanced/regular'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/acadcal_public/index/advanced/regular">
+				Regular Calendar			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/faq'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/faq">
+				CRS FAQ			</a>
+		</div>
+			<div class="footerlink footermin" onclick="window.location='https://crs.upd.edu.ph/about/'">
+			<a class="a_footerlink" href="https://crs.upd.edu.ph/about/">
+				The CRS Team<br/>			</a>
+		</div>
+	</body>
+</html>
