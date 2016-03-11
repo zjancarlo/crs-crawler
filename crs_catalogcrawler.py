@@ -208,112 +208,6 @@ def sched_process():
 							newClass[day]["bldg"] = schedParsed[3]
 							newClass[day]["room"] = schedParsed[4]
 
-
-						# if schedDay == "TTh":
-						# 	for day in ["T", "Th"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "WF":
-						# 	for day in ["W", "F"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "MS":
-						# 	for day in ["M", "S"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "TWThF":
-						# 	for day in ["T", "W", "Th", "F"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "MTWThF":
-						# 	for day in ["M", "T", "W", "Th", "F"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "MTWThTh":
-						# 	for day in ["M", "T", "W", "Th", "Th"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "MWF":
-						# 	for day in ["M", "W", "F"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "MW":
-						# 	for day in ["M", "W"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "TW":
-						# 	for day in ["T", "W"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "TWF":
-						# 	for day in ["T", "W", "F"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "TWTh":
-						# 	for day in ["T", "W", "Th"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "MTh":
-						# 	for day in ["M", "Th"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "WTh":
-						# 	for day in ["M", "Th"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "ThS":
-						# 	for day in ["Th", "S"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "MF":
-						# 	for day in ["M", "F"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# elif schedDay == "MMMMM":
-						# 	for day in ["M"]:
-						# 		newClass[day]["time"] = schedParsed[1]
-						# 		newClass[day]["type"] = schedParsed[2]
-						# 		newClass[day]["bldg"] = schedParsed[3]
-						# 		newClass[day]["room"] = schedParsed[4]
-						# else:
-						# 	# print schedParsed
-						# 	newClass[schedDay]["time"] = schedParsed[1]
-						# 	newClass[schedDay]["type"] = schedParsed[2]
-						# 	newClass[schedDay]["bldg"] = schedParsed[3]
-						# 	newClass[schedDay]["room"] = schedParsed[4]
-				# T 4:30-6:30PM lec Archi 1; Th 4:30-6:30PM lec Archi 104A <-- just split("; ")
-
-
 				profIndex = 7
 				profs = []
 				profs.append(searchLines[i + profIndex])
@@ -325,8 +219,16 @@ def sched_process():
 				for prof in profs:
 					for parsedProf in prof.split("; "):
 						# print parsedProf.lstrip()
-						profMatch = re.search("(?P<prof_name>.*)(<br.*)?", parsedProf.lstrip())
-						profString = profString + profMatch.group("prof_name")
+						if parsedProf.find("<br") != -1:
+							# then last prof on list
+							if len(profString) > 0:
+								profString = profString + "; " + parsedProf.split(" <")[0]
+							else:
+								profString = profString + parsedProf.split(" <")[0]
+						# profMatch = re.search("(?P<prof_name>.*)(<br.*)?", parsedProf.lstrip())
+						# profString = profString + profMatch.group("prof_name")
+						else:
+							profString = profString + parsedProf
 				newClass["instructor"] = profString 
 
 
@@ -375,17 +277,18 @@ def exportSchedule():
 	csvfile = open(filename, "wb")
 	csvwriter = csv.writer(csvfile, dialect='excel')
 
-	row = ["", "", "", "Monday", "", "", "Tuesday", "", "Wednesday", "", "", "Thursday", "", "", "Friday", "", "", "Saturday"]
+	row = ["", "", "", "Monday", "", "", "Tuesday", "", "", "Wednesday", "", "", "Thursday", "", "", "Friday", "", "", "Saturday"]
 	csvwriter.writerow(row)
 	row = ["Course", "Instructor", "Estimated Students", "Time", "Building", "Room", "Time", "Building", "Room", "Time", "Building", "Room", "Time", "Building", "Room", "Time", "Building", "Room", "Time", "Building", "Room"]
+	csvwriter.writerow(row)
 	for key in classScheds.keys():
 		if classScheds[key]["availableSlots"] != "DISSOLVED":
-			row = [key, classScheds[key]["instructor"]]
+			row = [key, classScheds[key]["instructor"][:-6]]	#HOTFIX ACTUALLY FIX THE CODE FFS
 
 			# getting estimated students
 			#if overbooked then total students ++
 			if classScheds[key]["availableSlots"] == "OVERBOOKED":
-				expectedAmt = classScheds[key]["totalSlots"] + "++"
+				expectedAmt = classScheds[key]["totalSlots"]
 			else:
 				expectedAmt = (int)(classScheds[key]["totalSlots"]) - (int)(classScheds[key]["availableSlots"])
 			row.append(expectedAmt)
